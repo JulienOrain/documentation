@@ -16,10 +16,11 @@ The Reliably Command Line Interface (CLI).
 ### Options
 
 ```
-      --help       help for reliably
-      --no-color   Disable color output
-  -v, --verbose    verbose output
-      --version    version for reliably
+      --help           help for reliably
+      --no-color       Disable color output
+  -v, --verbose        verbose output
+      --version        version for reliably
+  -V, --very-verbose   very verbose output
 ```
 
 ### SEE ALSO

@@ -27,8 +27,9 @@ You can also add/remove users to/from your organizations.
 ### Options inherited from parent commands
 
 ```
-      --no-color   Disable color output
-  -v, --verbose    verbose output
+      --no-color       Disable color output
+  -v, --verbose        verbose output
+  -V, --very-verbose   very verbose output
 ```
 
 ### SEE ALSO

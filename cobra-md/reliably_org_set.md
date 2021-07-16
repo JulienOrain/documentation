@@ -22,8 +22,9 @@ reliably org set [<name>] [flags]
 ### Options inherited from parent commands
 
 ```
-      --no-color   Disable color output
-  -v, --verbose    verbose output
+      --no-color       Disable color output
+  -v, --verbose        verbose output
+  -V, --very-verbose   very verbose output
 ```
 
 ### SEE ALSO
