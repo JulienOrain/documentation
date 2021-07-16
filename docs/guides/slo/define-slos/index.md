@@ -133,6 +133,32 @@ The **project ID** can be found in the "Project info" card of your <a href="http
 
 The **resource name** can be found in the <a href="https://console.cloud.google.com/net-services/loadbalancing/" target="_blank" rel="noopener noreferer">Network services / Load balancing section of the Google Cloud Console</a>, where all your services attached to a load balancer are listed.
 
+### Datadog resources
+
+A Service Level Indicator can be computed from Datadog by providing the *numerator* and *denominator* queries.
+
+The numerator query indicates the number of "good events", while the denominator query represents the number of "total" events.
+
+The indicator percentage is computed as an average of `"good events" / "total events"` per 2-hour samples over the full time window.
+
+You can provide this information in the following format:
+
+```yaml
+spec:
+  indicatorSelector:
+    datadog_numerator_query: sum:gcp.loadbalancing.https.backend_request_count{response_code_class:200}.as_count()
+    datadog_denominator_query: sum:gcp.loadbalancing.https.backend_request_count{}.as_count()
+```
+
+:::note
+The example computes the SLO as percentage of successful requests (with 2xx status code).
+:::
+
+:::important
+The CLI will require some environment variables to be able to make authenticated calls to the Datadog API:
+`export DD_SITE="datadoghq.eu" DD_API_KEY="123..." DD_APP_KEY="123..."`
+:::
+
 ## With the CLI
 
 The `reliably slo init` command can guide you through the creation of this file.
@@ -150,50 +176,6 @@ define an SLO.
 
 With Reliably, SLOs are attached to a service. You will first be asked to define a name for a service before you can define its SLOs.
 
-### SLO Type
-
-```reliably
-<span class="token green">?</span> <span class="token bold">What type of SLO do you want to declare?</span>  <span class="token blue">[Use arrows to move, type to filter]</span>
-<span class="token blue bold">&gt; Availability</span>
-  Latency
-```
-
-You can choose either availability or latency SLOs. **Availability SLOs** are based on the success of a particular request. **Latency SLOs** are based on the completion of a request under a **time threshold**.
-
-### Target and latency threshold
-
-```reliably
-<span class="token green">?</span> <span class="token bold">What is your target for this SLO (in %)?</span> <span class="token blue">99.9</span>
-```
-
-You must specify a **target** for your SLO. This is what good looks like for your SLO and is expressed as a percentage. For example, for an Availability SLO, a target of 98% would mean 98% of the events were successfull.
-
-If you select the latency SLO type, you will also be prompted to provide a **threshold** in milliseconds. All reponses within this threshold contribute to your target.
-
-```reliably
-<span class="token green">?</span> <span class="token bold">What type of SLO do you want to declare?</span> <span class="token blue">Latency</span>
-<span class="token green">?</span> <span class="token bold">What is your target for this SLO (in %)?</span> <span class="token blue">99.9</span>
-<span class="token green">?</span> <span class="token bold">What is your latency threshold (in milliseconds)?</span> <span class="token blue">300</span>
-```
-
-### Observation window
-
-```reliably
-<span class="token green">?</span> <span class="token bold">What is your observation window for this SLO?</span>  <span class="token blue">[Use arrows to move, type to filter]</span>
-<span class="token blue bold">&gt; 1 hour</span>
-  1 day
-  1 week
-  1 month
-  custom
-```
-
-```reliably
-<span class="token green">?</span> <span class="token bold">What is your observation window for this SLO?</span> <span class="token blue">custom</span>
-<span class="token green">?</span> <span class="token bold">Define your custom observation window</span> <span class="token blue">[? for help]</span>
-```
-<!-- 
-Read the ["Observation Window" section](#observation-window) for details about the **ISO8601** standard used to define time windows. -->
-
 ### Service Resource
 
 If you want to measure your SLO and generate [SLO reports](../slo-reports/), you will need to add a service resource. Service resources are resources from your cloud provider which Reliably uses to get your service level data.
@@ -201,10 +183,11 @@ If you want to measure your SLO and generate [SLO reports](../slo-reports/), you
 ```reliably
 <span class="token green">?</span> <span class="token bold">On which cloud provider?</span> <span class="token blue">[Use arrows to move, type to filter]</span>
 <span class="token blue bold">&gt; Amazon Web Services</span>
+  Datadog
   Google Cloud Platform
 ```
 
-Once you've selected a cloud provider, you will be asked to paste an resource identifier, or you can type `i` to enter an interactive mode which will help you identify the service you want to get data from.
+Once you've selected a cloud provider, you will be asked to paste a resource identifier, or you can type `i` to enter an interactive mode which will help you identify the service you want to get data from.
 
 :::important
 You will need to be authentified to Google Cloud or AWS for interactive mode to work.
@@ -254,11 +237,63 @@ Here is what interactive mode looks like for Google Cloud:
 <span class="token green">|</span> <span class="token bold">Select a resource.</span> <span class="token blue">staging-lb</span>
 ```
 
-You will then be asked if you want to add another service for this SLO. Answering Yes will trigger the same set of questions.
+Here is what interactive mode looks like for Datadog:
+
+You will be asked for "good events" *(numerator)* and "total events" *(denominator)* queries.
 
 ```reliably
-<span class="token green">?</span> <span class="token bold">Do you want to add another resource for measuring your SLI?</span> <span class="token greyed">(y/N)</span>
+<span class="token green">?</span> <span class="token bold">On which cloud provider?</span> <span class="token blue">Datadog</span>
+<span class="token green">|</span> <span class="token bold">Paste your 'numerator' (good events) datadog query:</span> <span class="token blue">sum:...</span>
+<span class="token green">|</span> <span class="token bold">Paste your 'denominator' (total events) datadog query:</span> <span class="token blue">sum:...</span>
 ```
+
+### SLO Target
+
+```reliably
+<span class="token green">?</span> <span class="token bold">What is your target for this SLO (in %)?</span> <span class="token blue">99.9</span>
+```
+
+You must specify a **target** for your SLO. This is what good looks like for your SLO and is expressed as a percentage. For example, for an Availability SLO, a target of 98% would mean 98% of the events were successfull.
+
+### SLO Type
+
+For some providers, *AWS or GCP*, you'll be asked for choosing a type of SLO to measure:
+
+```reliably
+<span class="token green">?</span> <span class="token bold">What type of SLO do you want to declare?</span>  <span class="token blue">[Use arrows to move, type to filter]</span>
+<span class="token blue bold">&gt; Availability</span>
+  Latency
+```
+
+You can choose either availability or latency SLOs. **Availability SLOs** are based on the success of a particular request. **Latency SLOs** are based on the completion of a request under a **time threshold**.
+
+#### latency threshold
+
+If you select the latency SLO type, you will also be prompted to provide a **threshold** in milliseconds. All reponses within this threshold contribute to your target.
+
+```reliably
+<span class="token green">?</span> <span class="token bold">What type of SLO do you want to declare?</span> <span class="token blue">Latency</span>
+<span class="token green">?</span> <span class="token bold">What is your target for this SLO (in %)?</span> <span class="token blue">99.9</span>
+<span class="token green">?</span> <span class="token bold">What is your latency threshold (in milliseconds)?</span> <span class="token blue">300</span>
+```
+
+### Observation window
+
+```reliably
+<span class="token green">?</span> <span class="token bold">What is your observation window for this SLO?</span>  <span class="token blue">[Use arrows to move, type to filter]</span>
+<span class="token blue bold">&gt; 1 hour</span>
+  1 day
+  1 week
+  1 month
+  custom
+```
+
+```reliably
+<span class="token green">?</span> <span class="token bold">What is your observation window for this SLO?</span> <span class="token blue">custom</span>
+<span class="token green">?</span> <span class="token bold">Define your custom observation window</span> <span class="token blue">[? for help]</span>
+```
+<!--
+Read the ["Observation Window" section](#observation-window) for details about the **ISO8601** standard used to define time windows. -->
 
 ### SLO Name
 
