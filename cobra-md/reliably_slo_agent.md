@@ -33,6 +33,8 @@ $ reliably slo agent --interval 600
   -h, --help              help for agent
   -i, --interval int      interval indicators are pushed at in seconds (default 300)
   -m, --manifest string   the location of the manifest file (default "reliably.yaml")
+  -R, --report-view       shows a view of the report while pushing indicators
+  -l, --selector string   objectives selector based on labels - only used when --report-ui/-R flag is used
 ```
 
 ### Options inherited from parent commands
