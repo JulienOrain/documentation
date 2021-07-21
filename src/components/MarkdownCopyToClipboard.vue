@@ -75,6 +75,7 @@ export default {
 <style lang="scss" scoped>
 .ctc-button {
   position: absolute;
+  margin-top: 1em;
   margin-left: 50%;
   transform: translate(-50%, -1em);
 

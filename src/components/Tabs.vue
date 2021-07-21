@@ -37,37 +37,60 @@
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .tabs-container {
-    padding: 0.25rem 1rem;
-    background-color: var(--blue-100);
-    border-radius: 5px;
-    margin-top: 4rem;
-}
+  margin-top: 4rem;
+
   .tabs {
     margin: 0 10px;
-     border-bottom: 2px solid white;
-     font-weight: bold;
+    
+    font-weight: bold;
+
+    ul {
+      display: flex;
+      padding: 0;
+
+      list-style: none;
+      li {
+        margin-right: 40px;
+      }
+      .nav-item {
+        position: relative;
+
+        cursor: pointer;
+
+        &:before {
+          content: "";
+
+          position: absolute;
+          top: calc(100% + .3rem);
+          left: 0;
+
+          display: block;
+          height: .3rem;
+          width: 100%;
+
+          background-color: transparent;
+        }
+
+        &:hover {
+          &::before {
+            background-color: var(--yellow-500);
+          }
+        }
+        &.is-active {
+          &::before {
+            background-color: var(--body-color);
+          }
+        }
+      }
+    }
   }
   .tabs-detail {
-    margin-top: -30px;
-    padding: 1rem 1.5rem 0.5rem;
+    padding: 1.6rem;
+
+    background-color: var(--blue-200);
+    border-radius: 5px;
   }
-  ul {
-    display: flex;
-    padding: 0;
-    list-style: none;
-    li {
-      margin-right: 40px;
-    }
-    .nav-item {
-      cursor: pointer;
-      &:hover {
-        color: var(--yellow-500);
-      }
-      &.is-active {
-        color: var(--yellow-500)
-      }
-    }
-  }
+}
 </style>

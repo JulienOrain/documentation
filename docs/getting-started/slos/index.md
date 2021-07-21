@@ -28,7 +28,6 @@ If you don't use any of the supported integrations, and wish to try the basics f
 
 <Tabs>
 <Tab name="AWS" selected="true">
-<div>
 
 ### AWS
 
@@ -60,10 +59,6 @@ reliably slo sync
 
 <CopyToClipboard />
 
-<br>
-
-
-</div>
 </Tab>
 <Tab name="GCP">
 
@@ -102,7 +97,6 @@ reliably slo sync
 </Tab>
 <Tab name="Datadog">
 
-
 ### Datadog
 
 To get started you will need:
@@ -134,9 +128,6 @@ reliably slo sync
 
 <CopyToClipboard />
 
-<br>
-
-
 </Tab>
 <Tab name="Custom Objectives">
 
@@ -163,7 +154,6 @@ For a brief introduction on how this works, it is recommended to run in agent mo
 
 <Tabs>
 <Tab name="Agent" selected="true">
-<div>
 
 ### Agent
 
@@ -181,10 +171,8 @@ reliably slo agent
 
 Additional options for the agent can be found in the [Reference - agent](/docs/reference/cli/reliably-slo-agent/) section.
 
-</div>
 </Tab>
 <Tab name="Custom Indicators - curl">
-<div>
 
 ### Custom Indicators - curl
 
@@ -194,7 +182,6 @@ If you have chosen to push custom Indicators, you may do so with a tool such as 
 
 The [Sending Custom Indicators](/docs/guides/slo/sending-custom-indicators/) section will guide you through this the process.
 
-</div>
 </Tab>
 </Tabs>
 
