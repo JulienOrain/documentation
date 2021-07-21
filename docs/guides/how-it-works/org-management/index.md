@@ -1,7 +1,7 @@
 ---
 title: Manage your organizations
 excerpt: Create organizations and invite other users to collaborate with you.
-categories: ["getting-started"]
+categories: ["guides", "how-it-works"]
 status: published
 type: doc
 ---

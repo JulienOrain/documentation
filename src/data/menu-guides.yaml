@@ -55,6 +55,9 @@
 - title: Objectives, indicators, results and behaviour
   link: /guides/how-it-works/objectives-indicators-results-and-behaviour/
   sub: true
+- title: Manage your organizations
+  link: /guides/how-it-works/org-management/
+  sub: true
 - title: SLO Reports
   link: /guides/how-it-works/slo-reports/
   sub: true
@@ -72,4 +75,7 @@
   sub: true
 - title: Manifest Migration
   link: /guides/how-it-works/migrate-manifest/
+  sub: true
+- title: Upgrade
+  link: /guides/how-it-works/upgrade/
   sub: true

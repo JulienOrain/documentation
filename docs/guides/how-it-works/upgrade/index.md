@@ -1,12 +1,14 @@
 ---
 title: Upgrade Reliably
 excerpt: Upgrade the Reliably CLI to the latest version.
-categories: ["getting-started"]
+categories: ["guides", "how-it-works"]
 status: published
 type: doc
 ---
 
 import CopyToClipboard from '~/components/MarkdownCopyToClipboard.vue'
+
+# Upgrade
 
 ## New update available notice
 
