@@ -4,9 +4,15 @@ This is the <a href="https://reliably.com/docs/">Documentation for Reliably</a>,
 
 ## Contribute
 
-1. Install Gridsome CLI tool if you don't already have: `npm install --global @gridsome/cli`
-2. Install the dependencies with `npm install`.
-3. Run `gridsome develop` to start a local dev server at `http://localhost:8080`
-4. Happy coding 🎉🙌
+### Requirements
+
+To contribute to this repository, you should have the following installed:
+
+* [`Node 14.*`](https://nodejs.org/en/) (We'd recommend using [`nvm`](https://github.com/nvm-sh/nvm) to manage Node versions - We include a `.nvmrc` file to specify the version)
+
+### Steps
+1. Install the dependencies with `npm install`.
+2. Run `npx gridsome develop` to start a local dev server at `http://localhost:8080`
+3. Happy coding 🎉🙌
 
 If you wish to contribute to this documentation, please submit a PR with your changes for review.
