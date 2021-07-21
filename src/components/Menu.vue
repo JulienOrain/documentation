@@ -290,7 +290,7 @@ export default {
     a {
       position: relative;
 
-      // display: block;
+      display: block;
       // padding: 1rem;
       margin: 1rem;
 
