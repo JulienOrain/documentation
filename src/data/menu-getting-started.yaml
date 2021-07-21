@@ -1,11 +1,14 @@
 - title: Install
   link: /getting-started/install/
   sub: false
-- title: Upgrade
-  link: /getting-started/upgrade/
-  sub: false
 - title: Login
   link: /getting-started/login/
+  sub: false
+- title: Define and observe your reliability
+  link: /getting-started/slos/
+  sub: false
+- title: Upgrade
+  link: /getting-started/upgrade/
   sub: false
 - title: Manage your organizations
   link: /getting-started/org-management/

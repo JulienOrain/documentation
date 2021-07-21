@@ -1,11 +1,11 @@
 ---
-title: Loging in to Reliably
-excerpt: Login to Reliably with the Reliably CLI to monitor SLOs, scans Kubernetes clusters and manifests and collaborate with teammates.
+title: Logging in to Reliably
+excerpt: Log in to Reliably with the Reliably CLI to monitor SLOs, scans Kubernetes clusters and manifests and collaborate with teammates.
 categories: ["getting-started"]
 status: published
 type: doc
 ---
-# Login to Reliably
+# Log in to Reliably
 
 To use Reliably, you will need to authenticate the Reliably CLI
 with [Reliably.com](https://reliably.com/).
@@ -20,7 +20,7 @@ with [Reliably.com](https://reliably.com/).
 
 ## Login
 
-You can login with the `reliably auth login` command, when prompted for the
+You can log in with the `reliably auth login` command, when prompted for the
 type of login select a provider, with the arrow keys and select enter:
 
 ```reliably
@@ -95,3 +95,7 @@ $ export RELIABLY_TOKEN=6ccfdxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 Once the environment variable is defined, any command of the CLI will
 be able to make authenticated calls to Reliably.
+
+## What's next?
+
+- [Define and observe your reliability](/docs/getting-started/)

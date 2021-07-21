@@ -20,7 +20,7 @@ import data from '~/data/getting-started-index-data.json'
 # Get started with Reliably
 
 <PageIntroduction>
-  The easiest and quickest way of getting started with Reliably is to run the Reliably CLI on your machine with your local source code files. Here's a link to the  <a href="/docs/getting-started/install/#quick-install-guide">quick install guide</a>
+  The easiest and quickest way of getting started with Reliably is to run the Reliably CLI on your machine with your local source code files. Here's a link to the  <a href="/docs/getting-started/install/#quick-install-guide">quick install guide</a>.
 </PageIntroduction>
 
 ## Main articles
@@ -35,16 +35,6 @@ import data from '~/data/getting-started-index-data.json'
     </template>
     <p>Install the Reliably CLI and make your first Kubernetes manifest more reliable in minutes.</p>
   </BigLink>
-  <BigLink to="/getting-started/upgrade/" :external="false" :dark="true">
-    <template v-slot:header>
-      Upgrade the Reliably CLI
-    </template>
-    <template v-slot:icon>
-      <IconUpgrade />
-    </template>
-    <p>If you already have the  Reliably CLI installed, you can easily
-    upgrade to the latest version of Reliably.</p>
-  </BigLink>
   <BigLink to="/getting-started/login/" :external="false" :dark="true">
     <template v-slot:header>
       Login to Reliably
@@ -53,6 +43,15 @@ import data from '~/data/getting-started-index-data.json'
       <IconLogin />
     </template>
     <p>Authenticate the Reliably CLI with Reliably.com</p>
+  </BigLink>
+  <BigLink to="/getting-started/slos/" :external="false" :dark="true">
+    <template v-slot:header>
+      Define and observe your reliability
+    </template>
+    <template v-slot:icon>
+      <IconLogin />
+    </template>
+    <p>Define and observe your reliability by implementing Service Level Objectives</p>
   </BigLink>
 </MarkdownTwoColumns>
 
