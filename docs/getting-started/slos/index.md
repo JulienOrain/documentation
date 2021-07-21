@@ -218,5 +218,5 @@ Additional information about the `report` command can be found in [Generate SLO 
 ## What's next?
 - Deep-dive on [Objectives, Indicators, Results and Behaviour](/docs/guides/how-it-works/objectives-indicators-results-and-behaviour/)
 <!-- - Deploy an agent -->
-- Custom indicators
+- [Custom Indicators](/docs/guides/slo/sending-custom-indicators/)
 <!-- - Add behaviour like slack alerts -->
