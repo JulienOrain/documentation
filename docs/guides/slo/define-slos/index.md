@@ -253,7 +253,7 @@ You will be asked for "good events" *(numerator)* and "total events" *(denominat
 <span class="token green">?</span> <span class="token bold">What is your target for this SLO (in %)?</span> <span class="token blue">99.9</span>
 ```
 
-You must specify a **target** for your SLO. This is what good looks like for your SLO and is expressed as a percentage. For example, for an Availability SLO, a target of 98% would mean 98% of the events were successfull.
+You must specify a **target** for your SLO. This is what good looks like for your SLO and is expressed as a percentage. For example, for an Availability SLO, a target of 98% would mean 98% of the events were successful.
 
 ### SLO Type
 

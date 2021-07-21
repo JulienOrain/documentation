@@ -84,13 +84,13 @@ reliably slo report --format text
 ```reliably
 <span class="token dollar"></span>reliably slo report --format text
 <span class="token yellow">Service #1: http-api</span>
-<span class="token green">✓</span> 99% availability over 1 hour: 100.00% [objective: 99% / 1h0m0s, delta: 1.00%, type: Availablity]
-<span class="token green">✓</span> 99.5% availability over 1 day: 100.00% [objective: 99.5% / 1d, delta: 0.50%, type: Availablity]
+<span class="token green">✓</span> 99% availability over 1 hour: 100.00% [objective: 99% / 1h0m0s, delta: 1.00%, type: Availability]
+<span class="token green">✓</span> 99.5% availability over 1 day: 100.00% [objective: 99.5% / 1d, delta: 0.50%, type: Availability]
 <span class="token red">✕</span> 99% of requests under 300ms: 77.46% [objective: 99% / 1d, delta: -21.54%, type: Latency]
 <span class="token red">✕</span> 99.9% of requests under 1s: 98.59%  [objective: 99.9% / 1d, delta: -1.31%, type: Latency]
 
 <span class="token yellow">Service #2: products-api</span>
-<span class="token green">✓</span> 99% availability over 1 day: 100.00% [objective: 99% / 1d , delta: 1.00%, type: Availablity]
+<span class="token green">✓</span> 99% availability over 1 day: 100.00% [objective: 99% / 1d , delta: 1.00%, type: Availability]
 <span class="token green">✓</span> 99.5% of products API requests under 200ms: 100.00% [objective: 99.5% / 1d, delta: 0.50%, type: Latency]
 ```
 
@@ -105,13 +105,13 @@ reliably slo report --format text --no-color
 ```reliably
 <span class="token dollar"></span>reliably slo report --format text --no-color
 Service #1: http-api
-✓ 99% availability over 1 hour: 100.00% [objective: 99% / 1h0m0s, delta: 1.00%, type: Availablity]
-✓ 99.5% availability over 1 day: 100.00% [objective: 99.5% / 1d, delta: 0.50%, type: Availablity]
+✓ 99% availability over 1 hour: 100.00% [objective: 99% / 1h0m0s, delta: 1.00%, type: Availability]
+✓ 99.5% availability over 1 day: 100.00% [objective: 99.5% / 1d, delta: 0.50%, type: Availability]
 ✕ 99% of requests under 300ms: 77.46% [objective: 99% / 1d, delta: -21.54%, type: Latency]
 ✕ 99.9% of requests under 1s: 98.59% [objective: 99.9% / 1d, delta: -1.31%, type: Latency]
 
 Service #2: products-api
-✓ 99% availability over 1 day: 100.00% [objective: 99% / 1d, delta: 1.00%, type: Availablity]
+✓ 99% availability over 1 day: 100.00% [objective: 99% / 1d, delta: 1.00%, type: Availability]
 ✓ 99.5% of products API requests under 200ms: 100.00% [objective: 99.5% / 1d, delta: 0.50%, type: Latency]
 ```
 

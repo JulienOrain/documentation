@@ -203,7 +203,7 @@ When you select the download button you may see a browser warning:
 ![Browser Warning](./images/browser-warning.png)
 
 Select the menu option and keep. You can then navigate to the file location
-using your prefered terminal window (in these docs we are using Powershell).
+using your preferred terminal window (in these docs we are using Powershell).
 
 If you want, you can check the md5 checksum to confirm the downloaded file has
 not been corrupted:
@@ -242,7 +242,7 @@ executable path. Open the Windows Start Search, type in “env”, and choose �
 In the pop-up window select:
 
 * Environment Variables
-* In the Enviroment Variables pop-up, select Path from the User environment variables
+* In the Environment Variables pop-up, select Path from the User environment variables
 * Select Edit then
 * Select Browse...
 * Navigate to the folder where you downloaded the reliably executable

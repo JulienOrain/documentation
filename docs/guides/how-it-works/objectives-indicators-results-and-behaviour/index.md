@@ -108,7 +108,7 @@ Relationships can be single-direction, or bi-directional. What we mean by this i
 
 ### Temporal coupling
 
-Relationships do not have temporal coupling. It is possible to declare the criteria for a relationship long before any other entity satisfies it. It is also possible to delcare a relationship after the rest of the entity landscape has settled.
+Relationships do not have temporal coupling. It is possible to declare the criteria for a relationship long before any other entity satisfies it. It is also possible to declare a relationship after the rest of the entity landscape has settled.
 
 ### When relationships break down
 

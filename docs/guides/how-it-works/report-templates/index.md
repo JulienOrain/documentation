@@ -202,7 +202,7 @@ Then the markdown table is setup with:
 
 ```
 
-The columns of the table are then populated with a further range loop, this time we show the complate range block:
+The columns of the table are then populated with a further range loop, this time we show the complete range block:
 
 ```
 {{ range $ind, $sl := $service.ServiceLevels -}}
@@ -295,7 +295,7 @@ type ServiceLevel struct {
 The Service level consists of:
 
 - The **Name** for the Service Level.
-- The **Type** of the Service Level, this currently either Availablity or Latency.
+- The **Type** of the Service Level, this currently either Availability or Latency.
 - An overal **Objective** as a percentage, e.g this service will be 95% available.
 - A **Period**, an ISO 8601 Duration, is the time period that is used for the Service Level, e.g PT1H. For further information on the time window for an SLI see [SLO Report Time Window].
 - The **Result** of an Service Level indicator.
@@ -394,7 +394,7 @@ A humanised duration could be 1 hour, 1 day, etc.
 
 svcLevelGetType takes a Service Level object as a single argument and will return a string with the type of Service Level.
 
-This would currently be either Availablity or Latency.
+This would currently be either Availability or Latency.
 
 ### func svcLevelGetTrends (svcName string, sl ServiceLevel, lrs *[]Report) string
 

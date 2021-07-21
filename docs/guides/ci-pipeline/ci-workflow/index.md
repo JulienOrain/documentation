@@ -55,7 +55,7 @@ $ reliably org current
 
 ## Specify the platform
 
-If you already know the platform you are targetting, and don't want to
+If you already know the platform you are targeting, and don't want to
 enter the interactive mode, you can use the `--platform` flag:
 
 ```console
