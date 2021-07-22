@@ -49,18 +49,22 @@ export default {
   },
   data() {
     return {
-      displayHeaderMessage: true,
+      displayHeaderMessage: false,
     }
   },
   mounted() {
-    if (localStorage.getItem("reliablyDisplayHeaderMessage") === null) {
-      localStorage.reliablyDisplayHeaderMessage = true;
-    } else if (localStorage.reliablyDisplayHeaderMessage === "false") {
-      // because localStorage only stores strings...
-      this.displayHeaderMessage = false;
-    } else if (localStorage.reliablyDisplayHeaderMessage === "true") {
-      this.displayHeaderMessage = true;
-    }
+    // Put this back when we need to display a header message again
+    // if (localStorage.getItem("reliablyDisplayHeaderMessage") === null) {
+    //   localStorage.reliablyDisplayHeaderMessage = true;
+    // } else if (localStorage.reliablyDisplayHeaderMessage === "false") {
+    //   // because localStorage only stores strings...
+    //   this.displayHeaderMessage = false;
+    // } else if (localStorage.reliablyDisplayHeaderMessage === "true") {
+    //   this.displayHeaderMessage = true;
+    // }
+
+    // ...and comment this
+    localStorage.removeItem('reliablyDisplayHeaderMessage')
   },
   methods: {
     discardHeaderMessage() {
