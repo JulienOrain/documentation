@@ -13,6 +13,7 @@ All ReliablyHQ manifests share certain common properties. They are described bel
 
 ```yaml
 apiVersion: <string>
+kind: <string>
 metadata:
     labels: {}
     relatedTo: {}
@@ -26,7 +27,7 @@ Defines the APIVersion that this entity is compatible with.
 ### Structure
 
 ```yaml
-apiVerison: <string>
+apiVersion: <string>
 ```
 
 ## Kind
@@ -75,7 +76,7 @@ Selectors are used compare elements of the `spec` of one manifest with the `labe
 ### Structure
 ```yaml
 spec:
-    ***Selector:
+    Selector:
         <string>: <string>
 ```
 
@@ -83,18 +84,3 @@ spec:
 * each property of a selector must match a label of the target manifest.
 * a target manifest may have more labels than a selector requires.
 * a target manifest may not have fewer labels than a selector requires.
-
-### Structure
-
-```yaml
-metadata:
-    labels: {}
-    relatedTo: {}
-```
-
-### Properties
-
-| ref | description |
-|---|---|
-| labels | A dict<string,string> that describes the purpose of this manifest. Common properties include `name`, `owner`, `service`, `region`, etc.
-| relatedTo | A dict<string,string> that describes labels that this manifest relates to. For instance, `metadata.relatedTo.service: awesome-service` would form a relationship to all other manifests that have a `metadata.labels.service: awesome-service`. This relationship is can then be visualised in the ReliablyHQ apps and utilised by behaviour to invoke some functionality. |
