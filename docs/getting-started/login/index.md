@@ -47,6 +47,8 @@ window and the CLI will acknowledge you are now logged in.
 You have successfully logged in to Reliably and are now ready to use the
 `reliably` commands.
 
+Get started with the section [Define and observe your reliability](/docs/getting-started/slos/) to start using `reliably slo`, or continue reading this section for additional login functionality.
+
 ## Authentication status
 
 You can check your authentication status with the `reliably auth status` command:
@@ -98,4 +100,4 @@ be able to make authenticated calls to Reliably.
 
 ## What's next?
 
-- [Define and observe your reliability](/docs/getting-started/)
+- [Define and observe your reliability](/docs/getting-started/slos/)

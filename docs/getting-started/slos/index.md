@@ -24,7 +24,12 @@ In this section you will learn how to define and observe your reliability by imp
 
 To get started, you will generate a manifest file defining your Objectives and an Indicator selector for each. These two entities will allow you to define what good looks like for your system from the perspective of your users. In order to do this, you first need to determine your data provider for the resources you wish to target. This may be the cloud platform which contains the resources such as AWS or GCP, or alternatively a monitoring service such as Datadog.
 
-If you don't use any of the supported integrations, and wish to try the basics first, you should select Custom Objective.
+
+:::note Note
+If you would prefer to start with a sandboxed deployment, instead of your own resources, follow the instructions of deployment for your preferred platform below and then return to this section.
+
+[AWS](https://github.com/reliablyhq/walkthrough-slo-capability-aws) / [GCP](https://github.com/reliablyhq/walkthrough-slo-capability-gcp)
+:::
 
 <Tabs>
 <Tab name="AWS" selected="true">
