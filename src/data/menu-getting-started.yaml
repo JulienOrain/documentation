@@ -10,3 +10,6 @@
 - title: Scanning Kubernetes clusters
   link: /getting-started/scanning-k8s/
   sub: false
+- title: Explore the impact on your Reliability using Chaos Engineering experiments
+  link: /getting-started/chaos-engineering/
+  sub: false
