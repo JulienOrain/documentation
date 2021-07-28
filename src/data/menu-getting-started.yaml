@@ -7,3 +7,6 @@
 - title: Define and observe your reliability
   link: /getting-started/slos/
   sub: false
+- title: Scanning Kubernetes clusters
+  link: /getting-started/scanning-k8s/
+  sub: false

@@ -53,5 +53,14 @@ import data from '~/data/getting-started-index-data.json'
     </template>
     <p>Define and observe your reliability by implementing Service Level Objectives</p>
   </BigLink>
+  <BigLink to="/getting-started/scanning-k8s/" :external="false" :dark="true">
+    <template v-slot:header>
+      Applying 'best practice' to Kubernetes
+    </template>
+    <template v-slot:icon>
+      <IconLogin />
+    </template>
+    <p>Scan a Kubernetes cluster for adherence to best practice</p>
+  </BigLink>
 </MarkdownTwoColumns>
 
