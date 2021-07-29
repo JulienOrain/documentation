@@ -49,18 +49,6 @@ You're good to go!
 You can check everything is working with the `reliably --version` and you're
 ready to [login](../login/).
 
-:::tip Tip
-  If you are a Kubernetes user you can also install Reliably as a [kubectl
-   plugin][kubectl-plugin], and run Reliably commands with `kubectl`.
-:::
-
-[kubectl-plugin]: ../kubectl-plugin/
-
-See the  [Installation Details][install-detail] section for more detailed
- instructions, including guidance for Windows users.
-
-[install-detail]: #installation-details
-
 ## Previous versions
 
 You can find the full list of Reliably CLI releases [here][releases].
