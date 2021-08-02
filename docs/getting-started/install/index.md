@@ -18,14 +18,14 @@ your PATH.
 On macOS
 
 ```console
-curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-darwin-amd64 -o /usr/local/bin/reliably
+curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-darwin-amd64 -o /usr/local/bin/reliably --create-dirs
 ```
 <CopyToClipboard />
 
 On Linux
 
 ```console
-curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-linux-amd64 -o /usr/local/bin/reliably
+curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-linux-amd64 -o /usr/local/bin/reliably --create-dirs
 ```
 <CopyToClipboard />
 
@@ -39,7 +39,7 @@ chmod +x /usr/local/bin/reliably
 On Windows
 
 ```console
-curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-windows-amd64 -o %HOMEDRIVE%%HOMEPATH%/bin/reliably.exe
+curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-windows-amd64 -o %HOMEDRIVE%%HOMEPATH%/bin/reliably.exe --create-dirs
 ```
 
 <CopyToClipboard />
@@ -63,7 +63,7 @@ Get the latest release and copy it to a directory in your PATH, for example
 /usr/local/bin.
 
 ```console
-curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-darwin-amd64 -o /usr/local/bin/reliably
+curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-darwin-amd64 -o /usr/local/bin/reliably --create-dirs
 ```
 <CopyToClipboard />
 
@@ -116,7 +116,7 @@ Get the latest release and copy it to a directory in your PATH, for example
 /usr/local/bin.
 
 ```console
-curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-linux-amd64 -o /usr/local/bin/reliably
+curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-linux-amd64 -o /usr/local/bin/reliably --create-dirs
 ```
 <CopyToClipboard />
 
@@ -166,7 +166,7 @@ You should see the current ```reliably``` cli version displayed.
 The quick and easy way to install the Reliably CLI on Windows is to use `curl`:
 
 ```console
-curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-windows-amd64 -o %HOMEDRIVE%%HOMEPATH%/bin/reliably.exe
+curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-windows-amd64 -o %HOMEDRIVE%%HOMEPATH%/bin/reliably.exe --create-dirs
 ```
 
 <CopyToClipboard />
