@@ -40,7 +40,7 @@ $ reliably slo delete --selector='key=value, key=value, key=value'
 ```
   -h, --help                   help for delete
   -m, --manifest string        the location of the manifest file (default "reliably.yaml")
-  -l, --selector stringArray   the location of the manifest file
+  -l, --selector stringArray   key/value pair(s) matching objective labels to be deleted
 ```
 
 ### Options inherited from parent commands
