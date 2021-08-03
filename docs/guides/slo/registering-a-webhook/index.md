@@ -10,7 +10,7 @@ type: doc
 
 Webhook registration is done by submitting a `WebhookCriteria` manifest to ReliablyHQ. This manifest contains the criteria needed to match an entity to your requirements, and then invoke a URL.
 
-An example of the manifest can be found [here](../../../reference/entities/webhookcriteria.md).
+An example of the manifest can be found [here](/docs/reference/entities/webhookcriteria/).
 
 The payload sent to the webhook is the entity that triggered the event.
 
@@ -25,7 +25,8 @@ The payload sent to the webhook is the entity that triggered the event.
 
 A webhook that is triggered when an `ObjectiveResult` that has a label `service:my awesome service` is created should look like this:
 
-*webhook.yaml*
+**webhook.yaml**
+
 ```yaml
 apiVersion: reliably.com/v1
 kind: WebhookCriteria
@@ -66,4 +67,4 @@ Information about the event and the context that created it is added to the requ
 
 ## Reference
 
-[webhookCriteria](../../../reference/entities/webhookcriteria.md)
+[webhookCriteria](/docs/reference/entities/webhookcriteria/)
