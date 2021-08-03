@@ -1,7 +1,7 @@
 ---
 title: Indicator
 excerpt: The definition of an indicator
-categories: []
+categories: ["reference", "entities"]
 status: published
 type: overview
 ---
@@ -25,10 +25,10 @@ spec:
 ## Properties
 | key | description |
 |---|---|
-| apiVersion | see [metadata](./index.md/#apiVersion) |
-| kind | see [metadata](./index.md/#kind) |
-| metadata | see [metadata](./inex.md/#metadata) |
-| spec | see [spec](./index.md/#spec) |
+| apiVersion | see <g-link to="/reference/entities#apiVersion">APIVersion</g-link> |
+| kind | see <g-link to="/reference/entities#kind">Kind</g-link> |
+| metadata | see <g-link to="/reference/entities/#metadata">metadata</g-link> |
+| spec | see <g-link to="/reference/entities#spec">spec</g-link> |
 | spec.from | The date that marks the start of the range that the indicator data relates to. |
 | spec.to | The date that marks the end of the range that the indicator data relates to. |
 | spec.percent | The percentage of the value defined by the indicaitor labels that relate to this period in time. |

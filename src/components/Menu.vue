@@ -39,8 +39,20 @@
         </template>
       </template>
       <template v-if="current === 'Reference'">
-        <!-- YAML file links -->
         <template v-for="(l, index) in referenceLinks" >
+          <g-link v-if="l.sub" :to="l.link" :key="index">
+            {{ l.title }}
+          </g-link>
+          <h5 v-else :key="index">
+            <g-link :to="l.link">
+              {{ l.title }}
+            </g-link>
+          </h5>
+        </template>
+      </template>
+      <template v-if="current === 'CLI Reference'">
+        <!-- YAML file links -->
+        <template v-for="(l, index) in cliReferenceLinks" >
           <g-link v-if="l.sub" :to="l.link" :key="index">
             {{ l.title }}
           </g-link>
@@ -57,6 +69,30 @@
           </g-link>
           <h5 v-else :key="l.id">
             <g-link :to="l.path">
+              {{ l.title }}
+            </g-link>
+          </h5>
+        </template>
+      </template>
+      <template v-if="current === 'Entities Reference'">
+        <template v-for="(l, index) in entitiesReferenceLinks" >
+          <g-link v-if="l.sub" :to="l.link" :key="index">
+            {{ l.title }}
+          </g-link>
+          <h5 v-else :key="index">
+            <g-link :to="l.link">
+              {{ l.title }}
+            </g-link>
+          </h5>
+        </template>
+      </template>
+      <template v-if="current === 'API Reference'">
+        <template v-for="(l, index) in restApiReferenceLinks" >
+          <g-link v-if="l.sub" :to="l.link" :key="index">
+            {{ l.title }}
+          </g-link>
+          <h5 v-else :key="index">
+            <g-link :to="l.link">
               {{ l.title }}
             </g-link>
           </h5>
@@ -86,6 +122,9 @@ query {
 import gettingStartedLinks from '@/data/menu-getting-started.yaml';
 import guidesLinks from '@/data/menu-guides.yaml';
 import referenceLinks from '@/data/menu-reference.yaml';
+import cliReferenceLinks from '@/data/menu-reference-cli.yaml';
+import entitiesReferenceLinks from '@/data/menu-reference-entities.yaml';
+import restApiReferenceLinks from '@/data/menu-reference-rest-api.yaml';
 
 import SelectIcon from '@/assets/images/menu-select-icon.svg';
 
@@ -109,6 +148,12 @@ export default {
         return "Getting Started";
       } else if (this.$route.path.startsWith('/guides')) {
         return "Guides";
+      } else if (this.$route.path.startsWith('/reference/cli')) {
+        return "CLI Reference";
+      } else if (this.$route.path.startsWith('/reference/entities')) {
+        return "Entities Reference";
+      } else if (this.$route.path.startsWith('/reference/rest-api')) {
+        return "API Reference";
       } else if (this.$route.path.startsWith('/reference')) {
         return "Reference";
       } else {
@@ -123,6 +168,9 @@ export default {
     },
     referenceLinks() {
       return referenceLinks;
+    },
+    cliReferenceLinks() {
+      return cliReferenceLinks;
     },
     cliRefLinks() {
       let edges = this.$static.clipages.edges;
@@ -161,6 +209,12 @@ export default {
         }
       });
       return links;
+    },
+    entitiesReferenceLinks() {
+      return entitiesReferenceLinks;
+    },
+    restApiReferenceLinks() {
+      return restApiReferenceLinks;
     },
   },
   methods:{

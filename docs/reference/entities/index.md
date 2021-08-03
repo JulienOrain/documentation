@@ -1,13 +1,13 @@
 ---
 title: Common Properties
 excerpt: The definition of properties common to all entities
-categories: []
+categories: ["reference", "entities"]
 status: published
 type: overview
 ---
 # Common Properties
 
-All ReliablyHQ manifests share certain common properties. They are described below.
+All Reliably manifests share certain common properties. They are described below.
 
 ## Structure
 

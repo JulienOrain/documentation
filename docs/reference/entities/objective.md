@@ -1,7 +1,7 @@
 ---
 title: Objective
 excerpt: The definition of an objective
-categories: []
+categories: ["reference", "entities"]
 status: published
 type: overview
 ---
@@ -26,10 +26,10 @@ spec:
 ## Properties
 | key | description |
 |---|---|
-| apiVersion | see [metadata](./index.md/#apiVersion) |
-| kind | see [metadata](./index.md/#kind) |
-| metadata | see [metadata](./inex.md/#metadata) |
-| spec | see [spec](./index.md/#spec) |
-| spec.indicatorSelector | see [selectors](./index.md/#selectors) |
+| apiVersion | see <g-link to="/reference/entities#apiVersion">APIVersion</g-link> |
+| kind | see <g-link to="/reference/entities#kind">Kind</g-link> |
+| metadata | see <g-link to="/reference/entities/#metadata">metadata</g-link> |
+| spec | see <g-link to="/reference/entities#spec">spec</g-link> |
+| spec.indicatorSelector | see <g-link to="/reference/entities#selectors">selectors</g-link> |
 | spec.objectivePercent | The percent required by this objective |
 | spec.window | The window of time that should be used to select data that can be used to test the actual state of a system. See [this](https://pkg.go.dev/time#ParseDuration) for more info. |

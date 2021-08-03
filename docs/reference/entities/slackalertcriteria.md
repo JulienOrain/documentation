@@ -1,7 +1,7 @@
 ---
 title: SlackAlertCriteria
 excerpt: The definition of SlackAlertCriteria
-categories: []
+categories: ["reference", "entities"]
 status: published
 type: overview
 ---
@@ -27,10 +27,10 @@ spec:
 ## Properties
 | key | description |
 |---|---|
-| apiVersion | see [metadata](./index.md/#apiVersion) |
-| kind | see [metadata](./index.md/#kind) |
-| metadata | see [metadata](./inex.md/#metadata) |
-| spec | see [spec](./index.md/#spec) |
-| spec.objectiveSelector | A selector that describes an objective(s) that this criteria relates to. See [spec](./index.md/#spec) for more information. |
-| spec.channelUrl | The URL of the Slack webhook. This URL must begin `https://hooks.slack.com`. |
-| spec.messageTemplate | A Golang template string that can be used to dynamically generate the message send to slack. The object passed to the template is an [ObjectiveResult](./objectiveresult.md). See [Golang templates](https://pkg.go.dev/text/template) for more info. |
+| apiVersion | see <g-link to="/reference/entities#apiVersion">APIVersion</g-link> |
+| kind | see <g-link to="/reference/entities#kind">Kind</g-link> |
+| metadata | see <g-link to="/reference/entities/#metadata">metadata</g-link> |
+| spec | see <g-link to="/reference/entities#spec">spec</g-link> |
+| spec.indicatorSelector | The criteria that defines the indicators this result relates to. See <g-link to="/reference/entities#selectors">spec</g-link> for more info. |
+| spec.channelUrl | The URL of the Slack webhook. This URL must begin with `https://hooks.slack.com`. |
+| spec.messageTemplate | A Golang template string that can be used to dynamically generate the message send to slack. The object passed to the template is an <g-link to="/reference/entities/objectiveresult/">ObjectiveResult</g-link>. See [Golang templates](https://pkg.go.dev/text/template) for more info. |
