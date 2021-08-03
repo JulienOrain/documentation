@@ -134,6 +134,42 @@ reliably slo sync
 <CopyToClipboard />
 
 </Tab>
+<Tab name="Prometheus">
+
+### Prometheus
+
+To get started you will need:
+
+1. The URL to a Prometheus instance that allows unauthenticated access to its API
+2. One Prometheus query that returns a ratio of good events against all events
+   seen for a particular metric. Make sure this query returns a
+   [scalar](https://prometheus.io/docs/prometheus/latest/querying/api/#scalars)
+   or a [instant vector](https://prometheus.io/docs/prometheus/latest/querying/api/#instant-vectors)
+   only.
+
+On your working directory, define your Objectives and Indicator selectors with:
+
+```console
+reliably slo init
+```
+
+<CopyToClipboard />
+
+When you're done, the CLI will confirm your manifest has been successfully created in your working directory.
+
+```reliably
+<span class="token green">✓</span> Your manifests has been saved to ./reliably.yaml
+````
+
+You must then sync your manifest with Reliably's API:
+
+```console
+reliably slo sync
+```
+
+<CopyToClipboard />
+
+</Tab>
 <Tab name="Custom Objectives">
 
 ### Custom Objectives

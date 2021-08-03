@@ -159,6 +159,33 @@ The CLI will require some environment variables to be able to make authenticated
 `export DD_SITE="datadoghq.eu" DD_API_KEY="123..." DD_APP_KEY="123..."`
 :::
 
+### Prometheus resources
+
+A Service Level Indicator can be computed from Prometheus by providing
+a [scalar](https://prometheus.io/docs/prometheus/latest/querying/api/#scalars)
+or [instant vector](https://prometheus.io/docs/prometheus/latest/querying/api/#instant-queries)
+query. It should compute the ratio of "good events" against the number of total
+events of a particular metric.
+
+Here is an example os such a scalar query:
+
+```yaml
+spec:
+  indicatorSelector:
+    prometheus_query: scalar(
+        sum by (uri) (http_server_requests_count{status="200",uri="/"})
+        / sum by (uri) (http_server_requests_count{uri="/"}))
+```
+
+The same as an instant vector query:
+
+```yaml
+spec:
+  indicatorSelector:
+    prometheus_query: sum by (uri) (http_server_requests_count{status="200",uri="/"})
+        / sum by (uri) (http_server_requests_count{uri="/"})
+```
+
 ## With the CLI
 
 The `reliably slo init` command can guide you through the creation of this file.
