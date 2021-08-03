@@ -186,6 +186,17 @@ spec:
         / sum by (uri) (http_server_requests_count{uri="/"})
 ```
 
+Make sure to also indicate the address of your Prometheus endpoint as follows:
+
+```yaml
+spec:
+  indicatorSelector:
+    prometheus_url: http://localhost:9090
+```
+
+The endpoint must be reachable from the CLI's context and allow unauthenticated
+calls to the Prometheus API.
+
 ## With the CLI
 
 The `reliably slo init` command can guide you through the creation of this file.
