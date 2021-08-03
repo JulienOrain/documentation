@@ -18,7 +18,7 @@ But what happens if you want to use a backend that Reliably doesn't currently su
 
 ## Creating your own indicators
 
-There are a couple of you'll need to know before you try to send an `indicator` to Reliably, and have that `indicator` trigger the required behaviour.
+There are a couple of things you'll need to know before you try to send an `indicator` to Reliably, and have that `indicator` trigger the required behaviour.
 
 * An `indicator` must match the `indicatorSelector` of an `objective` in order for calculation and behaviour be triggered. This is done by having the `labels` of the `indicator` match the fields in the `indicatorSelector` of the `objective`.
 * An `indicator` must have a valid time window. Normally this window is defined by an `objective`, but that is not a true requirement.
