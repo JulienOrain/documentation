@@ -146,7 +146,7 @@ Once copied, replace the values of `TOKEN` and `ORG` with the output of the foll
 
 ```reliably
 auths:
-    api.reliably.com:
+    reliably.com:
         token: {TOKEN}
         username: your-username
 currentOrg:
