@@ -13,6 +13,9 @@
 - title: Send custom indicators
   link: /guides/slo/sending-custom-indicators/
   sub: true
+- title: Registering Webhooks
+  link: /guides/slo/registering-a-webhook/
+  sub: true
 
 - title: Scan your Infrastructure
   link: /guides/scan-infrastructure/
