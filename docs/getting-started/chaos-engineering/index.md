@@ -23,7 +23,7 @@ At a high level, you'll be doing the following:
 
 ## Define your Objective
 
-Check out [Defining and observe your reliability](/docs/getting-started-slos/) for more information on defining SLOs.
+Check out [Define and observe your reliability](/docs/getting-started/slos/) for more information on defining SLOs.
 
 So that you don't need to have any infrastructure already available to follow this guide, you'll be defining a Custom Objective. These allow you to send Custom Indicators to Reliably and appreciate how indicators can be pushed, not just pulled by the Reliably SLO agent.
 
