@@ -54,6 +54,7 @@ export default {
   font-size: 2rem;
   text-decoration: none !important;
 
+  transform: perspective(1000px) rotateX(0) rotateY(0) rotateZ(0);
   transition: all .3s ease-in-out;
 
   &:hover {
