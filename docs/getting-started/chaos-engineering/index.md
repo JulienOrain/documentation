@@ -550,6 +550,15 @@ Let's conclude on what you've covered in the above sections:
 * You've observed both [good](#observing-your-good-reliability) and [bad](#observing-your-bad-reliability) reliability of your 'system'
 * You've explored the impact on your Steady State Hypothesis (and importantly your reliability) with both [healthy](#seeing-your-reliability-continue) and [unhealthy](#seeing-your-reliability-degrade) experiments
 
+You'll want to clear up after yourself and remove the Objective that was defined, this is so that it no longer appears in your reports.
+
+You can delete the objective by running:
+
+```reliably
+<span class="token dollar"></span>reliably slo delete --selector "service=exploring-reliability-guide-service"
+```
+<CopyToClipboard />
+
 At this point, you should be comfortable with how you might integrate your own Reliably SLOs created for your system, with your Steady State Hypothesis in your Chaos Toolkit experiments. 
 
 This all ultimately enables you to run chaos engineering experiments against your systems and see the impact they have on the things that **really** matter: what your users experience.
