@@ -3,7 +3,7 @@ title: ObjectiveResult
 excerpt: The definition of an objectiveResult
 categories: ["reference", "entities"]
 status: published
-type: overview
+type: doc
 ---
 # ObjectiveResult
 

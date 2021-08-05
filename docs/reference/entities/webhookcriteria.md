@@ -3,7 +3,7 @@ title: WebhookCriteria
 excerpt: The definition of WebhookCriteria
 categories: ["reference", "entities"]
 status: published
-type: overview
+type: doc
 ---
 # WebhookCriteria
 

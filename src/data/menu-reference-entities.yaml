@@ -1,6 +1,9 @@
 - title: Entities
   link: /reference/entities/
   sub: false
+- title: Common Properties
+  link: /reference/entities/common-properties/
+  sub: true
 - title: Indicator
   link: /reference/entities/indicator/
   sub: true

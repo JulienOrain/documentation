@@ -23,3 +23,11 @@ import data from '~/data/reference-index-data.json'
     link="/reference/cli/"
     :list="data.cli.links"
 />
+
+<SectionList
+    title="Entities"
+    categoryName="entities"
+    description="Complete reference guide for the Reliably Entity Server"
+    link="/reference/entities/"
+    :list="data.entities.links"
+/>

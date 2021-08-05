@@ -7,10 +7,13 @@ type: overview
 ---
 import PageIntroduction from '~/components/PageIntroduction.vue'
 import MarkdownTwoColumns from '~/components/MarkdownTwoColumns.vue'
-import ArticleCard from '~/components/ArticleCard.vue'
+import BigLink from '~/components/BigLink.vue';
 import OtherArticles from '~/components/OtherArticles.vue'
 
-import data from '~/data/cli-index-data.json'
+import IconLogin from '~/assets/images/icons/log-in.svg';
+import IconFilter from '~/assets/images/icons/filter.svg';
+import IconSearch from '~/assets/images/icons/search.svg';
+import IconActivity from '~/assets/images/icons/activity.svg';
 
 # CLI Reference
 
@@ -30,28 +33,40 @@ section.
 ## Main articles
 
 <MarkdownTwoColumns>
-  <ArticleCard
-    title="reliably auth"
-    description="Log in, log out, and verify your authentication with Reliably."
-    link="/reference/cli/reliably-auth/"
-  />
-  <ArticleCard
-    title="reliably workflow"
-    description="Setup Reliably in your CI/CD workflow."
-    link="/reference/cli/reliably-workflow/"
-  />
-  <ArticleCard
-    title="reliably scan"
-    description="Scan your Kubernetes manifests or cluster for Reliably Suggestions."
-    link="/reference/cli/reliably-scan/"
-  />
-  <ArticleCard
-    title="reliably history"
-    description="View your history of executions and suggestions."
-    link="/reference/cli/reliably-history/"
-  />
+  <BigLink to="/reference/cli/reliably-auth/" :external="false" :dark="true">
+    <template v-slot:header>
+      reliably auth
+    </template>
+    <template v-slot:icon>
+      <IconLogin />
+    </template>
+    <p>Log in, log out, and verify your authentication with Reliably.</p>
+  </BigLink>
+  <BigLink to="/reference/cli/reliably-workflow/" :external="false" :dark="true">
+    <template v-slot:header>
+      reliably workflow
+    </template>
+    <template v-slot:icon>
+      <IconFilter />
+    </template>
+    <p>Setup Reliably in your CI/CD workflow.</p>
+  </BigLink>
+  <BigLink to="/reference/cli/reliably-scan/" :external="false" :dark="true">
+    <template v-slot:header>
+      reliably scan
+    </template>
+    <template v-slot:icon>
+      <IconSearch />
+    </template>
+    <p>Scan your Kubernetes manifests or cluster for Reliably Suggestions.</p>
+  </BigLink>
+  <BigLink to="/reference/cli/reliably-slo/" :external="false" :dark="true">
+    <template v-slot:header>
+      reliably slo
+    </template>
+    <template v-slot:icon>
+      <IconActivity />
+    </template>
+    <p>The Reliably Service Level Objectives command</p>
+  </BigLink>
 </MarkdownTwoColumns>
-
-## Other articles
-
-<OtherArticles :links="data.links" />

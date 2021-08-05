@@ -5,82 +5,47 @@ categories: ["reference", "entities"]
 status: published
 type: overview
 ---
-# Common Properties
+import PageIntroduction from '~/components/PageIntroduction.vue'
+import MarkdownTwoColumns from '~/components/MarkdownTwoColumns.vue'
+import BigLink from '~/components/BigLink.vue';
+import OtherArticles from '~/components/OtherArticles.vue'
 
-All Reliably manifests share certain common properties. They are described below.
+import IconCommon from '~/assets/images/icons/refresh-cw.svg';
+import IconActivity from '~/assets/images/icons/activity.svg';
 
-## Structure
+import data from '~/data/entities-index-data.json'
 
-```yaml
-apiVersion: <string>
-kind: <string>
-metadata:
-    labels: {}
-    relatedTo: {}
-spec: {}
-```
+# Entities Reference
 
-## APIVersion
+<PageIntroduction>
 
-Defines the APIVersion that this entity is compatible with.
+The Reliably Entity Server holds the state of service levels for an organisation remotely, for consumption by other tools.
 
-### Structure
+</PageIntroduction>
 
-```yaml
-apiVersion: <string>
-```
+## Main articles
 
-## Kind
+<MarkdownTwoColumns>
+  <BigLink to="/reference/entities/common-properties/" :external="false" :dark="true">
+    <template v-slot:header>
+      Common Properties
+    </template>
+    <template v-slot:icon>
+      <IconCommon />
+    </template>
+    <p>All Reliably manifests share certain common properties. They are described here.</p>
+  </BigLink>
+  <BigLink to="/reference/entities/indicator/" :external="false" :dark="true">
+    <template v-slot:header>
+      Indicator
+    </template>
+    <template v-slot:icon>
+      <IconActivity />
+    </template>
+    <p>An Indicator declaratively defines a single Service Level Indicator</p>
+  </BigLink>
+</MarkdownTwoColumns>
 
-Defines the kind of entity this manifest describes.
+## Other articles
 
-### Structure
-
-```yaml
-kind: <string>
-```
-
-## Metadata
-
-Metadata is used to describe the information in the manifest. It is used to help identify individual manifests, as well as describe things that this manifest relates to.
-
-### Structure
-
-```yaml
-metadata:
-    labels: {}
-    relatedTo: {}
-```
-
-### Properties
-
-| ref | description |
-|---|---|
-| labels | A dict<string,string> that describes the purpose of this manifest. Common properties include `name`, `owner`, `service`, `region`, etc.
-| relatedTo | A dict<string,string> that describes labels that this manifest relates to. For instance, `metadata.relatedTo.service: awesome-service` would form a relationship to all other manifests that have a `metadata.labels.service: awesome-service`. This relationship is can then be visualised in the ReliablyHQ apps and utilised by behaviour to invoke some functionality. |
-
-## Spec
-
-Spec is an object that is specific to the manifest. It contains all manifest-specific data.
-
-### Structure
-
-```yaml
-spec: {}
-```
-
-## Selectors
-
-Selectors are used compare elements of the `spec` of one manifest with the `labels` of another manifest.
-
-### Structure
-```yaml
-spec:
-    Selector:
-        <string>: <string>
-```
-
-### Rules
-* each property of a selector must match a label of the target manifest.
-* a target manifest may have more labels than a selector requires.
-* a target manifest may not have fewer labels than a selector requires.
+<OtherArticles :links="data.links" />

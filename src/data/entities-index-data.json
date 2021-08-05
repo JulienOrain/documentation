@@ -1,0 +1,20 @@
+{
+  "links": [
+    {
+      "label": "Objective",
+      "link": "/reference/entities/objective/"
+    },
+    {
+      "label": "ObjectiveResult",
+      "link": "/reference/entities/objectiveresult/"
+    },
+    {
+      "label": "SlackAlertCriteria",
+      "link": "/reference/entities/slackalertcriteria/"
+    },
+    {
+      "label": "WebhookCriteria",
+      "link": "/reference/entities/webhookcriteria/"
+    }
+  ]
+}

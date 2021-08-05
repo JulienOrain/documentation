@@ -3,7 +3,7 @@ title: SlackAlertCriteria
 excerpt: The definition of SlackAlertCriteria
 categories: ["reference", "entities"]
 status: published
-type: overview
+type: doc
 ---
 # SlackAlertCriteria
 

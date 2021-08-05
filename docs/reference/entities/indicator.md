@@ -3,7 +3,7 @@ title: Indicator
 excerpt: The definition of an indicator
 categories: ["reference", "entities"]
 status: published
-type: overview
+type: doc
 ---
 # Indicator
 

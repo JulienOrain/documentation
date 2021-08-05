@@ -22,5 +22,25 @@
         "link": "/reference/cli/reliably-slo/"
       }
     ]
+  },
+  "entities": {
+    "links": [
+      {
+        "title": "Common Properties",
+        "link": "/reference/entities/common-properties/"
+      },
+      {
+        "title": "Indicator",
+        "link": "/reference/entities/indicator/"
+      },
+      {
+        "title": "Objective",
+        "link": "/reference/entities/objective/"
+      },
+      {
+        "title": "ObjectiveResult",
+        "link": "/reference/entities/objectiveresult/"
+      }
+    ]
   }
 }

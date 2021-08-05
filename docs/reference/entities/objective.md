@@ -3,7 +3,7 @@ title: Objective
 excerpt: The definition of an objective
 categories: ["reference", "entities"]
 status: published
-type: overview
+type: doc
 ---
 # Objective
 
