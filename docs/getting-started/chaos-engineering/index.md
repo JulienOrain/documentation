@@ -70,7 +70,6 @@ To make things easier, we've provided you with a ready-made Chaos Toolkit Experi
 
 ```json
 {
-    "version": "1.0.0",
     "title": "A Healthy Service",
     "description": "Sends Reliably `Good` Indicators to mimic a healthy service",
     "method": [
@@ -224,7 +223,6 @@ Copy this experiment into a file called `unhealthy-experiment.json`:
 
 ```json
 {
-    "version": "1.0.0",
     "title": "An Unhealthy Service",
     "description": "Sends Reliably `Bad` Indicators to mimic an unhealthy service",
     "method": [
