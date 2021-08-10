@@ -9,9 +9,10 @@
     <CopyToClipboard />
     <p> Additional information can be found in the <a href="/docs/getting-started/login/#login">Login</a> section.</p>
     <h3 id="install-ctk"><a href="#install-ctk" aria-hidden="true">#</a>Install Chaos Toolkit</h3>
-    <p>To use Chaos Toolkit, you'll need <a href="https://www.python.org/downloads/">Python 3.6+</a> installed, you can then get Chaos Toolkit and its Reliably plugin with:</p>
-    <pre class="language-console"><code class="language-console">python -m venv .venv && source .venv/bin/activate</code></pre>
+    <p>To use Chaos Toolkit, you'll need <a href="https://www.python.org/downloads/">Python 3.6+</a> installed - we also recommend setting up a virtual environment:</p>
+    <pre class="language-console"><code class="language-console">python3 -m venv .venv && source .venv/bin/activate</code></pre>
     <CopyToClipboard />
+    <p>You can then get Chaos Toolkit and its Reliably plugin with:</p>
     <pre class="language-console"><code class="language-console">pip install -U chaostoolkit chaostoolkit-reliably</code></pre>
     <CopyToClipboard />
     <p>You can confirm which version of Chaos Toolkit you've just installed with:</p>
