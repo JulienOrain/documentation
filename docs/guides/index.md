@@ -74,6 +74,14 @@ import data from '~/data/guides-index-data.json';
 />
 
 <SectionList
+    title="Other Guides"
+    categoryName="other-guides"
+    description="More guides!"
+    link="/guides/other/"
+    :list="data['other-guides'].links"
+/>
+
+<SectionList
     title="How It Works"
     categoryName="how-it-works"
     description="Discover how Reliably works under the hood."

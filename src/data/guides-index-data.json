@@ -48,6 +48,18 @@
       }
     ]
   },
+  "other-guides": {
+    "links": [
+      {
+        "title": "Manage your organizations",
+        "link": "/guides/other/org-management/"
+      },
+      {
+        "title": "Upgrade",
+        "link": "/guides/other/upgrade/"
+      }
+    ]
+  },
   "how-it-works": {
     "links": [
       {

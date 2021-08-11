@@ -1,7 +1,7 @@
 ---
 title: Upgrade Reliably
 excerpt: Upgrade the Reliably CLI to the latest version.
-categories: ["guides", "how-it-works"]
+categories: ["guides", "other-guides"]
 status: published
 type: doc
 ---

@@ -1,0 +1,16 @@
+{
+  "links": [
+    {
+      "label": "Slack Alerts",
+      "link": "/guides/other/slack-alerts/"
+    },
+    {
+      "label": "SLO Report Templates",
+      "link": "/guides/other/report-templates/"
+    },
+    {
+      "label": "Manifest Migration",
+      "link": "/guides/other/migrate-manifest/"
+    }
+  ]
+}

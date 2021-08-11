@@ -1,7 +1,7 @@
 ---
 title: Integrating with Slack
 excerpt: How to bring Slack into your Reliably ecosystem
-categories: ["guides", "how-it-works"]
+categories: ["guides", "other-guides"]
 status: published
 type: doc
 ---
@@ -9,9 +9,10 @@ type: doc
 # Integrating with Slack
 
 Reliably supports integration with Slack. It is possible to configure Reliably to send a message to Slack when the budget for a given objective is less than the threshold set in the alert configuration.
+
 ## Example
 
-Create a manifest using the definition [here](../../../reference/entities/slackalertcriteria.md)
+Create a manifest using the definition <g-link to="/reference/entities/slackalertcriteria/">here</g-link>
 
 **Objective**
 
@@ -56,7 +57,7 @@ If both of these conditions are met then the message template is parsed and a me
 
 ### Message templates
 
-Details on how to create a message template can be found here: [here](../../../reference/entities/slackalertcriteria.md/#properties).
+Details on how to create a message template can be found <g-link to="/reference/entities/slackalertcriteria/#properties">here</g-link>.
 
 **Example**:
 

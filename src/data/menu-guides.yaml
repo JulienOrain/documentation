@@ -52,20 +52,34 @@
   link: /guides/ci-pipeline/ci-workflow/
   sub: true
 
+- title: Other Guides
+  link: /guides/other/
+  sub: false
+- title: Upgrade
+  link: /guides/other/upgrade/
+  sub: true
+- title: Manage your organizations
+  link: /guides/other/org-management/
+  sub: true
+- title: Slack Alerts
+  link: /guides/other/slack-alerts/
+  sub: true
+- title: SLO Report Templates
+  link: /guides/other/report-templates/
+  sub: true
+- title: Manifest Migration
+  link: /guides/other/migrate-manifest/
+  sub: true
+
+
 - title: How it works
   link: /guides/how-it-works/
   sub: false
 - title: Objectives, indicators, results and behaviour
   link: /guides/how-it-works/objectives-indicators-results-and-behaviour/
   sub: true
-- title: Manage your organizations
-  link: /guides/how-it-works/org-management/
-  sub: true
 - title: SLO Reports
   link: /guides/how-it-works/slo-reports/
-  sub: true
-- title: SLO Report Templates
-  link: /guides/how-it-works/report-templates/
   sub: true
 - title: Scan Resources
   link: /guides/how-it-works/scan-resources/
@@ -75,10 +89,4 @@
   sub: true
 - title: Rules
   link: /guides/how-it-works/rules/
-  sub: true
-- title: Manifest Migration
-  link: /guides/how-it-works/migrate-manifest/
-  sub: true
-- title: Upgrade
-  link: /guides/how-it-works/upgrade/
   sub: true

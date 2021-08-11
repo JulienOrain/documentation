@@ -1,7 +1,7 @@
 ---
 title: Using Report Templates
 excerpt: How Reliably CLI creates reports from report tempates.
-categories: ["guides", "how-it-works"]
+categories: ["guides", "other-guides"]
 status: published
 type: doc
 ---
