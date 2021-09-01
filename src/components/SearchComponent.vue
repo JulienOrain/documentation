@@ -28,7 +28,7 @@
                 <template v-for="item in items">
                   <g-link
                     :to="item.path"
-                    @click="close"
+                    @click.native="close"
                     class="search-card"
                   >
                     <span class="search-card__title">{{item.title}}</span>
