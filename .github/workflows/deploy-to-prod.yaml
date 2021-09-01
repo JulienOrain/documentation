@@ -26,6 +26,10 @@ jobs:
 
       - name: Build Gridsome
         run: npm run-script build
+        env:
+          GRIDSOME_ALGOLIA_APP_ID: ${{ secrets.GRIDSOME_ALGOLIA_APP_ID }}
+          GRIDSOME_ALGOLIA_ADMIN_KEY: ${{ secrets.GRIDSOME_ALGOLIA_ADMIN_KEY }}
+          GRIDSOME_ALGOLIA_INDEX_NAME: ${{ secrets.GRIDSOME_ALGOLIA_INDEX_NAME_PROD }}
 
       - name: Authenticate with Gcloud
         uses: google-github-actions/setup-gcloud@master
