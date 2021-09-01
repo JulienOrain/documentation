@@ -14,7 +14,6 @@
           <span class="screen-reader-text">Reliably</span>
         </a>
         <g-link class="header-docs-home" to="/">docs</g-link>
-        {{ currentMode }}
       </div>
       <nav class="nav">
         <g-link class="nav__link" to="/getting-started/">Getting Started</g-link>
@@ -32,6 +31,7 @@
       <LazyHydrate on-interaction>
         <SearchComponent
           @close-search="hideSearch"
+          ref="searchInput"
         />
       </LazyHydrate>
     </div>
@@ -88,6 +88,9 @@ export default {
     displaySearch() {
       this.isSearchDisplayed = true;
       document.body.classList.add("no-scroll");
+      // console.log(this.$refs.searchInput.$el.getElementsByClassName("ais-SearchBox-input")[0]);
+      let algoliaInput = this.$refs.searchInput.$el.getElementsByClassName("ais-SearchBox-input")[0];
+      window.setTimeout(() => algoliaInput.focus(), 0);
     },
     hideSearch() {
       this.isSearchDisplayed = false;

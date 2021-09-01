@@ -21,6 +21,7 @@ const collections = [
             path
             content
             excerpt
+            categories
           }
         }
       }
@@ -36,6 +37,7 @@ const collections = [
         path: item.path,
         content: item.content,
         excerpt: item.excerpt,
+        categories: item.categories,
         // modified: String(item.modified)
       };
     }, // optional

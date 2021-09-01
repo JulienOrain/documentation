@@ -31,6 +31,7 @@
                     @click.native="close"
                     class="search-card"
                   >
+                    <span class="search-card__category">{{item.categories[0]}}</span>
                     <span class="search-card__title">{{item.title}}</span>
                     <p class="search-card__excerpt">{{ item.excerpt }}</p>
                   </g-link>
@@ -96,7 +97,6 @@ export default {
   },
   methods: {
     close() {
-      console.log("close");
       this.$emit('close-search');
     }
   },
@@ -229,9 +229,17 @@ export default {
       background-color: var(--blue-200);
     }
 
+    &__category {
+      display: block;
+      
+      color: var(--blue-500);
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+
     &__title {
       color: var(--blue-700);
-      font-size: 2rem;
+      font-size: 1.6rem;
     }
 
     &__excerpt {
