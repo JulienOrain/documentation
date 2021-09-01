@@ -4,6 +4,85 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
+if (process.env.NODE_ENV === "development") {
+  var algoliaInfo = {
+    indexName: process.env.GRIDSOME_ALGOLIA_INDEX_NAME,
+    appId: process.env.GRIDSOME_ALGOLIA_APP_ID,
+    apiKey: process.env.GRIDSOME_ALGOLIA_ADMIN_KEY
+  }
+} else if (process.env.NODE_ENV === "production") {
+  var algoliaInfo = {
+    indexName: process.env.GRIDSOME_ALGOLIA_INDEX_NAME,
+    appId: process.env.GRIDSOME_ALGOLIA_APP_ID,
+    apiKey: process.env.GRIDSOME_ALGOLIA_ADMIN_KEY
+  }
+}
+
+console.log(algoliaInfo);
+
+const collections = [
+  {
+    query: `{
+      allDocPage {
+        edges {
+          node {
+            id
+            title
+            path
+            content
+            excerpt
+          }
+        }
+      }
+    }`,
+    transformer: ({ data }) => {
+      return data.allDocPage.edges.map(({ node }) => node);
+    },
+    indexName: algoliaInfo.indexName, // Algolia index name
+    itemFormatter: (item) => {
+      return {
+        objectID: item.id,
+        title: item.title,
+        path: item.path,
+        content: item.content,
+        excerpt: item.excerpt,
+        // modified: String(item.modified)
+      };
+    }, // optional
+    // matchFields: ['slug', 'modified'], // Array<String> required with PartialUpdates
+  },
+  {
+    query: `{
+      allCliPage {
+        edges {
+          node {
+            id
+            title
+            path
+            content
+            excerpt
+          }
+        }
+      }
+    }`,
+    transformer: ({ data }) => {
+      return data.allCliPage.edges.map(({ node }) => node);
+    },
+    indexName: algoliaInfo.indexName, // Algolia index name
+    itemFormatter: (item) => {
+      return {
+        objectID: item.id,
+        title: item.title,
+        path: item.path,
+        content: item.content,
+        excerpt: item.excerpt,
+        // modified: String(item.modified)
+      };
+    }, // optional
+    // matchFields: ['slug', 'modified'], // Array<String> required with PartialUpdates
+  },
+];
+
 module.exports = {
   siteName: 'Reliably',
   siteUrl: 'https://reliably.com',
@@ -76,6 +155,16 @@ module.exports = {
           }
         }
       }
+    },
+    {
+      use: `gridsome-plugin-algolia`,
+      options: {
+        appId: algoliaInfo.appId,
+        apiKey: algoliaInfo.apiKey,
+        collections,
+        // chunkSize: 10000, // default: 1000
+        // enablePartialUpdates: true, // default: false
+      },
     },
     {
       use: '@gridsome/plugin-sitemap',

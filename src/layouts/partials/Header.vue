@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header" @keyup.esc="hideSearch">
     <div v-if="displayHeaderMessage" class="header__message">
       <div class="container">
         <p>
@@ -14,18 +14,26 @@
           <span class="screen-reader-text">Reliably</span>
         </a>
         <g-link class="header-docs-home" to="/">docs</g-link>
+        {{ currentMode }}
       </div>
       <nav class="nav">
         <g-link class="nav__link" to="/getting-started/">Getting Started</g-link>
         <g-link class="nav__link" to="/guides/">Guides</g-link>
         <g-link class="nav__link" to="/reference/">Reference</g-link>
       </nav>
-      <div class="header__github">
-        <a href="https://github.com/reliablyhq/cli" class="button button--icon button--small">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-          Star us on GitHub!
-        </a>
-      </div>
+      <button
+        @click.stop="displaySearch"
+        class="header__search button button--icon button--secondary">
+        Search the docs...
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </button>
+    </div>
+    <div v-show="isSearchDisplayed" class="algolia-search">
+      <LazyHydrate on-interaction>
+        <SearchComponent
+          @close-search="hideSearch"
+        />
+      </LazyHydrate>
     </div>
   </header>
 </template>
@@ -41,15 +49,21 @@ query {
 <script>
 import ReliablyLogo from '@/assets/images/reliably-logo.svg';
 import IconClose from '~/assets/images/icons/x.svg';
+import SearchComponent from '~/components/SearchComponent.vue';
+
+import LazyHydrate from 'vue-lazy-hydration';
 
 export default {
   components: {
     ReliablyLogo,
     IconClose,
+    SearchComponent,
+    LazyHydrate,
   },
   data() {
     return {
       displayHeaderMessage: false,
+      isSearchDisplayed: false,
     }
   },
   mounted() {
@@ -64,12 +78,20 @@ export default {
     // }
 
     // ...and comment this
-    localStorage.removeItem('reliablyDisplayHeaderMessage')
+    localStorage.removeItem('reliablyDisplayHeaderMessage');
   },
   methods: {
     discardHeaderMessage() {
       this.displayHeaderMessage = false;
       localStorage.reliablyDisplayHeaderMessage = false;
+    },
+    displaySearch() {
+      this.isSearchDisplayed = true;
+      document.body.classList.add("no-scroll");
+    },
+    hideSearch() {
+      this.isSearchDisplayed = false;
+      document.body.classList.remove("no-scroll");
     }
   }
 }
@@ -223,12 +245,32 @@ export default {
     }
   }
 
-  &__github {
-    display: none;
+  &__search {
+    padding-right: 7rem;
+    padding-left: 4.2rem;
 
-    @media (min-width: 60em) {
-      display: block;
+    font-weight: 400;
+
+    svg {
+      left: 1rem;
     }
+  }
+
+  .algolia-search {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    padding: 2.4rem;
+
+    // background-color: rgba(255,255,255,.8);
+    background-color: hsla(170, 29%, 75%, .6);
   }
 }
 </style>

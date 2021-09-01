@@ -11,18 +11,22 @@
     "@gridsome/remark-prismjs": "^0.5.0",
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/vue-remark": "^0.2.6",
+    "algoliasearch": "^4.10.5",
     "gridsome": "^0.7.0",
+    "gridsome-plugin-algolia": "^2.1.4",
     "gridsome-plugin-gtm": "^0.1.1",
     "remark-admonitions": "^1.2.1",
     "remark-attr": "^0.11.1",
     "remark-behead": "^2.3.3",
     "svg-to-vue-component": "^0.3.8",
-    "vue-cookie-accept-decline": "^5.4.0"
+    "vue-cookie-accept-decline": "^5.4.0",
+    "vue-instantsearch": "^4.0.0",
+    "vue-lazy-hydration": "^2.0.0-beta.4"
   },
   "devDependencies": {
     "@gridsome/cli": "^0.3.4",
     "@gridsome/transformer-remark": "^0.6.4",
-    "node-sass": "v6.0",
+    "node-sass": "^6.0.1",
     "sass-loader": "^10.1.1",
     "vue-svg-inline-loader": "^2.1.2"
   }
