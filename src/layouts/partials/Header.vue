@@ -88,7 +88,6 @@ export default {
     displaySearch() {
       this.isSearchDisplayed = true;
       document.body.classList.add("no-scroll");
-      // console.log(this.$refs.searchInput.$el.getElementsByClassName("ais-SearchBox-input")[0]);
       let algoliaInput = this.$refs.searchInput.$el.getElementsByClassName("ais-SearchBox-input")[0];
       window.setTimeout(() => algoliaInput.focus(), 0);
     },

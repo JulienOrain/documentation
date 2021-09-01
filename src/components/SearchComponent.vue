@@ -219,7 +219,7 @@ export default {
 
   .search-card {
     display: block;
-    padding: 1rem 1.5rem;
+    padding: .75rem 1.5rem;
 
     border-top: .1rem solid var(--blue-200);
 
@@ -232,7 +232,8 @@ export default {
     &__category {
       display: block;
       
-      color: var(--blue-500);
+      // color: var(--blue-500);
+      color: var(--yellow-600);
       font-size: 1rem;
       text-transform: uppercase;
     }
@@ -243,7 +244,7 @@ export default {
     }
 
     &__excerpt {
-      margin-top: 0;
+      margin: 0;
 
       color: var(--blue-600);
       font-size: 1.4rem;
