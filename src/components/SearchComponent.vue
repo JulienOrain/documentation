@@ -87,21 +87,12 @@ export default {
       .catch(onCatch)
   },
   data() {
-    if (process.env.NODE_ENV === "development") {
-      return {
-        searchClient: algoliasearch(
-          process.env.GRIDSOME_ALGOLIA_APP_ID,
-          process.env.GRIDSOME_ALGOLIA_ADMIN_KEY
-        ),
-      };
-    } else if (process.env.NODE_ENV === "production") {
-      return {
-        searchClient: algoliasearch(
-          process.env.GRIDSOME_ALGOLIA_APP_ID,
-          process.env.GRIDSOME_ALGOLIA_ADMIN_KEY
-        ),
-      };
-    }
+    return {
+      searchClient: algoliasearch(
+        process.env.GRIDSOME_ALGOLIA_APP_ID,
+        process.env.GRIDSOME_ALGOLIA_ADMIN_KEY
+      ),
+    };
   },
   methods: {
     close() {
