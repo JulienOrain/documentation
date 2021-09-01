@@ -1,6 +1,6 @@
 ---
 title: Logging in to Reliably
-excerpt: Log in to Reliably with the Reliably CLI to monitor SLOs, scans Kubernetes clusters and manifests and collaborate with teammates.
+excerpt: Log in to Reliably with the Reliably CLI to monitor SLOs, scans Kubernetes clusters and manifests, and collaborate with teammates.
 categories: ["getting-started"]
 status: published
 type: doc

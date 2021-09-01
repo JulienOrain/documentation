@@ -4,21 +4,11 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
-if (process.env.NODE_ENV === "development") {
-  var algoliaInfo = {
-    indexName: process.env.GRIDSOME_ALGOLIA_INDEX_NAME,
-    appId: process.env.GRIDSOME_ALGOLIA_APP_ID,
-    apiKey: process.env.GRIDSOME_ALGOLIA_ADMIN_KEY
-  }
-} else if (process.env.NODE_ENV === "production") {
-  var algoliaInfo = {
-    indexName: process.env.GRIDSOME_ALGOLIA_INDEX_NAME,
-    appId: process.env.GRIDSOME_ALGOLIA_APP_ID,
-    apiKey: process.env.GRIDSOME_ALGOLIA_ADMIN_KEY
-  }
+var algoliaInfo = {
+  indexName: process.env.GRIDSOME_ALGOLIA_INDEX_NAME,
+  appId: process.env.GRIDSOME_ALGOLIA_APP_ID,
+  apiKey: process.env.GRIDSOME_ALGOLIA_ADMIN_KEY
 }
-
-console.log(algoliaInfo);
 
 const collections = [
   {
@@ -31,6 +21,7 @@ const collections = [
             path
             content
             excerpt
+            categories
           }
         }
       }
@@ -46,6 +37,7 @@ const collections = [
         path: item.path,
         content: item.content,
         excerpt: item.excerpt,
+        categories: item.categories,
         // modified: String(item.modified)
       };
     }, // optional

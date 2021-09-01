@@ -28,9 +28,10 @@
                 <template v-for="item in items">
                   <g-link
                     :to="item.path"
-                    @click="close"
+                    @click.native="close"
                     class="search-card"
                   >
+                    <span class="search-card__category">{{item.categories[0]}}</span>
                     <span class="search-card__title">{{item.title}}</span>
                     <p class="search-card__excerpt">{{ item.excerpt }}</p>
                   </g-link>
@@ -87,25 +88,15 @@ export default {
       .catch(onCatch)
   },
   data() {
-    if (process.env.NODE_ENV === "development") {
-      return {
-        searchClient: algoliasearch(
-          process.env.GRIDSOME_ALGOLIA_APP_ID,
-          process.env.GRIDSOME_ALGOLIA_ADMIN_KEY
-        ),
-      };
-    } else if (process.env.NODE_ENV === "production") {
-      return {
-        searchClient: algoliasearch(
-          process.env.GRIDSOME_ALGOLIA_APP_ID,
-          process.env.GRIDSOME_ALGOLIA_ADMIN_KEY
-        ),
-      };
-    }
+    return {
+      searchClient: algoliasearch(
+        process.env.GRIDSOME_ALGOLIA_APP_ID,
+        process.env.GRIDSOME_ALGOLIA_ADMIN_KEY
+      ),
+    };
   },
   methods: {
     close() {
-      console.log("close");
       this.$emit('close-search');
     }
   },
@@ -228,7 +219,7 @@ export default {
 
   .search-card {
     display: block;
-    padding: 1rem 1.5rem;
+    padding: .75rem 1.5rem;
 
     border-top: .1rem solid var(--blue-200);
 
@@ -238,13 +229,22 @@ export default {
       background-color: var(--blue-200);
     }
 
+    &__category {
+      display: block;
+      
+      // color: var(--blue-500);
+      color: var(--yellow-600);
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+
     &__title {
       color: var(--blue-700);
-      font-size: 2rem;
+      font-size: 1.6rem;
     }
 
     &__excerpt {
-      margin-top: 0;
+      margin: 0;
 
       color: var(--blue-600);
       font-size: 1.4rem;

@@ -1,6 +1,6 @@
 ---
 title: Reference
-excerpt: Lorem Ipsum is simply dummy text.
+excerpt: A detailed guide to all the aspects of Reliably (CLI, enntity server...)
 categories: ["reference"]
 status: published
 type: overview
