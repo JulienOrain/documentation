@@ -130,6 +130,8 @@ export default {
     padding: 1rem 1.6rem 1rem 6rem;
 
     border: none;
+    -webkit-appearance: textfield;
+    -webkit-appearance: none;
 
     color: var(--blue-600);
     font-size: 2.4rem;
@@ -139,6 +141,14 @@ export default {
     &:focus {
       outline: none;
     }
+
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration {
+      -webkit-appearance: none;
+    }
+
   }
 
   &-submit {
