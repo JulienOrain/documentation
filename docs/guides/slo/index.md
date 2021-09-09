@@ -31,7 +31,7 @@ import data from '~/data/slo-index-data.json'
 
 </PageIntroduction>
 
-* [Define SLOs with the Reilaibly CLI]
+* [Define SLOs with the Reliably CLI]
 * [Measure and Report your SLOs]
 * [Live Report on your SLOs]
 
