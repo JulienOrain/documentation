@@ -15,6 +15,8 @@ import IconFilter from '~/assets/images/icons/filter.svg';
 import IconSearch from '~/assets/images/icons/search.svg';
 import IconActivity from '~/assets/images/icons/activity.svg';
 
+import data from '~/data/cli-index-data.json'
+
 # CLI Reference
 
 <PageIntroduction>
@@ -70,3 +72,7 @@ section.
     <p>The Reliably Service Level Objectives command</p>
   </BigLink>
 </MarkdownTwoColumns>
+
+## Other articles
+
+<OtherArticles :links="data.links" />

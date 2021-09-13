@@ -167,7 +167,7 @@ This is using the `ServiceLevels` subfield of the Reliably Report that is refere
   Note the use of the hyphen(-) character in the template delimiters, this informs the template to ignore all white space until the next template delimiter. See the section on [Text and spaces](https://golang.org/pkg/text/template/#hdr-Text_and_spaces) in the Go Text Templates documentation.
 :::
 
-The content of the range loop populates the table column by column, each using Reliably CLI functions. All the functions take as a prameter a Service Level object from the `$sl` variable that is setup in the range loop above. The exception being the `svcLevelGetTrends` function which takes 3 input variables:
+The content of the range loop populates the table column by column, each using Reliably CLI functions. All the functions take as a parameter a Service Level object from the `$sl` variable that is setup in the range loop above. The exception being the `svcLevelGetTrends` function which takes 3 input variables:
 
 
 - the service name (`$service.Name`),
@@ -295,8 +295,8 @@ type ServiceLevel struct {
 The Service level consists of:
 
 - The **Name** for the Service Level.
-- The **Type** of the Service Level, this currently either Availablity or Latency.
-- An overal **Objective** as a percentage, e.g this service will be 95% available.
+- The **Type** of the Service Level, this currently either Availability or Latency.
+- An overall **Objective** as a percentage, e.g this service will be 95% available.
 - A **Period**, an ISO 8601 Duration, is the time period that is used for the Service Level, e.g PT1H. For further information on the time window for an SLI see [SLO Report Time Window].
 - The **Result** of an Service Level indicator.
 - The actual **Observation window** that was used for the Service Level report. This consists of a From time and a To time.
@@ -394,14 +394,14 @@ A humanised duration could be 1 hour, 1 day, etc.
 
 svcLevelGetType takes a Service Level object as a single argument and will return a string with the type of Service Level.
 
-This would currently be either Availablity or Latency.
+This would currently be either Availability or Latency.
 
 ### func svcLevelGetTrends (svcName string, sl ServiceLevel, lrs *[]Report) string
 
 svcLevelGetTrends takes 3 arguments:
 
 - A string with the Service Name
-- A Service Level Oject
+- A Service Level Object
 - An array of Report object containing recent history
 
 It returns a string with a series of icons showing shown the results of SLI Reports in your recent history.
@@ -459,7 +459,7 @@ This section explains how you can use template files to create Reliably SLO Repo
 
 [How the Reliably Rules work](/docs/guides/how-it-works/rules/)
 
-## Not using Reliaby yet?
+## Not using Reliably yet?
 
 [Getting started with Reliably](/docs/getting-started/)
 

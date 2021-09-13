@@ -39,7 +39,6 @@ import data from '~/data/slo-index-data.json'
 [Measure and Report your SLOs]: /docs/guides/slo/slo-reports/
 [Live Report on your SLOs]: /docs/guides/slo/live-reporting/
 
-
 ## What are SLOs again?
 
 SLOs are one of the three Service Level concepts that power the SRE practice,
@@ -57,7 +56,6 @@ The Reliably CLI allows you to define SLOs for Availability and Latency.
 An Availability SLO allows you to specify a target availability percentage for a Service.
 
 A Latency SLO allows you to specify a threshold latency for a service and a target percentage. The percentage gives the target percentage of responses within that threshold latency.
-
 
 ### Service Level Indicator
 
@@ -81,20 +79,16 @@ With SLIs in mind, an SLO is a target for your SLIs.
 
 Example SLOs:
 
-- 99% of successful requests on a service
-- 98% of requests on a service fulfilled in less than 100 ms
+* 99% of successful requests on a service
+* 98% of requests on a service fulfilled in less than 100 ms
 
 ### Service Level Agreements
 
 Service Level Agreements are contracts with the client and so represent the minimum that can be provided, below which the customer will be more than unhappy.
 
-
-
-
 ## Managing your SLOs with the Reliably CLI
 
 The Reliably CLI provides the  `slo init` and `slo report` commands to allow you to define and report on your SLOs.
-
 
 Define your SLOs in the terminal with the Reliably CLI.
 <AsciiPlayer id="409008" />
@@ -143,6 +137,6 @@ Generate actionable reports.
   </BigLink>
 </MarkdownTwoColumns>
 
+## Other articles
 
-
-
+<OtherArticles :links="data.links" />

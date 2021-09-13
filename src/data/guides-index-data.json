@@ -6,14 +6,13 @@
         "link": "/guides/scan-infrastructure/kubernetes-manifest/"
       },
       {
-        "title": "Scan a  Kubernetes Cluster",
+        "title": "Scan a Kubernetes Cluster",
         "link": "/guides/scan-infrastructure/kubernetes-cluster/"
       },
       {
-        "title": "Run Reliably as a kubectl Plugin",
-        "link": "/guides/scan-infrastructure/kubectl-plugin/"
+        "title": "Output Formats",
+        "link": "/guides/scan-infrastructure/output-formats/"
       }
-
     ]
   },
   "slo-links": {
@@ -39,11 +38,11 @@
         "link": "/guides/ci-pipeline/github-action/"
       },
       {
-        "title": "GitLab pipeline",
+        "title": "GitLab Pipeline",
         "link": "/guides/ci-pipeline/gitlab-pipeline/"
       },
       {
-        "title": "Jenkins build",
+        "title": "Jenkins Build",
         "link": "/guides/ci-pipeline/jenkins/"
       }
     ]
@@ -71,8 +70,8 @@
         "link": "/guides/how-it-works/slo-reports/"
       },
       {
-        "title": "SLO Report Templates",
-        "link": "/guides/how-it-works/report-templates/"
+        "label": "Rules",
+        "link": "/guides/how-it-works/rules/"
       },
       {
         "title": "API",

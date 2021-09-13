@@ -3,7 +3,7 @@
     <div v-if="displayHeaderMessage" class="header__message">
       <div class="container">
         <p>
-          We've updated Reliably's manifest structure. <g-link to="/guides/how-it-works/migrate-manifest/">Discover how to update your existing manifests.</g-link> <button @click="discardHeaderMessage"><span class="screen-reader-text">Discard this message></span><IconClose /></button>
+          We've updated Reliably's manifest structure. <g-link to="/guides/other/migrate-manifest/">Discover how to update your existing manifests.</g-link> <button @click="discardHeaderMessage"><span class="screen-reader-text">Discard this message></span><IconClose /></button>
         </p>
       </div>
     </div>

@@ -1,16 +1,16 @@
 {
   "links": [
     {
-      "label": "Run as a kubectl plugin",
-      "link": "/getting-started/kubectl-plugin/"
+      "title": "Scan a Kubernetes Manifest",
+      "link": "/guides/scan-infrastructure/kubernetes-manifest/"
     },
     {
-      "label": "Output formats",
+      "title": "Scan a Kubernetes Cluster",
+      "link": "/guides/scan-infrastructure/kubernetes-cluster/"
+    },
+    {
+      "title": "Output Formats",
       "link": "/guides/scan-infrastructure/output-formats/"
-    },
-    {
-      "label": "Scan history",
-      "link": "/guides/scan-infrastructure/scan-history/"
     }
   ]
 }

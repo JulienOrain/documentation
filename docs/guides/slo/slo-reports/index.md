@@ -17,12 +17,12 @@ Now that you have defined objectives and generated indicators, you can use the R
 ```console
 reliably slo report
 ```
+
 <CopyToClipboard />
 
 <AsciiPlayer id="409053" />
 
 The `reliably slo report` command will by default provide results for each objective in your organization. There are two ways to filter the report.
-
 
 ### Selector Filter
 
@@ -31,15 +31,17 @@ The `reliably slo report` command will by default provide results for each objec
 ```console
 reliably slo report -l service=example_api,category=latency
 ```
+
 <CopyToClipboard />
 
 ### Manifest Filter
 
-- Additional filtering can be done with a manifest file and the flag `-m`. This filters your report to only view the objectives defined in your manifest. 
+- Additional filtering can be done with a manifest file and the flag `-m`. This filters your report to only view the objectives defined in your manifest.
 
 ```console
 reliably slo report -m reliably.yaml
 ```
+
 <CopyToClipboard />
 
 ## Output Format
@@ -53,6 +55,7 @@ Table output is the default format for SLO reports.
 ```console
 reliably slo report --format table
 ```
+
 <CopyToClipboard />
 
 ```reliably
@@ -69,8 +72,6 @@ reliably slo report --format table
   <span class="token emoji">✅</span> 99.5% of requests under 200ms        <span class="token green bold">100.00%</span>  99.5%      /  1d          Latency           <span class="token green">✓ ✓ ✓ ✓ ✓</span>
 ```
 
-
-
 ### Text Output
 
 The text output will remove the tabs, and use glyphs instead of emojis for
@@ -79,18 +80,19 @@ your SLO status, and will not display SLO target and delta.
 ```console
 reliably slo report --format text
 ```
+
 <CopyToClipboard />
 
 ```reliably
 <span class="token dollar"></span>reliably slo report --format text
 <span class="token yellow">Service #1: http-api</span>
-<span class="token green">✓</span> 99% availability over 1 hour: 100.00% [objective: 99% / 1h0m0s, delta: 1.00%, type: Availablity]
-<span class="token green">✓</span> 99.5% availability over 1 day: 100.00% [objective: 99.5% / 1d, delta: 0.50%, type: Availablity]
+<span class="token green">✓</span> 99% availability over 1 hour: 100.00% [objective: 99% / 1h0m0s, delta: 1.00%, type: Availability]
+<span class="token green">✓</span> 99.5% availability over 1 day: 100.00% [objective: 99.5% / 1d, delta: 0.50%, type: Availability]
 <span class="token red">✕</span> 99% of requests under 300ms: 77.46% [objective: 99% / 1d, delta: -21.54%, type: Latency]
 <span class="token red">✕</span> 99.9% of requests under 1s: 98.59%  [objective: 99.9% / 1d, delta: -1.31%, type: Latency]
 
 <span class="token yellow">Service #2: products-api</span>
-<span class="token green">✓</span> 99% availability over 1 day: 100.00% [objective: 99% / 1d , delta: 1.00%, type: Availablity]
+<span class="token green">✓</span> 99% availability over 1 day: 100.00% [objective: 99% / 1d , delta: 1.00%, type: Availability]
 <span class="token green">✓</span> 99.5% of products API requests under 200ms: 100.00% [objective: 99.5% / 1d, delta: 0.50%, type: Latency]
 ```
 
@@ -100,18 +102,19 @@ flag.
 ```console
 reliably slo report --format text --no-color
 ```
+
 <CopyToClipboard />
 
 ```reliably
 <span class="token dollar"></span>reliably slo report --format text --no-color
 Service #1: http-api
-✓ 99% availability over 1 hour: 100.00% [objective: 99% / 1h0m0s, delta: 1.00%, type: Availablity]
-✓ 99.5% availability over 1 day: 100.00% [objective: 99.5% / 1d, delta: 0.50%, type: Availablity]
+✓ 99% availability over 1 hour: 100.00% [objective: 99% / 1h0m0s, delta: 1.00%, type: Availability]
+✓ 99.5% availability over 1 day: 100.00% [objective: 99.5% / 1d, delta: 0.50%, type: Availability]
 ✕ 99% of requests under 300ms: 77.46% [objective: 99% / 1d, delta: -21.54%, type: Latency]
 ✕ 99.9% of requests under 1s: 98.59% [objective: 99.9% / 1d, delta: -1.31%, type: Latency]
 
 Service #2: products-api
-✓ 99% availability over 1 day: 100.00% [objective: 99% / 1d, delta: 1.00%, type: Availablity]
+✓ 99% availability over 1 day: 100.00% [objective: 99% / 1d, delta: 1.00%, type: Availability]
 ✓ 99.5% of products API requests under 200ms: 100.00% [objective: 99.5% / 1d, delta: 0.50%, type: Latency]
 ```
 
@@ -123,6 +126,7 @@ tools.
 ```console
 reliably slo report --format json
 ```
+
 <CopyToClipboard />
 
 ### Markdown Output
@@ -132,6 +136,7 @@ You can generate a markdown-formatted SLO report.
 ```console
 reliably slo report --format markdown
 ```
+
 <CopyToClipboard />
 
 :::tip Tip
@@ -139,7 +144,7 @@ reliably slo report --format markdown
   into many other formats such as HTML and PDF. To <a href="https://www.geeksforgeeks.org/piping-in-unix-or-linux/" target="_blank" rel="noopener noreferer">pipe</a> the markdown output to pandoc:
 
   ```console
-    $ reliably slo report --format markdown | pandoc
+  reliably slo report --format markdown | pandoc
   ```
 
   The command above will by default generate HTML output.
@@ -152,6 +157,7 @@ You can use templates to  generate an SLO report. This allows you to build repor
 ```console
 reliably slo report -t /path/to/template.tmpl
 ```
+
 <CopyToClipboard />
 
 You can combine this with the '-o' option to write the output to a file:
@@ -159,11 +165,12 @@ You can combine this with the '-o' option to write the output to a file:
 ```console
 reliably slo report -t /path/to/template.tmpl -o /path/to/report.txt
 ```
+
 <CopyToClipboard />
 
 The How it Works Guide on [SLO Report Templates] fully explains how to create your own templates for Reliably
 
-[SLO Report Templates]: /docs/guides/how-it-works/report-templates/
+[SLO Report Templates]: /docs/guides/other/report-templates/
 
 <!-- This needs to be moved to another area -->
 <!-- 

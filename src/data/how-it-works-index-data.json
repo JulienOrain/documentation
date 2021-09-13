@@ -5,8 +5,8 @@
       "link": "/guides/how-it-works/slo-reports/"
     },
     {
-      "label": "SLO Reports Templates",
-      "link": "/guides/how-it-works/report-templates/"
+      "label": "Scan Resources",
+      "link": "/guides/how-it-works/scan-resources/"
     },
     {
       "label": "Rules",
@@ -15,11 +15,6 @@
     {
       "label": "API",
       "link": "/guides/how-it-works/api/"
-    },
-    {
-      "label": "Manifest Migration",
-      "link": "/guides/how-it-works/migrate-manifest/"
     }
-
   ]
 }

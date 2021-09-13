@@ -1,5 +1,5 @@
 ---
-title: Run gainst a Kubernetes cluster
+title: Run Against a Kubernetes Cluster
 excerpt: The Reliably CLI allows you to scan you Kubernetes Cluster to surface potential reliability weaknesses, and fix them before problems happen.
 categories: ["guides", "scan-infrastructure"]
 status: published
@@ -21,7 +21,7 @@ configuration file is usually referred to as `kubeconfig`.
   The `kubeconfig` file is usually provisioned by `kubectl`. The Kubernetes
   [documentation][kubeconfig] provides more details.
 
-  You can add the Reliably CLI as a [kubectl plugin](/docs/getting-started/kubectl-plugin/).
+  You can add the Reliably CLI as a [kubectl plugin](/docs/getting-started/install/#kubectl-plugin/).
 :::
 
 [reliablyCLI]: https://github.com/reliablyhq/cli/
@@ -35,6 +35,7 @@ manifest files, with the `--live` flag:
 ```console
 reliably scan kubernetes --live
 ```
+
 <CopyToClipboard />
 
 The command will generate an output that offers advice about reliability
@@ -62,6 +63,7 @@ file:
 ```console
 KUBECONFIG=/reliably/kube-config reliably scan kubernetes --live
 ```
+
 <CopyToClipboard />
 
 You can also override the path for the kubeconfig by adding the `--kubeconfig`
@@ -70,6 +72,7 @@ or `-k` flag and providing a path:
 ```console
 reliably scan kubernetes --live --kubeconfig=/reliably/kube-config
 ```
+
 <CopyToClipboard />
 
 :::note

@@ -45,7 +45,8 @@ spec:
 ```
 
 ### 2. Send the manifest to ReliablyHQ
-```
+
+```console
 $ reliably slo sync -m webhook.yaml
 ```
 
@@ -62,9 +63,10 @@ Information about the event and the context that created it is added to the requ
 | x-correlation-id | A string that is associated with the context that this invocation came from. This is useful for debugging and should be included in any support requests you make. |
 
 ## Coming Soon
+
 * Webhooks will be required to use the HTTPS protocol, with a valid SSL certificate.
 * Webhook payload verification using the `sign` capability of [nacl](https://nacl.cr.yp.to/sign.html).
 
 ## Reference
 
-[webhookCriteria](/docs/reference/entities/webhookcriteria/)
+[WebhookCriteria](/docs/reference/entities/webhookcriteria/)
