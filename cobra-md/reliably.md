@@ -26,6 +26,7 @@ The Reliably Command Line Interface (CLI).
 ### SEE ALSO
 
 * [reliably auth](/docs/reference/cli/reliably-auth/)	 - Login, logout, and verify your authentication
+* [reliably chaos](/docs/reference/cli/reliably-chaos/)	 - chaos root command
 * [reliably completion](/docs/reference/cli/reliably-completion/)	 - Generate shell completion scripts
 * [reliably history](/docs/reference/cli/reliably-history/)	 - Show your scan history
 * [reliably org](/docs/reference/cli/reliably-org/)	 - Manage your organizations
