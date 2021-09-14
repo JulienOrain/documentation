@@ -1,6 +1,6 @@
 ---
 title: reliably slo init
-excerpt: Documentation for the doc/cobra-md/reliably_slo_init.md command in the Reliably CLI
+excerpt: Documentation for the reliably slo init command in the Reliably CLI
 categories: ["reference", "cli"]
 status: published
 type: doc

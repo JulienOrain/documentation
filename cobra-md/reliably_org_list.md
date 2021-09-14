@@ -1,6 +1,6 @@
 ---
 title: reliably org list
-excerpt: Documentation for the doc/cobra-md/reliably_org_list.md command in the Reliably CLI
+excerpt: Documentation for the reliably org list command in the Reliably CLI
 categories: ["reference", "cli"]
 status: published
 type: doc

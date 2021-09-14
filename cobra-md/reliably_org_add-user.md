@@ -1,6 +1,6 @@
 ---
 title: reliably org add-user
-excerpt: Documentation for the doc/cobra-md/reliably_org_add-user.md command in the Reliably CLI
+excerpt: Documentation for the reliably org add-user command in the Reliably CLI
 categories: ["reference", "cli"]
 status: published
 type: doc

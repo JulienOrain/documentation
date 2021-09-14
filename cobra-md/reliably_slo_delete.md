@@ -1,6 +1,6 @@
 ---
 title: reliably slo delete
-excerpt: Documentation for the doc/cobra-md/reliably_slo_delete.md command in the Reliably CLI
+excerpt: Documentation for the reliably slo delete command in the Reliably CLI
 categories: ["reference", "cli"]
 status: published
 type: doc
