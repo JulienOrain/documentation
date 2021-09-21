@@ -94,6 +94,6 @@ reliability effort.
 
 [How the Reliably Rules work](/docs/guides/how-it-works/rules/)
 
-## Not using Reliaby yet?
+## Not using Reliably yet?
 
 [Getting started with Reliably](/docs/getting-started/)

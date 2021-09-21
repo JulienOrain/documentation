@@ -31,4 +31,4 @@ spec:
 | spec | see <g-link to="/reference/entities#spec">spec</g-link> |
 | spec.from | The date that marks the start of the range that the indicator data relates to. |
 | spec.to | The date that marks the end of the range that the indicator data relates to. |
-| spec.percent | The percentage of the value defined by the indicaitor labels that relate to this period in time. |
+| spec.percent | The percentage of the value defined by the indicator labels that relate to this period in time. |

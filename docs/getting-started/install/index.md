@@ -100,7 +100,7 @@ You should see the current ```reliably``` cli version displayed.
 When you first run the `reliably` command, macOS might display a prompt. It
 might look different from this one, if you're running macOS Big Sur or newer.
 
-![macOS downloaded app promt](./images/open-app-screenshot.png)
+![macOS downloaded app prompt](./images/open-app-screenshot.png)
 
 Select ```Open``` and a terminal window will pop-up showing:
 
@@ -191,7 +191,7 @@ When you select the download button you may see a browser warning:
 ![Browser Warning](./images/browser-warning.png)
 
 Select the menu option and keep. You can then navigate to the file location
-using your prefered terminal window (in these docs we are using Powershell).
+using your preferred terminal window (in these docs we are using Powershell).
 
 If you want, you can check the md5 checksum to confirm the downloaded file has
 not been corrupted:
@@ -230,7 +230,7 @@ executable path. Open the Windows Start Search, type in “env”, and choose �
 In the pop-up window select:
 
 * Environment Variables
-* In the Enviroment Variables pop-up, select Path from the User environment variables
+* In the Environment Variables pop-up, select Path from the User environment variables
 * Select Edit then
 * Select Browse...
 * Navigate to the folder where you downloaded the reliably executable

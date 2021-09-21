@@ -1,6 +1,6 @@
 ---
 title: Reference
-excerpt: A detailed guide to all the aspects of Reliably (CLI, enntity server...)
+excerpt: A detailed guide to all the aspects of Reliably (CLI, entity server...)
 categories: ["reference"]
 status: published
 type: overview

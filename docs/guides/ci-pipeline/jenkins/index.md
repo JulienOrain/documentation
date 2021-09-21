@@ -15,7 +15,7 @@ Adding Reliably to your Jenkins build is as simple as adding a job to
 
 ## Prerequisites
 
-To run Reliably as a Jenkins Job you will need acess to a
+To run Reliably as a Jenkins Job you will need access to a
 [Jenkins][jenkins-home] server.
 
 [jenkins-home]: https://www.jenkins.io/
@@ -48,7 +48,7 @@ Enter an item name (e.g. Run Reliably). Select the *Freestyle project* option, t
 The CLI must be run with a valid access token to make authenticated calls
 to Reliably.
 
-As a pre-requesite, the `RELIABLY_TOKEN` must be defined as an environment variable.
+As a prerequisite, the `RELIABLY_TOKEN` must be defined as an environment variable.
 
 :::note Note
   It requires the [Environment Injector](https://plugins.jenkins.io/envinject/) plugin to be installed.

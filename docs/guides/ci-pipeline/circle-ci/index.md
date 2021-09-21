@@ -66,7 +66,7 @@ CircleCI build, you will find [more detailed information in the CircleCI documen
 The CLI must be run with a valid access token to make authenticated calls
 to Reliably.
 
-As a pre-requesite, the `RELIABLY_TOKEN` must be defined as a secret
+As a prerequisite, the `RELIABLY_TOKEN` must be defined as a secret
 environment variable in your project's settings;
 See how to [set an environment variable in a project]
 (https://circleci.com/docs/2.0/env-vars/#setting-an-environment-variable-in-a-project).
@@ -197,7 +197,7 @@ pipeline steps output.
 
 **Your workflow will now run each time you push to your repository.**
 
-You can also schecule workflow by adding a `triggers` key and specify a
+You can also schedule workflow by adding a `triggers` key and specify a
 `schedule`. This would allow you, for example, to run Reliably on a daily basis.
 Read the CircleCI documentation about [scheduling workflows](https://circleci.com/docs/2.0/workflows/#scheduling-a-workflow)
 for more details.

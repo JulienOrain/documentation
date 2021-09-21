@@ -7,7 +7,7 @@ type: doc
 ---
 # Migrate Deprecated Manifests
 
-Reliably's new [manifest structure](/docs/guides/slo/define-slos/#yaml-manifest) allows you to declare your SLOs as entities leveraging a structure based on `labels`. This allows you to define your SLOs in a more powerful way than before. [Objectives, Indicators, Results and Behaviour](/docs/guides/how-it-works/objectives-indicators-results-and-behaviour/), explains in detail the new way Reliaby's API and CLI work. Here we will walk you through how to migrate from our deprecated structure, to our new one.
+Reliably's new [manifest structure](/docs/guides/slo/define-slos/#yaml-manifest) allows you to declare your SLOs as entities leveraging a structure based on `labels`. This allows you to define your SLOs in a more powerful way than before. [Objectives, Indicators, Results and Behaviour](/docs/guides/how-it-works/objectives-indicators-results-and-behaviour/), explains in detail the new way Reliably's API and CLI work. Here we will walk you through how to migrate from our deprecated structure, to our new one.
 
 ## Change In Structure
 

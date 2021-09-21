@@ -61,7 +61,7 @@ Since the `labels` of the `indicator` matches the properties of the `indicatorSe
 
 ## So how do I send the data?
 
-You need to to `PUT` the `indicator` data to `https://api.reliably.com/entities/{org}/v1/indicators`, where `org` is the ID of your organisation. This value doesnt change very often at all, and can be retrieved using the cli by typing `reliably org show`.
+You need to to `PUT` the `indicator` data to `https://api.reliably.com/entities/{org}/v1/indicators`, where `org` is the ID of your organisation. This value doesn't change very often at all, and can be retrieved using the cli by typing `reliably org show`.
 
 You'll also need to send an auth token.
 

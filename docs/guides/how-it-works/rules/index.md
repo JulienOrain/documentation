@@ -28,7 +28,7 @@ The rules have been written by the Reliably team and reflect best practices,
 Kubernetes official recommendations, and our own experience configuring and
 running distributed systems.
 
-We're investigationg letting users submit rules that they think should trigger
+We're investigating letting users submit rules that they think should trigger
 suggestions. If you want to know when this is put in place, [follow us on
 Twitter](https://twitter.com/reliablyhq/).
 
@@ -50,7 +50,7 @@ overlook won't appear. As all workarounds, you will want to use it with caution.
 
 [How the Reliably Rules work](/docs/guides/how-it-works/rules/)
 
-## Not using Reliaby yet?
+## Not using Reliably yet?
 
 [Getting started with Reliably](/docs/getting-started/)
 

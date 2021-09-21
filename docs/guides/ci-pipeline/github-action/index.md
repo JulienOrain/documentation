@@ -174,7 +174,7 @@ manifest.yaml
     └── reliably.yaml
 ```
 
-Again, make sure you've commited and pushed your changes to GitHub on the `main` branch. When you have pushed your changes,
+Again, make sure you've committed and pushed your changes to GitHub on the `main` branch. When you have pushed your changes,
 head on over again to the `Actions` tab on your repository in GitHub and you should see that an action has been triggered, or
 even completed:
 

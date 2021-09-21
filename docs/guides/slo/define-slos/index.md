@@ -228,7 +228,7 @@ If you want to measure your SLO and generate [SLO reports](../slo-reports/), you
 Once you've selected a cloud provider, you will be asked to paste a resource identifier, or you can type `i` to enter an interactive mode which will help you identify the service you want to get data from.
 
 :::important
-You will need to be authentified to Google Cloud or AWS for interactive mode to work.
+You will need to be authenticated with Google Cloud or AWS for interactive mode to work.
 :::
 
 Here is what interactive mode looks like for AWS:
@@ -307,7 +307,7 @@ You can choose either availability or latency SLOs. **Availability SLOs** are ba
 
 #### latency threshold
 
-If you select the latency SLO type, you will also be prompted to provide a **threshold** in milliseconds. All reponses within this threshold contribute to your target.
+If you select the latency SLO type, you will also be prompted to provide a **threshold** in milliseconds. All responses within this threshold contribute to your target.
 
 ```reliably
 <span class="token green">?</span> <span class="token bold">What type of SLO do you want to declare?</span> <span class="token blue">Latency</span>

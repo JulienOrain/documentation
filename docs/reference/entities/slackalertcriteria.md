@@ -7,7 +7,7 @@ type: doc
 ---
 # SlackAlertCriteria
 
-A `SlackAlertCrtieria` declaratively defines the data required to send a message to a Slack channel, and the conditions required for the criteria to be used.
+A `SlackAlertCriteria` declaratively defines the data required to send a message to a Slack channel, and the conditions required for the criteria to be used.
 
 ## Structure
 

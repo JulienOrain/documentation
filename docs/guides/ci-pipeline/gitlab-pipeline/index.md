@@ -32,7 +32,7 @@ to your repository.
 The CLI must be run with a valid access token to make authenticated calls
 to Reliably.
 
-As a pre-requesite, the `RELIABLY_TOKEN` must be defined as a masked variable
+As a prerequisite, the `RELIABLY_TOKEN` must be defined as a masked variable
 in your project's settings; See how to [create a custom variable in the UI]
 (https://docs.gitlab.com/ee/ci/variables/#create-a-custom-variable-in-the-ui).
 
@@ -122,7 +122,7 @@ which will allow the user to download the artifact from the pipeline if required
 
 ### Viewing the GitLab CI/CD Pipeline
 
-When the `.gitlab-ci.yml` is commited to your project on GitLab, a job will be
+When the `.gitlab-ci.yml` is committed to your project on GitLab, a job will be
 started on the GitLab CI/CD Pipeline. This can be viewed by selecting the
 Pipelines menu entry on the menu panel on the lefthand side of your GitLab
 Project page:
@@ -215,7 +215,7 @@ We are using a Code Quality job as a review stage in the Pipeline, there are
 some predefined [environment variables](https://gitlab.com/gitlab-org/ci-cd/codequality#environment-variables)
 you use in the `.gitlab-ci.yml`.
 
-We will add the `SOURCE_CODE` environment varaible to point to the manifests
+We will add the `SOURCE_CODE` environment variable to point to the manifests
 folder. Add this to the top of the `.gitlab-ci.yml`:
 
 ```yaml
@@ -294,7 +294,7 @@ spec:
 
 This manifest.yaml file has been specifically written to trigger some of
 Reliably's Advice and Suggestions. If you add the manifest by making a merge
- request, the merge request will show any changes in the code quality ouput
+ request, the merge request will show any changes in the code quality output
  when the Pipeline has completed:
 
 ![Merge Request](./images/merge-review.png)
