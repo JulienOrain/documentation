@@ -24,7 +24,6 @@ In this section you will learn how to define and observe your reliability by imp
 
 To get started, you will generate a manifest file defining your Objectives and an Indicator selector for each. These two entities will allow you to define what good looks like for your system from the perspective of your users. In order to do this, you first need to determine your data provider for the resources you wish to target. This may be the cloud platform which contains the resources such as AWS or GCP, or alternatively a monitoring service such as Datadog.
 
-
 :::note Note
 If you would prefer to start with a sandboxed deployment, instead of your own resources, follow the instructions of deployment for your preferred platform below and then return to this section.
 
@@ -96,8 +95,6 @@ reliably slo sync
 ```
 
 <CopyToClipboard />
-
-<br>
 
 </Tab>
 <Tab name="Datadog">
@@ -179,7 +176,7 @@ If the resources you are targetting are not available as an integration, you may
 The [Sending Custom Indicators](/docs/guides/slo/sending-custom-indicators/) section will guide you through the process of creating Objectives and Indicators manually.
 
 :::warning Warning
-If defining custom Objectives, you will not be able to leverage `reliably slo agent` if the data provider is not supported. However, this will give you the flexibility to push Indicators from any source. 
+If defining custom Objectives, you will not be able to leverage `reliably slo agent` if the data provider is not supported. However, this will give you the flexibility to push Indicators from any source.
 :::
 
 </Tab>
@@ -240,7 +237,6 @@ At this stage you should be able to view the results table of the Objectives you
 
 An example of the default view:
 
-
 ```reliably
 <span class="token dollar"></span>reliably slo report
                                           <span class="token purple bold">Current Objective</span>   <span class="token purple bold">/ Time Window</span>  <span class="token purple bold">Type</span>             <span class="token purple bold">Trend</span>
@@ -253,10 +249,10 @@ An example of the default view:
   <span class="token emoji">✅</span> Request latency under 200ms        <span class="token green bold">100.00%</span>  99.5%      /  1d          Latency           <span class="token green">✓ ✓ ✓ ✓ ✓</span>
 ```
 
-
 Additional information about the `report` command can be found in [Generate SLO Reports](/docs/guides/slo/slo-reports/).
 
 ## What's next?
+
 - Deep-dive on [Objectives, Indicators, Results and Behaviour](/docs/guides/how-it-works/objectives-indicators-results-and-behaviour/)
 <!-- - Deploy an agent -->
 - [Custom Indicators](/docs/guides/slo/sending-custom-indicators/)
