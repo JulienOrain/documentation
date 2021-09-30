@@ -101,13 +101,15 @@ The Reliably CLI can currently fetch Service Level Indicators for **services tha
 :::
 
 You can get the project ID and resource name from the gcloud CLI or the Google Cloud Console.
-#### gcloud CLI
+
+#### `gcloud` CLI
 
 The **project ID** can be found by running:
 
 ```console
 gcloud config get-value project
 ```
+
 <CopyToClipboard />
 
 If you want to use a different project than the current one configured on your
@@ -116,6 +118,7 @@ machine, list all of them with:
 ```console
 gcloud projects list
 ```
+
 <CopyToClipboard />
 
 The **resource name** can be found with:
@@ -123,6 +126,7 @@ The **resource name** can be found with:
 ```console
 gcloud compute url-maps list
 ```
+
 <CopyToClipboard />
 
 #### Google Cloud Console
@@ -330,6 +334,7 @@ If you select the latency SLO type, you will also be prompted to provide a **thr
 <span class="token green">?</span> <span class="token bold">What is your observation window for this SLO?</span> <span class="token blue">custom</span>
 <span class="token green">?</span> <span class="token bold">Define your custom observation window</span> <span class="token blue">[? for help]</span>
 ```
+
 <!--
 Read the ["Observation Window" section](#observation-window) for details about the **ISO8601** standard used to define time windows. -->
 
