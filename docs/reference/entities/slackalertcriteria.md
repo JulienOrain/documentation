@@ -31,6 +31,7 @@ spec:
 | kind | see <g-link to="/reference/entities#kind">Kind</g-link> |
 | metadata | see <g-link to="/reference/entities/#metadata">metadata</g-link> |
 | spec | see <g-link to="/reference/entities#spec">spec</g-link> |
-| spec.indicatorSelector | The criteria that defines the indicators this result relates to. See <g-link to="/reference/entities#selectors">spec</g-link> for more info. |
+| spec.objectiveSelector | The criteria that defines the indicators this result relates to. See <g-link to="/reference/entities#selectors">spec</g-link> for more info. |
 | spec.channelUrl | The URL of the Slack webhook. This URL must begin with `https://hooks.slack.com`. |
 | spec.messageTemplate | A Golang template string that can be used to dynamically generate the message send to slack. The object passed to the template is an <g-link to="/reference/entities/objectiveresult/">ObjectiveResult</g-link>. See [Golang templates](https://pkg.go.dev/text/template) for more info. |
+| spec.remainingPercentThreshold | A simple condition that must pass for the message to be sent. The value can be absolute; i.e. `99` or can include condition; i.e. `< 99.9`. |
