@@ -13,7 +13,7 @@ initialise the slo portion of the manifest
 
 Initialise the reliably manifest.
 
-The manifest describes the operational contraints of the application,
+The manifest describes the operational constraints of the application,
 as well as some metadata about the app that allows users to reach out
 and communicate with the maintainer.
 

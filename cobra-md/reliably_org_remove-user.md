@@ -14,7 +14,7 @@ remove a user from the current organization
 Remove a user from an existing organization.
 
 By default, the user is removed from the current organization.
-It is possible to remove a memnber of a specific organization,
+It is possible to remove a member of a specific organization,
 provided with the `--org` flag.
 
 Only the owner of the organization is able to manages users.

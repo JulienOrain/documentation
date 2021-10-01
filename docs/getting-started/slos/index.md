@@ -171,7 +171,7 @@ reliably slo sync
 
 ### Custom Objectives
 
-If the resources you are targetting are not available as an integration, you may define your manifest manually. This can also be useful for seasoned users that know the exact values they would like to define in their manifest.
+If the resources you are targeting are not available as an integration, you may define your manifest manually. This can also be useful for seasoned users that know the exact values they would like to define in their manifest.
 
 The [Sending Custom Indicators](/docs/guides/slo/sending-custom-indicators/) section will guide you through the process of creating Objectives and Indicators manually.
 
