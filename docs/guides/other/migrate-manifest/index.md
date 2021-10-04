@@ -28,11 +28,12 @@ Previous Manifest:
       threshold: 300ms
 ```
 
-New Manifest: 
+New Manifest:
 
 ```yaml
 spec:
   indicatorSelector:
+    category: latency
     gcp_loadbalancer_name: example-lb
     gcp_project_id: example-id
     latency_target: 300ms
@@ -45,7 +46,6 @@ Our format will now require an `apiVersion`:
 ```yaml
 apiVersion: reliably.com/v1
 ```
-
 
 ### Time Format
 
