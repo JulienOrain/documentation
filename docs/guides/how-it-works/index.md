@@ -32,7 +32,7 @@ import data from '~/data/how-it-works-index-data.json'
 <MarkdownTwoColumns>
   <BigLink to="/guides/how-it-works/objectives-indicators-results-and-behaviour/" :external="false" :dark="true">
     <template v-slot:header>
-      Objectives, indicators, results and behaviour
+      Objectives, Indicators, Results and Behaviour
     </template>
     <template v-slot:icon>
       <IconSLO />

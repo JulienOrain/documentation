@@ -110,7 +110,7 @@ Generate actionable reports.
   </BigLink>
   <BigLink to="/guides/slo/slo-reports/" :external="false" :dark="true">
     <template v-slot:header>
-      Generate SLO reports
+      Generate SLO Reports
     </template>
     <template v-slot:icon>
       <IconSLO />
@@ -119,7 +119,7 @@ Generate actionable reports.
   </BigLink>
   <BigLink to="/guides/slo/live-reporting/" :external="false" :dark="true">
     <template v-slot:header>
-      Live SLO reports
+      Live SLO Reports
     </template>
     <template v-slot:icon>
       <IconLiveSLO />

@@ -22,7 +22,7 @@ Reliably works wherever you do – connecting seamlessly to GitHub and GitLab Co
 
 <MarkdownTwoColumns>
  <Card
-    title="Objectives, indicators, results and behaviour"
+    title="Objectives, Indicators, Results and Behaviour"
     description="Introducing SLO support to the Reliably CLI. Learn how objectives relate to indicators, which create results, which drive behaviour"
     color="yellow"
     :links="data['card-2'].links"

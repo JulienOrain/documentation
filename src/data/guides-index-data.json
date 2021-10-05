@@ -18,15 +18,15 @@
   "slo-links": {
     "links": [
       {
-        "title": "Send custom indicators",
+        "title": "Send Custom Indicators",
         "link": "/guides/slo/sending-custom-indicators/"
       },
       {
-        "title": "Generate SLO reports",
+        "title": "Generate SLO Reports",
         "link": "/guides/slo/slo-reports/"
       },
       {
-        "title": "Live SLO reports",
+        "title": "Live SLO Reports",
         "link": "/guides/slo/live-reporting/"
       }
     ]
@@ -50,7 +50,7 @@
   "other-guides": {
     "links": [
       {
-        "title": "Manage your organizations",
+        "title": "Manage your Organizations",
         "link": "/guides/other/org-management/"
       },
       {

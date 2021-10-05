@@ -1,5 +1,5 @@
 ---
-title: Scan your infrastructure
+title: Scan your Infrastructure
 excerpt: Scan your infrastructure with the Reliably CLI to surface potential reliability issues and suggestions.
 categories: ["guides", "scan-infrastructure"]
 status: published

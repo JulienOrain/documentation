@@ -50,5 +50,5 @@ $ reliably org add-user <someone-user-name> --org <my-other-org>
 
 ### SEE ALSO
 
-* [reliably org](/docs/reference/cli/reliably-org/)	 - Manage your organizations
+* [reliably org](/docs/reference/cli/reliably-org/)	 - Manage your Organizations
 

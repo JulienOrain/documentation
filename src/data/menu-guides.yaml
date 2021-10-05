@@ -4,13 +4,13 @@
 - title: Define SLOs
   link: /guides/slo/define-slos/
   sub: true
-- title: Generate SLO reports
+- title: Generate SLO Reports
   link: /guides/slo/slo-reports/
   sub: true
-- title: Live SLO reports
+- title: Live SLO Reports
   link: /guides/slo/live-reporting/
   sub: true
-- title: Send custom indicators
+- title: Send Custom Indicators
   link: /guides/slo/sending-custom-indicators/
   sub: true
 - title: Registering Webhooks
@@ -58,7 +58,7 @@
 - title: Upgrade
   link: /guides/other/upgrade/
   sub: true
-- title: Manage your organizations
+- title: Manage your Organizations
   link: /guides/other/org-management/
   sub: true
 - title: Slack Alerts
@@ -75,7 +75,7 @@
 - title: How it works
   link: /guides/how-it-works/
   sub: false
-- title: Objectives, indicators, results and behaviour
+- title: Objectives, Indicators, Results and Behaviour
   link: /guides/how-it-works/objectives-indicators-results-and-behaviour/
   sub: true
 - title: SLO Reports

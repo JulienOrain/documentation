@@ -107,7 +107,7 @@ The Reliably CLI supports custom reports from templates, so you can generate you
 
 ## More on that subject
 
-[Reliably SLO Report templates](/docs/guides/how-it-works/report-templates/)
+[Reliably SLO Report Templates](/docs/guides/how-it-works/report-templates/)
 
 [How the Reliably API works](/docs/guides/how-it-works/api/)
 

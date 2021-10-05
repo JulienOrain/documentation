@@ -1,5 +1,5 @@
 ---
-title: Scan history
+title: Scan History
 excerpt: Display an history of all your Reliably infrastructure scans, with the complete list of suggestions.
 categories: ["guides", "scan-infrastructure"]
 status: published

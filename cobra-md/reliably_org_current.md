@@ -29,5 +29,5 @@ reliably org current [flags]
 
 ### SEE ALSO
 
-* [reliably org](/docs/reference/cli/reliably-org/)	 - Manage your organizations
+* [reliably org](/docs/reference/cli/reliably-org/)	 - Manage your Organizations
 

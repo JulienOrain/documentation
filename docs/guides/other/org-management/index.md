@@ -1,5 +1,5 @@
 ---
-title: Manage your organizations
+title: Manage your Organizations
 excerpt: Create organizations and invite other users to collaborate with you.
 categories: ["guides", "other-guides"]
 status: published

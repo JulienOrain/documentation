@@ -29,7 +29,7 @@ The Reliably Command Line Interface (CLI).
 * [reliably chaos](/docs/reference/cli/reliably-chaos/)	 - chaos root command
 * [reliably completion](/docs/reference/cli/reliably-completion/)	 - Generate shell completion scripts
 * [reliably history](/docs/reference/cli/reliably-history/)	 - Show your scan history
-* [reliably org](/docs/reference/cli/reliably-org/)	 - Manage your organizations
+* [reliably org](/docs/reference/cli/reliably-org/)	 - Manage your Organizations
 * [reliably scan](/docs/reference/cli/reliably-scan/)	 - Check for Reliably Suggestions
 * [reliably slo](/docs/reference/cli/reliably-slo/)	 - service level objective commands
 * [reliably update](/docs/reference/cli/reliably-update/)	 - Updates Reliably CLI
