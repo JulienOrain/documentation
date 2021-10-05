@@ -8,6 +8,8 @@ type: doc
 import AsciiPlayer from '~/components/AsciiPlayer.vue'
 import CopyToClipboard from '~/components/MarkdownCopyToClipboard.vue'
 
+[`reliably slo agent`]: /docs/getting-started/slos/#push-indicators
+
 # Define Service Level Objectives
 
 ## YAML manifest
@@ -69,6 +71,14 @@ Examples:
 | PT10M          | 10 minutes                      |
 | P3DT7H36M      | 3 days, 7 hours, and 36 minutes | -->
 
+### Latency Percentile
+
+For a latency Objective, it is required that a `percentile` is provided. To combat
+the issue of data scalability, objective results calculate the provided `percentile`
+of the response times for each minute within the `window` and then calculate the
+percentage of these that are below the `latency_target`. This percentage is
+then compared against the `objectivePercent` to produce an Objective Result.
+
 ### AWS resources
 
 Resources on AWS are identified with their Amazon Resource Name. Learn more
@@ -83,6 +93,8 @@ spec:
 ```
 
 Note the `arn:` prefix.
+
+Now you can use [`reliably slo agent`][] to push indicators to Reliably
 
 ### Google Cloud Platform resources
 
@@ -137,6 +149,8 @@ The **project ID** can be found in the "Project info" card of your <a href="http
 
 The **resource name** can be found in the <a href="https://console.cloud.google.com/net-services/loadbalancing/" target="_blank" rel="noopener noreferer">Network services / Load balancing section of the Google Cloud Console</a>, where all your services attached to a load balancer are listed.
 
+Now you can use [`reliably slo agent`][] to push indicators to Reliably
+
 ### Datadog resources
 
 A Service Level Indicator can be computed from Datadog by providing the *numerator* and *denominator* queries.
@@ -153,6 +167,8 @@ spec:
     datadog_numerator_query: sum:gcp.loadbalancing.https.backend_request_count{response_code_class:200}.as_count()
     datadog_denominator_query: sum:gcp.loadbalancing.https.backend_request_count{}.as_count()
 ```
+
+Now you can use [`reliably slo agent`][] to push indicators to Reliably
 
 :::note
 The example computes the SLO as percentage of successful requests (with 2xx status code).
@@ -200,6 +216,8 @@ spec:
 
 The endpoint must be reachable from the CLI's context and allow unauthenticated
 calls to the Prometheus API.
+
+Now you can use [`reliably slo agent`][] to push indicators to Reliably
 
 ## With the CLI
 
@@ -309,7 +327,7 @@ For some providers, *AWS or GCP*, you'll be asked for choosing a type of SLO to 
 
 You can choose either availability or latency SLOs. **Availability SLOs** are based on the success of a particular request. **Latency SLOs** are based on the completion of a request under a **time threshold**.
 
-#### latency threshold
+#### Latency Threshold
 
 If you select the latency SLO type, you will also be prompted to provide a **threshold** in milliseconds. All responses within this threshold contribute to your target.
 
@@ -355,11 +373,13 @@ When you're done, the CLI will confirm your manifest has been successfully creat
 
 ```reliably
 <span class="token green">✓</span> Your manifests has been saved to ./reliably.yaml
-````
+```
 
 The manifest file will also uploaded to the Reliably SaaS. The local `reliably.yaml`file will be used to
 [generate your SLO report](/docs/guides/slo/slo-reports/).
 :::
+
+Now you can use [`reliably slo agent`][] to push indicators to Reliably
 
 ## Measure and Report
 

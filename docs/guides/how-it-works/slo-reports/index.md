@@ -66,7 +66,9 @@ The Reliably CLI allows you to measure you SLO targets. For availability, Reliab
 
 ### Latency SLO
 
-A Latency SLO allows you to specify a threshold latency for a service and a target percentage. The percentage gives the target percentage of responses within that threshold latency.
+A Latency SLO allows you to specify a threshold latency for a service, a percentile and a target percentage. The percentage gives the target percentage of minutely percentile responses that should be within the threshold latency. [See Latency Percentile for more information][Percentile]
+
+[Percentile]: /docs/guides/slo/define-slos/#latency-percentile
 
 #### Measuring Latency SLOs
 
@@ -81,7 +83,6 @@ The Reliably CLI receives Objective Results from the API to generate the report.
 For all the Objectives received, Reliably will construct a report showing if the target for the Objective is met or not. You can specify different output formats for the [SLO report]. The default table output for a manifest would be:
 
  [SLO report]:/docs/reference/cli/reliably-slo-report/
-
 
 ```reliably
 <span class="token dollar"></span>reliably slo report --format table
@@ -102,8 +103,6 @@ For all the Objectives received, Reliably will construct a report showing if the
 The Reliably CLI supports custom reports from templates, so you can generate your own report formats. This section explains how to use [Reports from Templates]
 
 [Reports from Templates]: /docs/guides/how-it-works/report-templates/
-
-
 
 ## More on that subject
 
