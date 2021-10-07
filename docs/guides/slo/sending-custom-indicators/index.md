@@ -61,7 +61,7 @@ Since the `labels` of the `indicator` matches the properties of the `indicatorSe
 
 ## So how do I send the data?
 
-You need to to `PUT` the `indicator` data to `https://api.reliably.com/entities/{org}/v1/indicators`, where `org` is the ID of your organisation. This value doesn't change very often at all, and can be retrieved using the cli by typing `reliably org show`.
+You need to to `PUT` the `indicator` data to `https://api.reliably.com/entities/{org}/reliably.com/v1/indicators`, where `org` is the ID of your organisation. This value doesn't change very often at all, and can be retrieved using the cli by typing `reliably org current`.
 
 You'll also need to send an auth token.
 
@@ -82,9 +82,11 @@ RELIABLY_DATA=`{
     }
 }`
 ```
+
 ```bash
 ENDPOINT = https://api.reliably.com/entities/$RELIABLY_ORG/reliably.com/v1/indicator
 ```
+
 ```bash
 curl -x PUT -d $RELIABLY_DATA -H "Authorization: bearer $RELIABLY_TOKEN" $ENDPOINT
 ```
