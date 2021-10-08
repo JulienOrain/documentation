@@ -43,6 +43,7 @@ spec:
   objectivePercent: 99.9
   window: 1h
 ```
+
 <CopyToClipboard />
 
 ### Observe your system
@@ -53,6 +54,7 @@ Now that you have an SLO defined, you can observe the reliability of your system
 <span class="token dollar"></span>reliably slo sync # Uploads your manifest (reliably.yaml) to Reliably
 <span class="token dollar"></span>reliably slo report
 ```
+
 <CopyToClipboard />
 
 ```reliably
@@ -86,9 +88,10 @@ To make things easier, we've provided you with a ready-made Chaos Toolkit Experi
     ]
 }
 ```
+
 <CopyToClipboard />
 
-#### What is this doing?
+### What is this doing?
 
 You've just created a Chaos Toolkit Experiment. The most key section to review is `method`. `method` is where you tell Chaos Toolkit _what_ you're going to do against your system. As you don't have a 'system' in this example, you're using `reliability_utils.send_good_indicator` to pretend you're pinging your service - it's going to report back to Reliably that everything from the last hour is `Good`.
 
@@ -134,6 +137,7 @@ def send_good_indicator(
         headers={"Authorization": f"Bearer {TOKEN}"},
     )
 ```
+
 <CopyToClipboard />
 
 Once copied, replace the values of `TOKEN` and `ORG` with the output of the following command:
@@ -141,6 +145,7 @@ Once copied, replace the values of `TOKEN` and `ORG` with the output of the foll
 ```reliably
 <span class="token dollar"></span>cat ~/.config/reliably/config.yaml
 ```
+
 <CopyToClipboard />
 
 ```reliably
@@ -164,6 +169,7 @@ In a new terminal window, run the following:
 ```reliably
 <span class="token dollar"></span>reliably slo report -w
 ```
+
 <CopyToClipboard />
 
 ```reliably
@@ -181,6 +187,7 @@ In a different terminal window from the `reliably slo report` one, run the follo
 ```reliably
 <span class="token dollar"></span>PYTHONPATH=. chaos run healthy-experiment.json
 ```
+
 <CopyToClipboard />
 
 ```reliably
@@ -239,6 +246,7 @@ Copy this experiment into a file called `unhealthy-experiment.json`:
     ]
 }
 ```
+
 <CopyToClipboard />
 
 #### `reliability_utils.send_bad_indicator`
@@ -271,6 +279,7 @@ def send_bad_indicator(
         headers={"Authorization": f"Bearer {TOKEN}"},
     )
 ```
+
 <CopyToClipboard />
 
 You'll also need to replace `__all__ = ["send_good_indicator"]` with:
@@ -278,6 +287,7 @@ You'll also need to replace `__all__ = ["send_good_indicator"]` with:
 ```python
 __all__ = ["send_good_indicator", "send_bad_indicator"]
 ```
+
 <CopyToClipboard />
 
 ### Viewing the SLO Report
@@ -287,6 +297,7 @@ In a new terminal window (or the same one if you've not closed it), run the foll
 ```reliably
 <span class="token dollar"></span>reliably slo report -w
 ```
+
 <CopyToClipboard />
 
 ```reliably
@@ -305,6 +316,7 @@ In a different terminal window from the `reliably slo report` one, run the follo
 ```reliably
 <span class="token dollar"></span>PYTHONPATH=. chaos run unhealthy-experiment.json
 ```
+
 <CopyToClipboard />
 
 ```reliably
@@ -372,6 +384,7 @@ Below is a Steady State Hypothesis for this guide, you should copy it into `heal
     ]
 },
 ```
+
 <CopyToClipboard />
 
 This statement tells Chaos Toolkit that you define your Steady State as being your SLO you defined previously with Reliably.
@@ -397,6 +410,7 @@ within your manifest translates to the following in your experiment:
 ### Seeing your reliability continue
 
 #### Getting to `Good` first
+
 Before you run the experiment and validate that your SLOs are met during the experiment, you need to put the 'system' back into a `Good` state.
 
 You can do this by running:
@@ -404,6 +418,7 @@ You can do this by running:
 ```reliably
 <span class="token dollar"></span>PYTHONPATH=. chaos run healthy-experiment.json --hypothesis-strategy=after-method-only
 ```
+
 <CopyToClipboard />
 
 ```reliably
@@ -434,6 +449,7 @@ Now you can run your experiment **with** validation of your Steady State Hypothe
 ```reliably
 <span class="token dollar"></span>PYTHONPATH=. chaos run healthy-experiment.json
 ```
+
 <CopyToClipboard />
 
 ```reliably
@@ -492,6 +508,7 @@ Firstly, you'll need to copy the hypothesis block below into `unhealthy-experime
     ]
 },
 ```
+
 <CopyToClipboard />
 
 #### Running the unhealthy experiment with your hypothesis
@@ -501,6 +518,7 @@ You can now also see that the unhealthy experiment will fail by running:
 ```reliably
 <span class="token dollar"></span>PYTHONPATH=. chaos run unhealthy-experiment.json
 ```
+
 <CopyToClipboard />
 
 ```reliably
@@ -538,7 +556,7 @@ The experiment has done the following:
 
 The `chaostoolkit-reliably` extension also provides some output which indicates to you _what_ Result caused the deviation and what its actual percentage was compared to your Objectives.
 
-## Tieing it all up
+## Tying it all up
 
 Let's conclude on what you've covered in the above sections:
 
@@ -555,8 +573,9 @@ You can delete the objective by running:
 ```reliably
 <span class="token dollar"></span>reliably slo delete --selector "service=exploring-reliability-guide-service"
 ```
+
 <CopyToClipboard />
 
-At this point, you should be comfortable with how you might integrate your own Reliably SLOs created for your system, with your Steady State Hypothesis in your Chaos Toolkit experiments. 
+At this point, you should be comfortable with how you might integrate your own Reliably SLOs created for your system, with your Steady State Hypothesis in your Chaos Toolkit experiments.
 
 This all ultimately enables you to run chaos engineering experiments against your systems and see the impact they have on the things that **really** matter: what your users experience.
