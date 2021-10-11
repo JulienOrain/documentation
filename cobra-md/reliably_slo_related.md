@@ -21,7 +21,7 @@ Objective Results --> Objectives.
 
 By default the [related] command will return a graph of ALL entities within
 the organisation. A more specific view can be obtained by passing a manifest using
---manifest/-m, this will return a graph of entities relating to those in the manifest
+--manifest/-m, this will return a graph of entites relating to those in the manifest
 provided. --filters/-f flags can also be used to filter nodes.
 
 Passing the --raw/-r flag will return the raw JSON data used to draw
@@ -56,7 +56,7 @@ $ reliably slo related --filter 'key=value' --filter 'key=value'
   -f, --filters stringArray   <key=value> labels to filter relationship graph nodes
   -h, --help                  help for related
   -m, --manifest string       the location of the manifest file
-  -p, --port string           the port to serve the graph visualisation on. A random port [60000-61000] is used if no port is provided
+  -p, --port string           the port to serve the graph visualisation on. A random port [60000-61000] is used if no port is profided
   -r, --raw                   prints raw json graph data
 ```
 

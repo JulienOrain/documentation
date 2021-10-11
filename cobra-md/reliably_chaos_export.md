@@ -19,6 +19,10 @@ using SLOs within the Steady State Hypothesis.
 Each SLO chosen is included as a probe, this probe checks whether the SLO
 was met.
 
+A control is also provided which will create entity-contexts regarding various
+experiment objects (versions, runs, events, etc.) - this will be related to the
+chosen SLOs.
+
 The generated experiment relies on the chaostoolkit-reliably extension which
 can be found here: https://github.com/chaostoolkit-incubator/chaostoolkit-reliably/.
 

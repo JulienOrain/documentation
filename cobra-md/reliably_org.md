@@ -7,7 +7,7 @@ type: doc
 ---
 ## reliably org
 
-Manage your Organizations
+Manage your organizations
 
 ### Synopsis
 

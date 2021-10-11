@@ -28,7 +28,7 @@ reliably slo delete [flags]
 delete all entities within an manifest
 $ reliably slo delete -m reliably.yaml
 
-delete all entities that match any of the given selectors, equivalent: (OR statement)
+delete all enitites that match any of the given selectors, equivalent: (OR statement)
 $ reliably slo delete --selector='key=value' --selector='key=value'
 
 delete all entities that match ALL the key=value pairs within the selector, equivalent: (AND statement)

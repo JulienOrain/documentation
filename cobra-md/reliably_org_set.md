@@ -29,5 +29,5 @@ reliably org set [<name>] [flags]
 
 ### SEE ALSO
 
-* [reliably org](/docs/reference/cli/reliably-org/)	 - Manage your Organizations
+* [reliably org](/docs/reference/cli/reliably-org/)	 - Manage your organizations
 
