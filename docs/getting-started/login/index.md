@@ -77,7 +77,7 @@ You can logout with the `reliably auth logout` command:
 
 ```reliably
 <span class="token dollar"></span>reliably auth logout
-<span class="token green">?</span> <span class="token bold">Are you sure you want to log out of reliably.dev account 'user'?</span> <span class="token blue">Yes</span>
+<span class="token green">?</span> <span class="token bold">Are you sure you want to log out of reliably.com account 'user'?</span> <span class="token blue">Yes</span>
 Logged out of reliably.com account 'user'
 ```
 
