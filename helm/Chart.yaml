@@ -1,6 +1,0 @@
-apiVersion: v2
-name: doc
-version: 1.0.0
-# kubeVersion: A SemVer range of compatible Kubernetes versions (optional)
-description: A Helm chart for installing the reliably docs on Kubernetes
-type: application

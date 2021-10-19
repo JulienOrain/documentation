@@ -5,8 +5,6 @@ on:
     tags:
       - '**'
 
-env:
-  IMAGE_NAME: eu.gcr.io/${{ secrets.GCP_PROJECT_ID }}/docs/docs:${{ github.sha }}
 
 jobs:
   build-and-deploy:
@@ -46,41 +44,25 @@ jobs:
 
       - name: Build container image
         if: ${{ !env.ACT }}
-        run: docker build --no-cache -t $IMAGE_NAME .
+        run: docker build --no-cache -t $GCP_REGISTRY_HOSTNAME/${{ secrets.GCP_PROJECT }}/docs/$GCP_CLOUD_RUN_SERVICE_NAME:$GITHUB_SHA .
+        env:
+          GCP_CLOUD_RUN_SERVICE_NAME: docs
+          GCP_REGISTRY_HOSTNAME: eu.gcr.io
 
       - name: Push container image
         if: ${{ !env.ACT }}
-        run: docker push $IMAGE_NAME
-
-# Deploy to GKE
-
-      - name: setup helm
-        uses: azure/setup-helm@v1
-
-      - name: install kubectl
-        uses: azure/setup-kubectl@v1
-
-      - name: get kubenetes config
+        run: docker push $GCP_REGISTRY_HOSTNAME/${{ secrets.GCP_PROJECT }}/docs/$GCP_CLOUD_RUN_SERVICE_NAME:$GITHUB_SHA
         env:
-          KUBE_CLUSTER: apps-staging-gke
-        run: |
-          gcloud container clusters get-credentials ${{ env.KUBE_CLUSTER }} \
-            --region europe-west1 \
-            --project ${{ secrets.GCP_PROJECT_ID }}
-
-      - name: install/update web UI via helm
-        working-directory: helm
+          GCP_CLOUD_RUN_SERVICE_NAME: docs
+          GCP_REGISTRY_HOSTNAME: eu.gcr.io
+    
+      - name: Deploy cloud run service
+        if: ${{ !env.ACT }}
+        run: gcloud run services update $GCP_CLOUD_RUN_SERVICE_NAME --quiet --project ${{secrets.GCP_PROJECT}} --platform=managed --image=$GCP_REGISTRY_HOSTNAME/${{ secrets.GCP_PROJECT }}/docs/$GCP_CLOUD_RUN_SERVICE_NAME:$GITHUB_SHA --labels=commit-sha=$GITHUB_SHA,gc-action-name=$GITHUB_ACTION,gc-action-id=$GITHUB_RUN_ID --region=$GCP_DEPLOY_REGION
         env:
-          NAMESPACE: default
-        run: |
-          helm upgrade doc . \
-            -n ${{ env.NAMESPACE }} \
-            --set prod=true \
-            --set image=$IMAGE_NAME \
-            --set env.gcp_project_id=${{ secrets.GCP_PROJECT_ID }} \
-            --install
-
-      # End - Deploy to GKE
+          GCP_CLOUD_RUN_SERVICE_NAME: docs
+          GCP_REGISTRY_HOSTNAME: eu.gcr.io
+          GCP_DEPLOY_REGION: europe-west1
 
       - name: Invalidate CDN cache to serve latest policies
         if: ${{ !env.ACT }}
