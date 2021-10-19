@@ -9,7 +9,7 @@ on:
 
 
 env:
-  IMAGE_NAME: eu.gcr.io/${{ secrets.GCP_PROJECT }}/docs/staging-docs:${{ github.sha }}
+  IMAGE_NAME: eu.gcr.io/${{ secrets.GCP_PROJECT_ID }}/docs/staging-docs:${{ github.sha }}
 
 jobs:
   build-and-deploy:
@@ -63,7 +63,7 @@ jobs:
         run: |
           gcloud container clusters get-credentials ${{ env.KUBE_CLUSTER }} \
             --region europe-west1 \
-            --project ${{ secrets.GCP_PROJECT }}
+            --project ${{ secrets.GCP_PROJECT_ID }}
 
       - name: install/update web UI via helm
         working-directory: helm
@@ -73,7 +73,7 @@ jobs:
           helm upgrade doc . \
             -n ${{ env.NAMESPACE }} \
             --set image=$IMAGE_NAME \
-            --set env.gcp_project_id=${{ secrets.GCP_PROJECT }} \
+            --set env.gcp_project_id=${{ secrets.GCP_PROJECT_ID }} \
             --install
 
       # End - Deploy to GKE
