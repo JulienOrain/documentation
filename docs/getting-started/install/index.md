@@ -6,37 +6,107 @@ status: published
 type: doc
 ---
 
+import Tab from '~/components/Tab.vue'
+import Tabs from '~/components/Tabs.vue'
 import CopyToClipboard from '~/components/MarkdownCopyToClipboard.vue'
+
+[Releases]: https://github.com/reliablyhq/cli/releases/
+[macOS Release]: https://github.com/reliablyhq/cli/releases/latest/download/reliably-darwin-amd64
+[Linux Release]: https://github.com/reliablyhq/cli/releases/latest/download/reliably-linux-amd64
+[Windows Release]: https://github.com/reliablyhq/cli/releases/latest/download/reliably-windows-amd64
+[macOS Checksum]: https://github.com/reliablyhq/cli/releases/latest/download/reliably-darwin-amd64.md5
+[Linux Checksum]: https://github.com/reliablyhq/cli/releases/latest/download/reliably-linux-amd64.md5
+[Windows Checksum]: https://github.com/reliablyhq/cli/releases/latest/download/reliably-windows-amd64.md5
 
 # Installing the Reliably CLI
 
 ## Quick Install Guide
 
-Download the latest executable for your system, and copy it to a directory in
-your PATH.
+This guide explains the streamlined process of installing the Reliably CLI and
+taking the first steps to incorporate reliability best practices into your
+current workflow. Alternatively, you may prefer to
+[manually install](#manual-install-guide) the Reliably CLI or work with a
+[kubectl plugin](#kubectl-plugin-guide) instead
 
-On macOS
+<Tabs>
+<Tab name="macOS" selected="true">
+
+### macOS
+
+Download the latest executable for `macOS` into a directory in your PATH - for
+example: `/usr/local/bin`
 
 ```console
 curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-darwin-amd64 -o /usr/local/bin/reliably --create-dirs
 ```
+
 <CopyToClipboard />
 
-On Linux
-
-```console
-curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-linux-amd64 -o /usr/local/bin/reliably --create-dirs
-```
-<CopyToClipboard />
-
-Make it executable.
+Make it executable:
 
 ```console
 chmod +x /usr/local/bin/reliably
 ```
+
 <CopyToClipboard />
 
-On Windows
+To ensure that everything is working, you can use `reliably --version`:
+
+```console
+reliably --version
+```
+
+<CopyToClipboard />
+
+```text
+Reliably CLI version x.x.x (yyyy-mm-dd)
+```
+
+Now you're all set to [login](../login/)
+
+</Tab>
+<Tab name="Linux">
+
+### Linux
+
+Download the latest executable for `Linux` into a directory in your PATH - for
+example: `/usr/local/bin`
+
+```console
+curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-linux-amd64 -o /usr/local/bin/reliably --create-dirs
+```
+
+<CopyToClipboard />
+
+Make it executable:
+
+```console
+chmod +x /usr/local/bin/reliably
+```
+
+<CopyToClipboard />
+
+To ensure that everything is working, you can use `reliably --version`:
+
+```console
+reliably --version
+```
+
+<CopyToClipboard />
+
+```text
+Reliably CLI version x.x.x (yyyy-mm-dd)
+```
+
+Now you're all set to [login](../login/)
+
+</Tab>
+<Tab name="Windows">
+
+### Windows
+
+Download the latest executable for `Windows` into a directory in your HOMEPATH -
+for example: `/bin`
 
 ```console
 curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-windows-amd64 -o %HOMEDRIVE%%HOMEPATH%/bin/reliably.exe --create-dirs
@@ -44,268 +114,291 @@ curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-wind
 
 <CopyToClipboard />
 
-You're good to go!
+:::important
+This guide assumes you have the `curl` command available. `curl` is available as
+a Windows 10 command after version 1706. For other versions of Windows, you can
+[download curl](https://curl.se/download.html) from the official curl website.
+:::
 
-You can check everything is working with the `reliably --version` and you're
-ready to [login](../login/).
+Edit the system environment variables:
 
-## Previous versions
+- Go to Settings > System > About > Advanced system settings
+- Select "Environment Variables ..."
+- Select the "Path" variable of the "User variables"
+- Select "Edit..."
+- Select "Browse..."
+- Navigate to the executable's directory
+- Select "OK"
 
-You can find the full list of Reliably CLI releases [here][releases].
-
-[releases]: https://github.com/reliablyhq/cli/releases/
-
-## Installation Details
-
-### MacOS
-
-Get the latest release and copy it to a directory in your PATH, for example
-/usr/local/bin.
-
-```console
-curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-darwin-amd64 -o /usr/local/bin/reliably --create-dirs
-```
-<CopyToClipboard />
-
-You can also [download the latest macOS Release](https://github.com/reliablyhq/cli/releases/latest/download/reliably-darwin-amd64/)
-from your browser. To make Reliably convenient to run move the
-executable to a directory that is on your path, for example ```/usr/local/bin```.
-
-If you downloaded the file from your browser (ie, not with `curl`), you might
-want to rename it:
-
-```console
-mv reliably-darwin-amd64 reliably
-```
-<CopyToClipboard />
-
-Make the file executable. If needed, change the path to reliably to match the
-location you chose.
-
-```console
-chmod +x /usr/local/bin/reliably
-```
-<CopyToClipboard />
-
-Then in a terminal window execute:
+To ensure that everything is working, you can use `reliably --version`:
 
 ```console
 reliably --version
 ```
+
 <CopyToClipboard />
 
-You should see the current ```reliably``` cli version displayed.
+```text
+Reliably CLI version x.x.x (yyyy-mm-dd)
+```
 
-:::tip
-When you first run the `reliably` command, macOS might display a prompt. It
-might look different from this one, if you're running macOS Big Sur or newer.
+Now you're all set to [login](../login/)
 
-![macOS downloaded app prompt](./images/open-app-screenshot.png)
+</Tab>
+</Tabs>
 
-Select ```Open``` and a terminal window will pop-up showing:
+## Manual Install Guide
 
-![Terminal popup](./images/terminal-popup.png)
+This guide explains the in-depth process of manually installing the Reliably CLI
+to support continuous application reliability throughout your SDLC.
+Alternatively, you may prefer to install the Reliably CLI as a
+[kubectl plugin](#kubectl-plugin-guide) or work with a
+[previous version](#previous-versions) instead
 
-The app will be saved as an exception to your security settings and now you
-will be able to run it from the command line.
-:::
+<Tabs>
+<Tab name="macOS" selected="true">
 
-### Linux (Ubuntu)
+### macOS
 
-Get the latest release and copy it to a directory in your PATH, for example
-/usr/local/bin.
+You can [download the latest macOS release][macOS Release] from your browser.
+To make Reliably convenient to run, rename the executable to `reliably` and move
+it to a directory in your PATH - for example: `/usr/local/bin`
+
+If you want to check the file has not been corrupted, you can
+[download the latest macOS checksum][macOS Checksum] and compare it to the `md5`
+checksum. If needed, change the path to match the location you chose:
 
 ```console
-curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-linux-amd64 -o /usr/local/bin/reliably --create-dirs
+md5 /usr/local/bin/reliably
 ```
+
 <CopyToClipboard />
 
-You can also [download the latest Linux release](https://github.com/reliablyhq/cli/releases/latest/download/reliably-linux-amd64)
-from your browser. To make Reliably convenient to run move the
-executable to a directory that is on your path, for example ```/usr/local/bin```.
-
-If you downloaded the file from your browser (ie, not with `curl`), you might
-want to rename it:
-
-```console
-mv reliably-darwin-amd64 reliably
-```
-<CopyToClipboard />
-
-If you want to check the file has not been corrupted, navigate to the directory
-where you downloaded the Reliably and check the md5 checksum.
-
-```console
-md5sum reliably-linux-amd64
-cab791d7d4b4e5a0dcf00392b4ce672c  reliably-linux-amd64
+```text
+MD5 (/usr/local/bin/reliably) = cab791d7d4b4e5a0dcf00392b4ce672c
 ```
 
-Compare the md5 checksum displayed with the [MD5 checksum file](https://github.com/reliablyhq/cli/releases/latest/download/reliably-linux-amd64.md5), they should match.
-
-Make the file executable. If needed, change the path to reliably to match the
-location you chose.
+Now you can make the file executable. If needed, change the path to match the
+location you chose:
 
 ```console
 chmod +x /usr/local/bin/reliably
 ```
+
 <CopyToClipboard />
 
-Then in a terminal window execute:
+To ensure that everything is working, you can use `reliably --version`:
 
 ```console
 reliably --version
 ```
+
 <CopyToClipboard />
 
-You should see the current ```reliably``` cli version displayed.
+```text
+Reliably CLI version x.x.x (yyyy-mm-dd)
+```
 
-### Windows 10
+When you run this command, macOS might display a warning as follows - although
+it may look different if you're running macOS Big Sur or newer:
 
-#### Install with curl
+![macOS reliably warning](./images/reliably-warning.png)
 
-The quick and easy way to install the Reliably CLI on Windows is to use `curl`:
+To get around this, navigate to the executable's directory in your PATH, select
+the executable, Control + Click it, select "Open" and the following warning will
+appear:
+
+![macOS open warning](./images/open-warning.png)
+
+Select `Open` and a terminal window will pop-up showing:
+
+![terminal popup](./images/terminal-popup.png)
+
+The app will be saved as an exception to your security settings and you will now
+be able to run it from the command line.
+
+Now you're all set to [login](../login/)
+
+</Tab>
+<Tab name="Linux">
+
+### Linux
+
+You can [download the latest Linux release][Linux Release] from your browser.
+To make Reliably convenient to run, rename the executable to `reliably` and move
+it to a directory in your PATH - for example: `/usr/local/bin`
+
+If you want to check the file has not been corrupted, you can
+[download the latest Linux checksum][Linux Checksum] and compare it to the `md5`
+checksum. If needed, change the path to match the location you chose:
 
 ```console
-curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-windows-amd64 -o %HOMEDRIVE%%HOMEPATH%/bin/reliably.exe --create-dirs
+md5sum reliably
 ```
 
 <CopyToClipboard />
 
+```text
+cab791d7d4b4e5a0dcf00392b4ce672c  reliably
+```
 
-:::note Note
-The above command assumes you have the `curl` command available and you have a `bin` folder in your home directory. For ease of use, ensure the `bin` folder is on your path.
+Now you can make the file executable. If needed, change the path to match the
+location you chose:
 
-You can install the Reliably CLI in any directory you like. Just update the `curl` command above as required.
+```console
+chmod +x /usr/local/bin/reliably
+```
 
-`curl` is available as a Windows 10 command after version 1706. On other versions of Windows, you can [download curl] from the official curl website.
-:::
+<CopyToClipboard />
 
-[download curl]:https://curl.se/download.html
+To ensure that everything is working, you can use `reliably --version`:
 
-#### Manual Install
+```console
+reliably --version
+```
 
-Download the latest [Reliably CLI release for Windows 10](https://github.com/reliablyhq/cli/releases/latest/download/reliably-windows-amd64) to a working directory.
+<CopyToClipboard />
 
-When you select the download button you may see a browser warning:
+```text
+Reliably CLI version x.x.x (yyyy-mm-dd)
+```
+
+Now you're all set to [login](../login/)
+
+</Tab>
+<Tab name="Windows">
+
+### Windows
+
+You can [download the latest Windows release][Windows Release] from your browser
+which may prompt the following warning:
 
 ![Browser Warning](./images/browser-warning.png)
 
-Select the menu option and keep. You can then navigate to the file location
-using your preferred terminal window (in these docs we are using Powershell).
+Here, you can just select the uptick and choose to "Keep" the download
 
-If you want, you can check the md5 checksum to confirm the downloaded file has
-not been corrupted:
+To make Reliably convenient to run, rename the executable to `reliably` with the
+`.exe` file extension and move it to a directory in your PATH - for example:
+`\bin`
+
+If you want to check the file has not been corrupted, you can
+[download the latest Windows checksum][Windows Checksum] and compare it to the
+`md5` checksum using Windows Powershell. If needed, change the path to match the
+location you chose:
 
 ```powershell
-PS D:\progams\reliably Get-FileHash .\reliably.exe -algorithm md5
+ Get-FileHash .\bin\reliably.exe -algorithm md5
+```
 
+<CopyToClipboard />
+
+```text
 Algorithm           Hash
 ---------           ----
-MD5                 1234556789
+MD5                 cab791d7d4b4e5a0dcf00392b4ce672c
 ```
 
-Compare the md5 checksum displayed with the md5 checksum in the
-[MD5 checksum file](https://github.com/reliablyhq/cli/releases/latest/download/reliably-windows-amd64.md5),
-they should match.
+To ensure that everything is working, you can use `.\bin\reliably.exe --version`.
+If needed, change the path to match the location you chose:
 
-To execute ```reliably CLI``` you will need to rename the file and add a
-```.exe``` file extension. In the terminal window type:
-
-```console
-move .\reliably-windows-amd64 .\reliably.exe
+```powershell
+.\bin\reliably.exe --version
 ```
+
 <CopyToClipboard />
 
-Then execute:
-
-```console
-.\reliably.exe --version
+```text
+Reliably CLI version x.x.x (yyyy-mm-dd)
 ```
+
+However, using `reliably` with the prefix `.\bin\reliably.exe` isn't too useful
+but luckily we can change this with some environment variables.
+To alter this, you can:
+
+- Go to Settings > System > About > Advanced system settings
+- Select "Environment Variables ..."
+- Select the "Path" variable of the "User variables"
+- Select "Edit..."
+- Select "Browse..."
+- Navigate to the executable's directory
+- Select "OK"
+
+To ensure that everything is working, you can use `reliably --version` in a new
+Powershell window:
+
+```powershell
+reliably --version
+```
+
 <CopyToClipboard />
 
-You should see the current Reliably CLI version displayed.
+```text
+Reliably CLI version x.x.x (yyyy-mm-dd)
+```
 
-At this point, to make Reliably convenient to run, add the folder to the
-executable path. Open the Windows Start Search, type in “env”, and choose “Edit the system environment variables”.
-In the pop-up window select:
+Now you're all set to [login](../login/)
 
-* Environment Variables
-* In the Environment Variables pop-up, select Path from the User environment variables
-* Select Edit then
-* Select Browse...
-* Navigate to the folder where you downloaded the reliably executable
-* Select OK
+</Tab>
+</Tabs>
 
-Open a new Powershell window and type ```reliably --version```, the version of
-the Reliably CLI should be displayed.
+## Kubectl Plugin Guide
 
-Reliably CLI will now be available in you Powershell sessions.
+If you use [`kubernetes`][kubernetes] clusters to containerise your application,
+you may prefer to install `reliably` as a `kubectl` plugin instead. The
+[`kubectl`][kubectl] command-line tool allows you to interact with your
+`kubernetes` clusters to be able to mantain and manage them. Plugins extend
+`kubectl` with new sub-commands, allowing for custom features not included in
+the main distribution of `kubectl`
 
-### `kubectl` Plugin
+[kubernetes]: https://kubernetes.io/docs/home/
+[kubectl]: https://kubernetes.io/docs/reference/kubectl/overview/
 
-The [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/)
-command-line tool lets you control
-[Kubernetes](https://kubernetes.io/docs/home/) clusters. `kubectl` commands are
-the essential building blocks for interacting with a Kubernetes cluster.
-Plugins extend `kubectl` with new sub-commands, allowing for new  and custom
-features not included with the main distribution of `kubectl`.
+### Install Directly
 
-The [Reliably CLI][reliablyCLI] can be run as a `kubectl` plugin and installed
-as a Krew plugin. [Krew][krew] is an open-source plugin manager maintained by
-the [Kubernetes SIG CLI][sigcli] community.
+To install `reliably` as a `kubectl` plugin, follow either the
+[Quick Install Guide](#quick-install-guide) or the
+[Manual Install Guide](#manual-install-guide) and replace the executable's
+filename with `kubectl-reliably` instead
 
-[reliablyCLI]: https://github.com/reliablyhq/cli
+Alternatively, you can use `krew`
+
+### Install as a Krew Plugin
+
+[Krew][krew] is an open-source plugin manager maintained by
+the [Kubernetes SIG CLI][sigcli] community. If you don't already have `krew`
+installed, we recommend you follow the [krew install guide][krew-install]. Once
+installed, you can install the `reliably` plugin with:
+
 [krew]: https://krew.sigs.k8s.io/
 [sigcli]: https://github.com/kubernetes/community/tree/master/sig-cli
-
-The easiest way to install and use this plugin is with
-[Krew](https://krew.sigs.k8s.io/docs/user-guide/quickstart/).
-
-#### Install as a Krew Plugin
-
-If you don't already have Krew installed, please install it from the
-[Krew install guide][krew-install].
-
 [krew-install]: https://krew.sigs.k8s.io/docs/user-guide/setup/install/
-
-Once Krew is installed you can install Reliably plugin with:
 
 ```console
 kubectl krew install reliably
 ```
 
-#### Install from GitHub
-
-If you don't want to use Krew, [download the Reliably CLI from the Releases page](https://github.com/reliablyhq/cli/releases/)
-or [clone it and build it from the GitHub repository](https://github.com/reliablyhq/cli/).
-Then, rename it (or make a copy) as `kubectl-reliably` anywhere in your `PATH`,
-ensuring it is executable.
-
-For example, here is how to install it for macOS, considering `$HOME/bin` is a
-directory in your `PATH`:
-
-```console
-curl -L https://github.com/reliablyhq/cli/releases/latest/download/reliably-darwin-amd64 -o $HOME/bin/kubectl-reliably -s
-```
 <CopyToClipboard />
 
-```console
-chmod +x ~/bin/kubectl-reliably
-```
-<CopyToClipboard />
-
-#### Usage
-
-If you have installed the `kubectl-reliably` either as a Krew plugin or from
-Github, you can run the plugin with:
+To ensure that everything is working, you can use `kubectl reliably --version`:
 
 ```console
-kubectl reliably
+kubectl reliably --version
 ```
+
+```text
+Reliably CLI version x.x.x (yyyy-mm-dd)
+```
+
+Now you're all set to [login](../login/)
+
+## Previous Versions
+
+To install a previous release, you can use the following:
+
+```console
+reliably update --version x.x.x
+```
+
 <CopyToClipboard />
 
-You should see the Reliably CLI help page.
-
-You can now use [all the commands from the CLI][cli-ref] in kubectl.
-
-[cli-ref]: /docs/reference/cli/
+You can find the full list of Reliably CLI releases [here][Releases].
