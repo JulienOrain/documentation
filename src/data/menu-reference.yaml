@@ -1,7 +1,7 @@
-- title: CLI
-  link: /reference/cli/
+- title: Entities Reference
+  link: /reference/entities/
   sub: false
 
-- title: Entities
-  link: /reference/entities/
+- title: CLI Reference
+  link: /reference/cli/
   sub: false

@@ -12,9 +12,13 @@
         <g-link to="/reference/">Reference</g-link>
       </div>
     </div>
-    <h4 class="sidebar-title" v-if="$route.path !== '/'">{{ current }}</h4>
     <nav class="new-sidebar-nav">
       <template v-if="current === 'Getting Started'">
+        <template>
+          <h3>
+            <g-link to="/getting-started/">Getting Started</g-link>
+          </h3>
+        </template>
         <template v-for="(l, index) in gettingStartedLinks" >
           <g-link v-if="l.sub" :to="l.link" :key="index">
             {{ l.title }}
@@ -27,6 +31,11 @@
         </template>
       </template>
       <template v-if="current === 'Guides'">
+        <template>
+          <h3>
+            <g-link to="/guides/">Guides</g-link>
+          </h3>
+        </template>
         <template v-for="(l, index) in guidesLinks" >
           <g-link v-if="l.sub" :to="l.link" :key="index">
             {{ l.title }}
@@ -39,28 +48,43 @@
         </template>
       </template>
       <template v-if="current === 'Reference'">
+        <template>
+          <h3>
+            <g-link to="/reference/">Reference</g-link>
+          </h3>
+        </template>
         <template v-for="(l, index) in referenceLinks" >
           <g-link v-if="l.sub" :to="l.link" :key="index">
             {{ l.title }}
           </g-link>
-          <h5 v-else :key="index">
+          <h4 v-else :key="index">
             <g-link :to="l.link">
               {{ l.title }}
             </g-link>
-          </h5>
+          </h4>
         </template>
       </template>
       <template v-if="current === 'CLI Reference'">
+        <template>
+          <h3>
+            <g-link to="/reference/">Reference</g-link>
+          </h3>
+        </template>
+        <template>
+          <h4>
+            <g-link to="/reference/entities/">Entities Reference</g-link>
+          </h4>
+        </template>
         <!-- YAML file links -->
         <template v-for="(l, index) in cliReferenceLinks" >
           <g-link v-if="l.sub" :to="l.link" :key="index">
             {{ l.title }}
           </g-link>
-          <h5 v-else :key="index">
+          <h4 v-else :key="index">
             <g-link :to="l.link">
               {{ l.title }}
             </g-link>
-          </h5>
+          </h4>
         </template>
         <!-- GraphQL links -->
         <template v-for="l in cliRefLinks">
@@ -75,27 +99,42 @@
         </template>
       </template>
       <template v-if="current === 'Entities Reference'">
+        <template>
+          <h3>
+            <g-link to="/reference/">Reference</g-link>
+          </h3>
+        </template>
         <template v-for="(l, index) in entitiesReferenceLinks" >
           <g-link v-if="l.sub" :to="l.link" :key="index">
             {{ l.title }}
           </g-link>
-          <h5 v-else :key="index">
+          <h4 v-else :key="index">
             <g-link :to="l.link">
               {{ l.title }}
             </g-link>
-          </h5>
+          </h4>
+        </template>
+        <template>
+          <h4>
+            <g-link to="/reference/cli/">CLI Reference</g-link>
+          </h4>
         </template>
       </template>
       <template v-if="current === 'API Reference'">
+        <template>
+          <h3>
+            <g-link to="/reference/">Reference</g-link>
+          </h3>
+        </template>
         <template v-for="(l, index) in restApiReferenceLinks" >
           <g-link v-if="l.sub" :to="l.link" :key="index">
             {{ l.title }}
           </g-link>
-          <h5 v-else :key="index">
+          <h4 v-else :key="index">
             <g-link :to="l.link">
               {{ l.title }}
             </g-link>
-          </h5>
+          </h4>
         </template>
       </template>
     </nav>
@@ -321,21 +360,29 @@ export default {
     }
   }
 
-  .sidebar-title {
-    margin-top: .2em;
-    padding-left: .5em;
-
-    font-size: 1.2em;
-    font-family: 'Filson Pro';
-  }
-
   .new-sidebar-nav {
     display: flex;
     flex-direction: column;
 
+    h3 {
+      margin-top: 0em;
+      margin-bottom: 1.5em;
+
+      font-size: 1.2em;
+      font-family: 'Filson Pro';
+    }
+
+    h4 {
+      margin-top: 1em;
+      margin-bottom: 0em;
+
+      font-size: 1.1em;
+      font-weight: 600;
+    }
+
     h5 {
-      margin-top: 2em;
-      margin-bottom: 1rem;
+      margin-top: 1.5em;
+      margin-bottom: .5em;
 
       font-size: 1em;
       font-weight: 600;

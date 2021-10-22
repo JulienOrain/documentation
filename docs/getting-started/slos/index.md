@@ -1,5 +1,5 @@
 ---
-title: Define and observe your reliability
+title: Define and Observe your Reliability
 excerpt: Define SLOs, push SLIs, and view your reports.
 categories: ["getting-started"]
 status: published
@@ -12,7 +12,7 @@ import Tabs from '~/components/Tabs.vue'
 import AsciiPlayer from '~/components/AsciiPlayer.vue'
 import CopyToClipboard from '~/components/MarkdownCopyToClipboard.vue'
 
-# Define and observe your reliability
+# Define and Observe your Reliability
 
 In this section you will learn how to define and observe your reliability by implementing Service Level Objectives with Reliably. After an initial setup with the CLI, you will define your Objectives and Indicators, push Indicator instances, and view a report. This will enable you to take an SLO-oriented approach to reliability.
 

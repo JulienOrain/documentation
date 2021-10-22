@@ -33,7 +33,7 @@
   link: /guides/scan-infrastructure/scan-history/
   sub: true
 
-- title: Run in your CI pipeline
+- title: Run in your CI Pipeline
   link: /guides/ci-pipeline/
   sub: false
 - title: GitHub Action
@@ -72,7 +72,7 @@
   sub: true
 
 
-- title: How it works
+- title: How it Works
   link: /guides/how-it-works/
   sub: false
 - title: Objectives, Indicators, Results and Behaviour

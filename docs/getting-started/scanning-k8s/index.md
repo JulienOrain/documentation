@@ -1,5 +1,5 @@
 ---
-title: Scanning Kubernetes
+title: Scanning Kubernetes Clusters
 excerpt: Scan a Kubernetes cluster for adherence to best practice.
 categories: ["getting-started"]
 status: published

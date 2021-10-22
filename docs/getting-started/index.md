@@ -46,7 +46,7 @@ import data from '~/data/getting-started-index-data.json'
   </BigLink>
   <BigLink to="/getting-started/slos/" :external="false" :dark="true">
     <template v-slot:header>
-      Define and observe your reliability
+      Define and Observe your Reliability
     </template>
     <template v-slot:icon>
       <IconLogin />

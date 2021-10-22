@@ -17,17 +17,17 @@ import data from '~/data/reference-index-data.json'
 </PageIntroduction>
 
 <SectionList
-    title="CLI"
-    categoryName="cli"
-    description="Complete reference guide for the Reliably CLI"
-    link="/reference/cli/"
-    :list="data.cli.links"
-/>
-
-<SectionList
     title="Entities"
     categoryName="entities"
     description="Complete reference guide for the Reliably Entity Server"
     link="/reference/entities/"
     :list="data.entities.links"
+/>
+
+<SectionList
+    title="CLI"
+    categoryName="cli"
+    description="Complete reference guide for the Reliably CLI"
+    link="/reference/cli/"
+    :list="data.cli.links"
 />
