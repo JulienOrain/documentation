@@ -87,7 +87,7 @@ Entities at Reliably all have the ability to be related to other entities based 
 
 A relationship is defined as a collection of labels that one entity is interested in, that may belong to 0 or many other entities.
 
-Since this relationship is 'loosely enforced' we evaluate it at runtime whenever we trigger behaviour that may need to understand a relationship graph (a good example of this is when the Slack connector is 
+Since this relationship is 'loosely enforced' we evaluate it at runtime whenever we trigger behaviour that may need to understand a relationship graph (a good example of this is when the Slack connector is
 required to send a message to you when an objective you are 'related to' on changes).
 
 #### Relationship rules
@@ -108,7 +108,7 @@ Relationships can be single-direction, or bi-directional. What we mean by this i
 
 ### Temporal coupling
 
-Relationships do not have temporal coupling. It is possible to declare the criteria for a relationship long before any other entity satisfies it. It is also possible to delcare a relationship after the rest of the entity landscape has settled.
+Relationships do not have temporal coupling. It is possible to declare the criteria for a relationship long before any other entity satisfies it. It is also possible to declare a relationship after the rest of the entity landscape has settled.
 
 ### When relationships break down
 

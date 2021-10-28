@@ -91,8 +91,8 @@ is not wanted, the CLI can be authenticated by using the `RELIABLY_TOKEN`
 environment variable.
 Using the environment variable overriddes the token stored into the config.
 
-```
-$ export RELIABLY_TOKEN=6ccfdxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```console
+export RELIABLY_TOKEN=6ccfdxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
 Once the environment variable is defined, any command of the CLI will

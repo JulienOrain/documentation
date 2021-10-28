@@ -47,7 +47,7 @@ spec:
 ### 2. Send the manifest to ReliablyHQ
 
 ```console
-$ reliably slo sync -m webhook.yaml
+reliably slo sync -m webhook.yaml
 ```
 
 ## Context information

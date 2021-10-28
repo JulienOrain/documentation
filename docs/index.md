@@ -21,23 +21,23 @@ Reliably works wherever you do – connecting seamlessly to GitHub and GitLab Co
 </PageIntroduction>
 
 <MarkdownTwoColumns>
- <Card
-    title="Objectives, Indicators, Results and Behaviour"
-    description="Introducing SLO support to the Reliably CLI. Learn how objectives relate to indicators, which create results, which drive behaviour"
-    color="yellow"
-    :links="data['card-2'].links"
-    :svg="data['card-2'].svg"
-  />
-  <Card
+
+<Card
     title="Reliable Kubernetes Clusters"
     description="Install the Reliably CLI to scan your Kubernetes manifests and clusters, and make them more reliable in minutes."
-    color="blue"
+    color="yellow"
     :button="data['card-1'].button"
     :svg="data['card-1'].svg"
   />
+ <Card
+    title="Objectives, Indicators, Results and Behaviour"
+    description="Introducing SLO support to the Reliably CLI. Learn how objectives relate to indicators, which create results, which drive behaviour"
+    color="blue"
+    :button="data['card-2'].button"
+    :svg="data['card-2'].svg"
+  />
 
 </MarkdownTwoColumns>
-
 
 <SectionList
     title="Getting Started"
@@ -50,7 +50,7 @@ Reliably works wherever you do – connecting seamlessly to GitHub and GitLab Co
 <SectionList
     title="Guides"
     categoryName="guides"
-    description="Practical guides show you how to get Reliably running in your favorite environments."
+    description="Practical guides to show you how to get Reliably running in your favorite environments."
     link="/guides/"
     :list="data.guides.links"
 />
@@ -58,7 +58,7 @@ Reliably works wherever you do – connecting seamlessly to GitHub and GitLab Co
 <SectionList
     title="Reference"
     categoryName="reference"
-    description="Technical description of how the Reliably API works, as well as a full documentation for the CLI."
+    description="Explanations of Reliably's Entity structures, as well as a full documentation for the CLI."
     link="/reference/"
     :list="data.reference.links"
 />

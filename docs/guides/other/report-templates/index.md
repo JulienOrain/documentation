@@ -152,7 +152,7 @@ The next section is using a markdown format table. The table is using the markdo
 [Tables Section in Markdown Cheetsheets]: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#tables
 
 
-```
+```text
 | | Name | Current | Objective| Time Window | Type  | Trend |
 |-|------------| ---:| ---:|---:|----|:--:|
 ```
@@ -169,13 +169,11 @@ This is using the `ServiceLevels` subfield of the Reliably Report that is refere
 
 The content of the range loop populates the table column by column, each using Reliably CLI functions. All the functions take as a parameter a Service Level object from the `$sl` variable that is setup in the range loop above. The exception being the `svcLevelGetTrends` function which takes 3 input variables:
 
-
 - the service name (`$service.Name`),
 - the Service  Level  (`$sl`)
 - the a history of reports from `$reps` (see above).
 
-
-```
+```text
 |{{- svcLevelGetStatusIcon $sl -}}
 {{- svcLevelGetName $sl -}}|
 {{- svcLevelGetActualResult $sl}}|
@@ -189,7 +187,7 @@ The population of the table column completes the first range block. The range bl
 
 The next section in the example template adds an Error budget section to the report. This again uses a markdown table format. The first part is text that is included as-is into the output of the report.
 
-```
+```text
 The Error Budget metrics are:
 ```
 
@@ -204,7 +202,7 @@ Then the markdown table is setup with:
 
 The columns of the table are then populated with a further range loop, this time we show the complate range block:
 
-```
+```text
 {{ range $ind, $sl := $service.ServiceLevels -}}
 |{{- svcLevelGetType $sl -}}|
 {{- svcLevelGetName $sl}}|
@@ -224,7 +222,7 @@ Again the block is completed by the range `{{ end }}` delimiter.
 
 The report concludes by including a section that shows the version and date of the Reliably CLI that generated the report. This uses a Reliably CLI function to provide the version info.
 
-```
+```text
 <small>Generating with: The Reliably CLI Version {{ reliablyVersion }}</small>
 ```
 
@@ -254,6 +252,7 @@ type Report struct {
   Services   []*Service
 }
 ```
+
 The struct includes:
 
 - The **APIVersion** supported by the CLI.
@@ -334,6 +333,7 @@ type ServiceLevelResult struct {
   SloIsMet bool
 }
 ```
+
 ## Functions to use in a Report
 
 Internally the Reliably CLI uses a function map to process function calls from the templates. This section lists the functions that can be used in the templates.
@@ -366,7 +366,7 @@ If the result is **SloIsMet** it will return ✅, if it is not met it will retur
 
 If the result is `nil` it will return the "Unknown" icon (a question mark).
 
-```
+```text
 iconTick    = "✅"
 iconEx      = "❌"
 iconUnknown = "❔"
@@ -414,21 +414,22 @@ An example showing measures where four of the SLOs are met and one SLO that is n
 
 The service name comes from `$service.ServiceName` assuming the `$service` variable is setup in the range statement:
 
-```
+```text
 {{ range $index, $service := $report.Services }}
 ```
 
 The Service Level object comes from `$sl` variable, assuming it is set up like:
 
-```
+```text
 {{ range $ind, $sl := $service.ServiceLevels -}}
 ```
 
 The array of reports comes from the `$reps` variable, assuming it is set up with:
 
-```
+```text
 {{ $reps := .Lreps }}
 ```
+
 ### func errBudgetPercentage (sl ServiceLevel) string
 
 errBudgetPercentage takes a Service Level object as a single argument and returns a string with the error budget for the Service Level as a percentage.
