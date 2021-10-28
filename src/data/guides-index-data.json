@@ -56,6 +56,10 @@
       {
         "title": "Upgrade",
         "link": "/guides/other/upgrade/"
+      },
+      {
+        "title": "Slack Alerts",
+        "link": "/guides/other/slack-alerts/"
       }
     ]
   },
@@ -70,12 +74,8 @@
         "link": "/guides/how-it-works/slo-reports/"
       },
       {
-        "label": "Rules",
+        "title": "Rules",
         "link": "/guides/how-it-works/rules/"
-      },
-      {
-        "title": "API",
-        "link": "/guides/how-it-works/api/"
       }
     ]
   }

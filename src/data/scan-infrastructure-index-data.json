@@ -1,16 +1,12 @@
 {
   "links": [
     {
-      "title": "Scan a Kubernetes Manifest",
-      "link": "/guides/scan-infrastructure/kubernetes-manifest/"
-    },
-    {
-      "title": "Scan a Kubernetes Cluster",
-      "link": "/guides/scan-infrastructure/kubernetes-cluster/"
-    },
-    {
-      "title": "Output Formats",
+      "label": "Output Formats",
       "link": "/guides/scan-infrastructure/output-formats/"
+    },
+    {
+      "label": "View Scan History",
+      "link": "/guides/scan-infrastructure/scan-history/"
     }
   ]
 }

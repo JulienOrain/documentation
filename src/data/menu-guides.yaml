@@ -55,11 +55,11 @@
 - title: Other Guides
   link: /guides/other/
   sub: false
-- title: Upgrade
-  link: /guides/other/upgrade/
-  sub: true
 - title: Manage your Organizations
   link: /guides/other/org-management/
+  sub: true
+- title: Upgrade
+  link: /guides/other/upgrade/
   sub: true
 - title: Slack Alerts
   link: /guides/other/slack-alerts/
@@ -78,15 +78,15 @@
 - title: Objectives, Indicators, Results and Behaviour
   link: /guides/how-it-works/objectives-indicators-results-and-behaviour/
   sub: true
-- title: SLO Reports
-  link: /guides/how-it-works/slo-reports/
-  sub: true
 - title: Scan Resources
   link: /guides/how-it-works/scan-resources/
   sub: true
-- title: API
-  link: /guides/how-it-works/api/
+- title: SLO Reports
+  link: /guides/how-it-works/slo-reports/
   sub: true
 - title: Rules
   link: /guides/how-it-works/rules/
+  sub: true
+- title: API
+  link: /guides/how-it-works/api/
   sub: true

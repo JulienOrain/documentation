@@ -117,24 +117,6 @@ Generate actionable reports.
     </template>
     <p>Fetch data from your cloud provider and generate comprehensive SLO reports.</p>
   </BigLink>
-  <BigLink to="/guides/slo/live-reporting/" :external="false" :dark="true">
-    <template v-slot:header>
-      Live SLO Reports
-    </template>
-    <template v-slot:icon>
-      <IconLiveSLO />
-    </template>
-    <p>Monitor your SLO's live and generate near realtime reports.</p>
-  </BigLink>
-  <BigLink to="/guides/slo/sending-custom-indicators/" :external="false" :dark="true">
-    <template v-slot:header>
-      Send Custom Indicators
-    </template>
-    <template v-slot:icon>
-      <IconUpload />
-    </template>
-    <p>Learn how to send indicators to Reliably directly, without using Reliably tools like the CLI or agent.</p>
-  </BigLink>
 </MarkdownTwoColumns>
 
 ## Other articles

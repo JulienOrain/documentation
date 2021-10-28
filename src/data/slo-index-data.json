@@ -1,12 +1,16 @@
 {
   "links": [
     {
-      "label": "Jenkins Build",
-      "link": "/guides/ci-pipeline/jenkins/"
+      "label": "Live SLO Reports",
+      "link": "/guides/slo/live-reporting/"
     },
     {
-      "label": "CircleCI",
-      "link": "/guides/ci-pipeline/circle-ci/"
+      "label": "Send Custom Indicators",
+      "link": "/guides/slo/sending-custom-indicators/"
+    },
+    {
+      "label": "Register a Webhook",
+      "link": "/guides/slo/registering-a-webhook/"
     }
   ]
 }
