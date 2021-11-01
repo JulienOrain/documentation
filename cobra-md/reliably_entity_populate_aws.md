@@ -21,8 +21,29 @@ Stack names must be given in the format: --stacks stackname1,stackname2,stacknam
 If no --stacks are provided, you will be prompted
 to select from a list of Stacks found in your AWS account
 
+Note - You must have the AWS CLI (https://aws.amazon.com/cli/) installed
+and configured to use this command
+
+
 ```
 reliably entity populate aws [flags]
+```
+
+### Examples
+
+```
+
+populate your network with CloudFormation stacks, your available stacks will be displayed
+$ reliably entity populate aws
+
+populate your network with specific CloudFormation stacks
+$ reliably entity populate aws --stacks stackname1,stackname2
+
+populate your network with CloudFormation stacks from a specific named profile
+$ AWS_DEFAULT_PROFILE=<named-profile> reliably entity populate aws
+
+populate your network with CloudFormation stacks from a specific region
+$ AWS_DEFAULT_REGION=<region-name> reliably entity populate aws
 ```
 
 ### Options
