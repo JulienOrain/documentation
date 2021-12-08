@@ -36,6 +36,7 @@ $ reliably auth login --with-token < my-access-token.txt
 ```
   -h, --help              help for login
       --hostname string   The hostname of Reliably to authenticate with
+      --provider string   The provider for Reliably to authenticate with
       --with-token        Read token from standard input
 ```
 

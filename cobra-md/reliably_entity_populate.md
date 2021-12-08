@@ -27,4 +27,5 @@ type: doc
 
 * [reliably entity](/docs/reference/cli/reliably-entity/)	 - 
 * [reliably entity populate aws](/docs/reference/cli/reliably-entity-populate-aws/)	 - creates Reliably Entities from AWS Cloudformation Stacks
+* [reliably entity populate github](/docs/reference/cli/reliably-entity-populate-github/)	 - create Reliably Entities from Github Repositories
 

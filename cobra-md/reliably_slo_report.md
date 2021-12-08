@@ -39,12 +39,13 @@ reliably slo report [flags]
 ```
   -f, --format string     specify the report format. Allowed Values: [json yaml text table markdown template] (default "table")
   -h, --help              help for report
+  -i, --interval int      continuously watch for changes in report output (default 3)
   -m, --manifest string   the location of the manifest file (default "reliably.yaml")
   -o, --output string     where the report should be written to
   -l, --selector string   objectives selector based on labels
       --service string    the name of the service
   -t, --template string   the name of the template to use for the report output
-  -r, --use-reliably      retrieve objectives from reliably.com rather than a local manfiest file (default true)
+  -r, --use-reliably      retrieve objectives from reliably.com rather than a local manifest file (default true)
   -w, --watch             continuously watch for changes in report output
 ```
 

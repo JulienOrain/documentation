@@ -44,6 +44,12 @@ $ cat manifest.yaml | reliably scan -
 # Scan with custom format & output to local file
 $ reliably scan --format json --output report.json
 
+# Ignore specific rules
+$ reliably scan kubernetes --ignore-rules K8S-POD-0002,K8S-DPL-0004
+
+# Ignore rules defined in a .json file
+$ reliably scan kubernetes --ignore-rules exceptions.json
+
 # Scan a live Kubernetes cluster
 $ reliably scan --live
 $ reliably scan --live [--namespace n] [--kubecontext c] [--kubeconfig c]
@@ -52,14 +58,15 @@ $ reliably scan --live [--namespace n] [--kubecontext c] [--kubeconfig c]
 ### Options
 
 ```
-  -f, --format string        Specify the output format: [text json yaml sarif codeclimate extended table]
-  -h, --help                 help for kubernetes
-  -k, --kubeconfig string    Specifies the path and file to use for kubeconfig for live scan (default "/home/runner/.kube/config")
-  -c, --kubecontext string   Specifies the Kubernetes context to evaluate when scanning live cluster
-  -l, --level string         Display suggestions only for level and higher
-      --live                 Look for weaknesses in a live Kubernetes cluster
-  -n, --namespace string     The namespace to use when using a live cluster
-  -o, --output string        Write results to a file instead of standard output
+  -f, --format string         Specify the output format: [text json yaml sarif codeclimate extended table]
+  -h, --help                  help for kubernetes
+  -i, --ignore-rules string   Ignore rules defined in standard input or from a provided .json file
+  -k, --kubeconfig string     Specifies the path and file to use for kubeconfig for live scan (default "/home/runner/.kube/config")
+  -c, --kubecontext string    Specifies the Kubernetes context to evaluate when scanning live cluster
+  -l, --level string          Display suggestions only for level and higher
+      --live                  Look for weaknesses in a live Kubernetes cluster
+  -n, --namespace string      The namespace to use when using a live cluster
+  -o, --output string         Write results to a file instead of standard output
 ```
 
 ### Options inherited from parent commands
