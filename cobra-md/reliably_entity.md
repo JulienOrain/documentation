@@ -7,7 +7,11 @@ type: doc
 ---
 ## reliably entity
 
+entry point for entity manipulation commands
 
+### Synopsis
+
+entry point for entity manipulation commands
 
 ### Options
 
@@ -26,5 +30,6 @@ type: doc
 ### SEE ALSO
 
 * [reliably](/docs/reference/cli/reliably/)	 - Reliably CLI
+* [reliably entity create](/docs/reference/cli/reliably-entity-create/)	 - entry point to create entities
 * [reliably entity populate](/docs/reference/cli/reliably-entity-populate/)	 - 
 
