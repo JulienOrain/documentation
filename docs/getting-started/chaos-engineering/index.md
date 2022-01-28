@@ -58,8 +58,8 @@ Now that you have an SLO defined, you can observe the reliability of your system
 <CopyToClipboard />
 
 ```reliably
-                                                      <span class="token red bold">Current  Objective  / Time Window     Type     Trend</span>
-  Service #1: exploring-reliability-guide-service
+⣯ <span class="token bold yellow">No relevant objective results were found.</span>
+To generate them, follow this guide: https://reliably.com/docs/getting-started/slos/#push-indicators
 ```
 
 You'll notice that there's no information. That's because Reliably hasn't had any Indicators that match the `indicatorSelector` yet.
@@ -126,13 +126,15 @@ def send_good_indicator(
             "labels": {
                 "category": "Availability",
                 "indicator_name": "exploring-reliability-guide-service-availability-indicator",
+                "to": timenow,
+                "from": timenow,
             }
         },
         "spec": {"from": timenow, "to": timenow, "percent": 100.0},
     }
 
     requests.put(
-        url=f"https://api.reliably.com/entities/{ORG}/reliably.com/v1/indicator",
+        url=f"https://app.reliably.com/api/entities/{ORG}/reliably.com/v1/indicator",
         data=json.dumps(body),
         headers={"Authorization": f"Bearer {TOKEN}"},
     )
