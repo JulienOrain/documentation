@@ -27,6 +27,7 @@ type: doc
 
 * [reliably entity](/docs/reference/cli/reliably-entity/)	 - entry point for entity manipulation commands
 * [reliably entity populate aws](/docs/reference/cli/reliably-entity-populate-aws/)	 - creates Reliably Entities from AWS Cloudformation Stacks
+* [reliably entity populate gcp](/docs/reference/cli/reliably-entity-populate-gcp/)	 - create Reliably Entities from Google Cloud Platform Infrastructure
 * [reliably entity populate github](/docs/reference/cli/reliably-entity-populate-github/)	 - create Reliably Entities from Github Repositories
 * [reliably entity populate kube](/docs/reference/cli/reliably-entity-populate-kube/)	 - create Reliably Entities from Kubernetes Infrastructure
 
