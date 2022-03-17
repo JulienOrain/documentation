@@ -1,11 +1,11 @@
 ---
-title: reliably slo delete
-excerpt: Documentation for the reliably slo delete command in the Reliably CLI
+title: reliably graph delete
+excerpt: Documentation for the reliably graph delete command in the Reliably CLI
 categories: ["reference", "cli"]
 status: published
 type: doc
 ---
-## reliably slo delete
+## reliably graph delete
 
 deletes Objectives based on given manifest/selectors
 
@@ -19,7 +19,7 @@ the selectors will be prioritized
 selectors must be given in the format: --selector 'key=value'
 
 ```
-reliably slo delete [flags]
+reliably graph delete [flags]
 ```
 
 ### Examples
@@ -53,5 +53,5 @@ $ reliably slo delete --selector='key=value, key=value, key=value'
 
 ### SEE ALSO
 
-* [reliably slo](/docs/reference/cli/reliably-slo/)	 - service level objective commands
+* [reliably graph](/docs/reference/cli/reliably-graph/)	 - Manage entities within your reliably graph
 

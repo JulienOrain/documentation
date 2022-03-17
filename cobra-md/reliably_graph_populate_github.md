@@ -1,11 +1,11 @@
 ---
-title: reliably entity populate github
-excerpt: Documentation for the reliably entity populate github command in the Reliably CLI
+title: reliably graph populate github
+excerpt: Documentation for the reliably graph populate github command in the Reliably CLI
 categories: ["reference", "cli"]
 status: published
 type: doc
 ---
-## reliably entity populate github
+## reliably graph populate github
 
 create Reliably Entities from Github Repositories
 
@@ -31,7 +31,7 @@ token from the environment.
 
 
 ```
-reliably entity populate github [flags]
+reliably graph populate github [flags]
 ```
 
 ### Examples
@@ -81,5 +81,5 @@ $ GITHUB_TOKEN=<your_token_here> reliably entity populate github
 
 ### SEE ALSO
 
-* [reliably entity populate](/docs/reference/cli/reliably-entity-populate/)	 - 
+* [reliably graph populate](/docs/reference/cli/reliably-graph-populate/)	 - populate your reliably graph
 

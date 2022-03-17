@@ -1,11 +1,11 @@
 ---
-title: reliably entity populate kube
-excerpt: Documentation for the reliably entity populate kube command in the Reliably CLI
+title: reliably graph populate kube
+excerpt: Documentation for the reliably graph populate kube command in the Reliably CLI
 categories: ["reference", "cli"]
 status: published
 type: doc
 ---
-## reliably entity populate kube
+## reliably graph populate kube
 
 create Reliably Entities from Kubernetes Infrastructure
 
@@ -28,7 +28,7 @@ only the descriptive entities will be created and the objectives
 will be skipped.
 
 ```
-reliably entity populate kube [flags]
+reliably graph populate kube [flags]
 ```
 
 ### Examples
@@ -69,5 +69,5 @@ $ reliably entity populate kube -r deployments -r pods
 
 ### SEE ALSO
 
-* [reliably entity populate](/docs/reference/cli/reliably-entity-populate/)	 - 
+* [reliably graph populate](/docs/reference/cli/reliably-graph-populate/)	 - populate your reliably graph
 

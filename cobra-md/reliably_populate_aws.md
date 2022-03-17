@@ -1,11 +1,11 @@
 ---
-title: reliably entity populate aws
-excerpt: Documentation for the reliably entity populate aws command in the Reliably CLI
+title: reliably populate aws
+excerpt: Documentation for the reliably populate aws command in the Reliably CLI
 categories: ["reference", "cli"]
 status: published
 type: doc
 ---
-## reliably entity populate aws
+## reliably populate aws
 
 creates Reliably Entities from AWS Cloudformation Stacks
 
@@ -26,7 +26,7 @@ and configured to use this command
 
 
 ```
-reliably entity populate aws [flags]
+reliably populate aws [flags]
 ```
 
 ### Examples
@@ -63,5 +63,5 @@ $ AWS_DEFAULT_REGION=<region-name> reliably entity populate aws
 
 ### SEE ALSO
 
-* [reliably entity populate](/docs/reference/cli/reliably-entity-populate/)	 - 
+* [reliably populate](/docs/reference/cli/reliably-populate/)	 - populate your reliably graph
 

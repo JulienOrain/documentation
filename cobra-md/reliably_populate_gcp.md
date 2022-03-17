@@ -1,11 +1,11 @@
 ---
-title: reliably entity populate gcp
-excerpt: Documentation for the reliably entity populate gcp command in the Reliably CLI
+title: reliably populate gcp
+excerpt: Documentation for the reliably populate gcp command in the Reliably CLI
 categories: ["reference", "cli"]
 status: published
 type: doc
 ---
-## reliably entity populate gcp
+## reliably populate gcp
 
 create Reliably Entities from Google Cloud Platform Infrastructure
 
@@ -24,7 +24,7 @@ See: https://cloud.google.com/docs/authentication/getting-started
 
 
 ```
-reliably entity populate gcp [flags]
+reliably populate gcp [flags]
 ```
 
 ### Examples
@@ -63,5 +63,5 @@ $ reliably entity populate gcp --select
 
 ### SEE ALSO
 
-* [reliably entity populate](/docs/reference/cli/reliably-entity-populate/)	 - 
+* [reliably populate](/docs/reference/cli/reliably-populate/)	 - populate your reliably graph
 

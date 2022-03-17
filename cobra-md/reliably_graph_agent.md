@@ -1,11 +1,11 @@
 ---
-title: reliably slo agent
-excerpt: Documentation for the reliably slo agent command in the Reliably CLI
+title: reliably graph agent
+excerpt: Documentation for the reliably graph agent command in the Reliably CLI
 categories: ["reference", "cli"]
 status: published
 type: doc
 ---
-## reliably slo agent
+## reliably graph agent
 
 runs in agent mode sending SLIs to Reliably
 
@@ -17,7 +17,7 @@ on reliably.com or a specified slo manifest to retrieve metrics and generate ind
 The indicators are sent to reliably.
 
 ```
-reliably slo agent [flags]
+reliably graph agent [flags]
 ```
 
 ### Examples
@@ -48,5 +48,5 @@ $ reliably slo agent --use-reliably=false -m reliably.yaml -i 300
 
 ### SEE ALSO
 
-* [reliably slo](/docs/reference/cli/reliably-slo/)	 - service level objective commands
+* [reliably graph](/docs/reference/cli/reliably-graph/)	 - Manage entities within your reliably graph
 
