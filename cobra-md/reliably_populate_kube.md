@@ -36,16 +36,16 @@ reliably populate kube [flags]
 ```
 
 specify the kubernetes config file and context to populate your kubernetes network from
-$ reliably entity populate kube -k path/to/kube/config.yml -c <your context here>
+$ reliably populate kube -k path/to/kube/config.yml -c <your context here>
 
 specify the prometheus endpoint for retrieving metrics
-$ reliably entity populate kube -p http://localhost:9090
+$ reliably populate kube -p http://localhost:9090
 
 populate your kubernetes network with resources from the specified namespace
-$ reliably entity populate kube -n <your namespace>
+$ reliably populate kube -n <your namespace>
 
 populate your kubernetes network with deployment and pod entities
-$ reliably entity populate kube -r deployments -r pods
+$ reliably populate kube -r deployments -r pods
 ```
 
 ### Options
@@ -69,5 +69,5 @@ $ reliably entity populate kube -r deployments -r pods
 
 ### SEE ALSO
 
-* [reliably populate](/docs/reference/cli/reliably-populate/)	 - populate your reliably graph
+* [reliably populate](/docs/reference/cli/reliably-populate/)	 - populate your reliably environment
 

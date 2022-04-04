@@ -25,10 +25,10 @@ The Reliably Command Line Interface (CLI).
 
 ### SEE ALSO
 
+* [reliably agent](/docs/reference/cli/reliably-agent/)	 - runs in agent mode sending SLIs to Reliably
 * [reliably auth](/docs/reference/cli/reliably-auth/)	 - Login, logout, and verify your authentication
 * [reliably completion](/docs/reference/cli/reliably-completion/)	 - Generate shell completion scripts
-* [reliably graph](/docs/reference/cli/reliably-graph/)	 - Manage entities within your reliably graph
 * [reliably org](/docs/reference/cli/reliably-org/)	 - Manage your organizations
-* [reliably populate](/docs/reference/cli/reliably-populate/)	 - populate your reliably graph
+* [reliably populate](/docs/reference/cli/reliably-populate/)	 - populate your reliably environment
 * [reliably update](/docs/reference/cli/reliably-update/)	 - Updates Reliably CLI
 

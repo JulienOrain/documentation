@@ -41,23 +41,23 @@ reliably populate github [flags]
 populate your network with github repositories
 - you will be prompted to login if no github token is detected
 - a list of available repos will be displayed
-$ reliably entity populate github
+$ reliably populate github
 
 populate your network with the github repositories you specify.
 you must have have access to the repositories specificed
-$ reliably entity populate github  --repo github.com/repo/two --repo github.com/repo/one
+$ reliably populate github  --repo github.com/repo/two --repo github.com/repo/one
 
 populate your network with github repositories using the GH CLI token if it exists
-$ reliably entity populate github --gh-cli-token
+$ reliably populate github --gh-cli-token
 
 populate your network with github repositories using a given token
-$ reliably entity populate github --with-token < my-access-token.txt
+$ reliably populate github --with-token < my-access-token.txt
 
 trigger interactive authentication and populate your network with github repositories
-$ reliably entity populate github --login
+$ reliably populate github --login
 
 pass a token using an environment variable
-$ GITHUB_TOKEN=<your_token_here> reliably entity populate github
+$ GITHUB_TOKEN=<your_token_here> reliably populate github
 
 ```
 
@@ -81,5 +81,5 @@ $ GITHUB_TOKEN=<your_token_here> reliably entity populate github
 
 ### SEE ALSO
 
-* [reliably populate](/docs/reference/cli/reliably-populate/)	 - populate your reliably graph
+* [reliably populate](/docs/reference/cli/reliably-populate/)	 - populate your reliably environment
 

@@ -13,17 +13,13 @@ creates Reliably Entities from AWS Cloudformation Stacks
 
 
 Populates your Reliably Network with Entities
-based on the Resources and Relationships found
-within the selected AWS CloudFormation Stacks
+based on supported AWS Resources and Relationships
 
-Stack names must be given in the format: --stacks stackname1,stackname2,stackname3...
+This command will scan all supported resources and created objectives.
+The --select or --resource flags can be used you to select which resource types to scan.
 
-If no --stacks are provided, you will be prompted
-to select from a list of Stacks found in your AWS account
-
-Note - You must have the AWS CLI (https://aws.amazon.com/cli/) installed
-and configured to use this command
-
+Note - You must have AWS Credentials configured to used this
+command. See https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html
 
 ```
 reliably populate aws [flags]
@@ -33,24 +29,31 @@ reliably populate aws [flags]
 
 ```
 
-populate your network with CloudFormation stacks, your available stacks will be displayed
-$ reliably entity populate aws
+populate your network with AWS Lambda based Objectives
+$ reliably populate aws --resource lambda
 
-populate your network with specific CloudFormation stacks
-$ reliably entity populate aws --stacks stackname1,stackname2
+run the populate command in interactive select mode
+$ reliably populate aws --select
 
-populate your network with CloudFormation stacks from a specific named profile
-$ AWS_DEFAULT_PROFILE=<named-profile> reliably entity populate aws
+specify AWS Profile while running populate command
+$ AWS_DEFAULT_PROFILE=<named-profile> reliably populate aws
 
-populate your network with CloudFormation stacks from a specific region
-$ AWS_DEFAULT_REGION=<region-name> reliably entity populate aws
+specify AWS Region while running populate command
+$ AWS_DEFAULT_REGION=<region-name> reliably populate aws
 ```
 
 ### Options
 
 ```
-  -h, --help             help for aws
-  -s, --stacks strings   comma separated list of AWS CloudFormation Stack Names
+  -h, --help                   help for aws
+  -r, --resource stringArray   select AWS resource types:
+                               
+                               	- lambda
+                               	- cloudformation
+                               	- apigateway
+                               	- elasticloadbalancer
+                               
+      --select                 select which resource types to add from list of supported types
 ```
 
 ### Options inherited from parent commands
@@ -63,5 +66,5 @@ $ AWS_DEFAULT_REGION=<region-name> reliably entity populate aws
 
 ### SEE ALSO
 
-* [reliably populate](/docs/reference/cli/reliably-populate/)	 - populate your reliably graph
+* [reliably populate](/docs/reference/cli/reliably-populate/)	 - populate your reliably environment
 

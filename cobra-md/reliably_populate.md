@@ -7,15 +7,15 @@ type: doc
 ---
 ## reliably populate
 
-populate your reliably graph
+populate your reliably environment
 
 ### Synopsis
 
-The reliably slo populate command fasicilates populating your Relaibly graph
+The reliably populate command fasicilates populating your Relaibly environmant
 with pre-supported entities/objectives from various platforms. 
 
 All objectives created by the populate command are directly supported
-by the reliably slo agent command for pushing indicators.
+by the reliably agent command for pushing indicators.
 
 
 ### Options

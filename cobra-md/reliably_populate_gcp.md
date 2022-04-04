@@ -33,14 +33,14 @@ reliably populate gcp [flags]
 
 populate your network with resources from GCP, 
 you will be prompted for Project ID and Resource types
-$ reliably entity populate gcp
+$ reliably graph populate gcp
 
 sepcify Porject ID to populate your network with resources from GCP
-$ reliably entity populate gcp --project abc-123
+$ reliably graph populate gcp --project abc-123
 
 populate your network with resources from GCP using select mode
 you will be prompted to select which resources to add
-$ reliably entity populate gcp --select
+$ reliably graph populate gcp --select
 
 ```
 
@@ -63,5 +63,5 @@ $ reliably entity populate gcp --select
 
 ### SEE ALSO
 
-* [reliably populate](/docs/reference/cli/reliably-populate/)	 - populate your reliably graph
+* [reliably populate](/docs/reference/cli/reliably-populate/)	 - populate your reliably environment
 
