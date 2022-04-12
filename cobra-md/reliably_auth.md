@@ -1,9 +1,7 @@
 ---
 title: reliably auth
 excerpt: Documentation for the reliably auth command in the Reliably CLI
-categories: ["reference", "cli"]
-status: published
-type: doc
+layout: ~/layouts/DocsLayout.astro
 ---
 ## reliably auth
 
@@ -30,7 +28,7 @@ Manage Reliably's authentication state.
 ### SEE ALSO
 
 * [reliably](/docs/reference/cli/reliably/)	 - Reliably CLI
-* [reliably auth login](/docs/reference/cli/reliably-auth-login/)	 - Authenticate with Reliably
-* [reliably auth logout](/docs/reference/cli/reliably-auth-logout/)	 - Log out from Reliably
-* [reliably auth status](/docs/reference/cli/reliably-auth-status/)	 - View authentication status
+* [reliably auth login](/docs/reference/cli/reliably_auth_login/)	 - Authenticate with Reliably
+* [reliably auth logout](/docs/reference/cli/reliably_auth_logout/)	 - Log out from Reliably
+* [reliably auth status](/docs/reference/cli/reliably_auth_status/)	 - View authentication status
 

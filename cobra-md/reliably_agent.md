@@ -1,9 +1,7 @@
 ---
 title: reliably agent
 excerpt: Documentation for the reliably agent command in the Reliably CLI
-categories: ["reference", "cli"]
-status: published
-type: doc
+layout: ~/layouts/DocsLayout.astro
 ---
 ## reliably agent
 

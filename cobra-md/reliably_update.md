@@ -1,9 +1,7 @@
 ---
 title: reliably update
 excerpt: Documentation for the reliably update command in the Reliably CLI
-categories: ["reference", "cli"]
-status: published
-type: doc
+layout: ~/layouts/DocsLayout.astro
 ---
 ## reliably update
 

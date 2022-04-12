@@ -1,9 +1,7 @@
 ---
 title: reliably populate github
 excerpt: Documentation for the reliably populate github command in the Reliably CLI
-categories: ["reference", "cli"]
-status: published
-type: doc
+layout: ~/layouts/DocsLayout.astro
 ---
 ## reliably populate github
 
@@ -81,5 +79,5 @@ $ GITHUB_TOKEN=<your_token_here> reliably populate github
 
 ### SEE ALSO
 
-* [reliably populate](/docs/reference/cli/reliably-populate/)	 - populate your reliably environment
+* [reliably populate](/docs/reference/cli/reliably_populate/)	 - populate your reliably environment
 

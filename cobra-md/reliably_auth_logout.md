@@ -1,9 +1,7 @@
 ---
 title: reliably auth logout
 excerpt: Documentation for the reliably auth logout command in the Reliably CLI
-categories: ["reference", "cli"]
-status: published
-type: doc
+layout: ~/layouts/DocsLayout.astro
 ---
 ## reliably auth logout
 
@@ -37,5 +35,5 @@ reliably auth logout [flags]
 
 ### SEE ALSO
 
-* [reliably auth](/docs/reference/cli/reliably-auth/)	 - Login, logout, and verify your authentication
+* [reliably auth](/docs/reference/cli/reliably_auth/)	 - Login, logout, and verify your authentication
 

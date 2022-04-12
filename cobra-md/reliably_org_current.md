@@ -1,9 +1,7 @@
 ---
 title: reliably org current
 excerpt: Documentation for the reliably org current command in the Reliably CLI
-categories: ["reference", "cli"]
-status: published
-type: doc
+layout: ~/layouts/DocsLayout.astro
 ---
 ## reliably org current
 
@@ -29,5 +27,5 @@ reliably org current [flags]
 
 ### SEE ALSO
 
-* [reliably org](/docs/reference/cli/reliably-org/)	 - Manage your organizations
+* [reliably org](/docs/reference/cli/reliably_org/)	 - Manage your organizations
 

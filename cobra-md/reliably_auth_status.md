@@ -1,9 +1,7 @@
 ---
 title: reliably auth status
 excerpt: Documentation for the reliably auth status command in the Reliably CLI
-categories: ["reference", "cli"]
-status: published
-type: doc
+layout: ~/layouts/DocsLayout.astro
 ---
 ## reliably auth status
 
@@ -38,5 +36,5 @@ reliably auth status [flags]
 
 ### SEE ALSO
 
-* [reliably auth](/docs/reference/cli/reliably-auth/)	 - Login, logout, and verify your authentication
+* [reliably auth](/docs/reference/cli/reliably_auth/)	 - Login, logout, and verify your authentication
 

@@ -1,9 +1,7 @@
 ---
 title: reliably populate
 excerpt: Documentation for the reliably populate command in the Reliably CLI
-categories: ["reference", "cli"]
-status: published
-type: doc
+layout: ~/layouts/DocsLayout.astro
 ---
 ## reliably populate
 
@@ -35,8 +33,8 @@ by the reliably agent command for pushing indicators.
 ### SEE ALSO
 
 * [reliably](/docs/reference/cli/reliably/)	 - Reliably CLI
-* [reliably populate aws](/docs/reference/cli/reliably-populate-aws/)	 - creates Reliably Entities from AWS Cloudformation Stacks
-* [reliably populate gcp](/docs/reference/cli/reliably-populate-gcp/)	 - create Reliably Entities from Google Cloud Platform Infrastructure
-* [reliably populate github](/docs/reference/cli/reliably-populate-github/)	 - create Reliably Entities from Github Repositories
-* [reliably populate kube](/docs/reference/cli/reliably-populate-kube/)	 - create Reliably Entities from Kubernetes Infrastructure
+* [reliably populate aws](/docs/reference/cli/reliably_populate_aws/)	 - creates Reliably Entities from AWS Cloudformation Stacks
+* [reliably populate gcp](/docs/reference/cli/reliably_populate_gcp/)	 - create Reliably Entities from Google Cloud Platform Infrastructure
+* [reliably populate github](/docs/reference/cli/reliably_populate_github/)	 - create Reliably Entities from Github Repositories
+* [reliably populate kube](/docs/reference/cli/reliably_populate_kube/)	 - create Reliably Entities from Kubernetes Infrastructure
 

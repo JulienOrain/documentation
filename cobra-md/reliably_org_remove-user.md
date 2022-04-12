@@ -1,9 +1,7 @@
 ---
 title: reliably org remove-user
 excerpt: Documentation for the reliably org remove-user command in the Reliably CLI
-categories: ["reference", "cli"]
-status: published
-type: doc
+layout: ~/layouts/DocsLayout.astro
 ---
 ## reliably org remove-user
 
@@ -50,5 +48,5 @@ $ reliably org remove-user <someone-user-name> --org <my-other-org>
 
 ### SEE ALSO
 
-* [reliably org](/docs/reference/cli/reliably-org/)	 - Manage your organizations
+* [reliably org](/docs/reference/cli/reliably_org/)	 - Manage your organizations
 

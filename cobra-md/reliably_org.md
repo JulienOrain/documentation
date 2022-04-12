@@ -1,9 +1,7 @@
 ---
 title: reliably org
 excerpt: Documentation for the reliably org command in the Reliably CLI
-categories: ["reference", "cli"]
-status: published
-type: doc
+layout: ~/layouts/DocsLayout.astro
 ---
 ## reliably org
 
@@ -35,11 +33,11 @@ You can also add/remove users to/from your organizations.
 ### SEE ALSO
 
 * [reliably](/docs/reference/cli/reliably/)	 - Reliably CLI
-* [reliably org add-user](/docs/reference/cli/reliably-org-add-user/)	 - add a user to the current organization
-* [reliably org create](/docs/reference/cli/reliably-org-create/)	 - create a new organization
-* [reliably org current](/docs/reference/cli/reliably-org-current/)	 - show the organization defined as current
-* [reliably org delete](/docs/reference/cli/reliably-org-delete/)	 - delete an organization
-* [reliably org list](/docs/reference/cli/reliably-org-list/)	 - list organizations 
-* [reliably org remove-user](/docs/reference/cli/reliably-org-remove-user/)	 - remove a user from the current organization
-* [reliably org set](/docs/reference/cli/reliably-org-set/)	 - defines an organization as the current one
+* [reliably org add-user](/docs/reference/cli/reliably_org_add-user/)	 - add a user to the current organization
+* [reliably org create](/docs/reference/cli/reliably_org_create/)	 - create a new organization
+* [reliably org current](/docs/reference/cli/reliably_org_current/)	 - show the organization defined as current
+* [reliably org delete](/docs/reference/cli/reliably_org_delete/)	 - delete an organization
+* [reliably org list](/docs/reference/cli/reliably_org_list/)	 - list organizations 
+* [reliably org remove-user](/docs/reference/cli/reliably_org_remove-user/)	 - remove a user from the current organization
+* [reliably org set](/docs/reference/cli/reliably_org_set/)	 - defines an organization as the current one
 

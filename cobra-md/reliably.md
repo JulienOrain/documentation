@@ -1,9 +1,7 @@
 ---
 title: reliably
 excerpt: Documentation for the reliably command in the Reliably CLI
-categories: ["reference", "cli"]
-status: published
-type: doc
+layout: ~/layouts/DocsLayout.astro
 ---
 ## reliably
 
@@ -25,10 +23,10 @@ The Reliably Command Line Interface (CLI).
 
 ### SEE ALSO
 
-* [reliably agent](/docs/reference/cli/reliably-agent/)	 - runs in agent mode sending SLIs to Reliably
-* [reliably auth](/docs/reference/cli/reliably-auth/)	 - Login, logout, and verify your authentication
-* [reliably completion](/docs/reference/cli/reliably-completion/)	 - Generate shell completion scripts
-* [reliably org](/docs/reference/cli/reliably-org/)	 - Manage your organizations
-* [reliably populate](/docs/reference/cli/reliably-populate/)	 - populate your reliably environment
-* [reliably update](/docs/reference/cli/reliably-update/)	 - Updates Reliably CLI
+* [reliably agent](/docs/reference/cli/reliably_agent/)	 - runs in agent mode sending SLIs to Reliably
+* [reliably auth](/docs/reference/cli/reliably_auth/)	 - Login, logout, and verify your authentication
+* [reliably completion](/docs/reference/cli/reliably_completion/)	 - Generate shell completion scripts
+* [reliably org](/docs/reference/cli/reliably_org/)	 - Manage your organizations
+* [reliably populate](/docs/reference/cli/reliably_populate/)	 - populate your reliably environment
+* [reliably update](/docs/reference/cli/reliably_update/)	 - Updates Reliably CLI
 

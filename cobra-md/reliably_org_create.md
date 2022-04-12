@@ -1,9 +1,7 @@
 ---
 title: reliably org create
 excerpt: Documentation for the reliably org create command in the Reliably CLI
-categories: ["reference", "cli"]
-status: published
-type: doc
+layout: ~/layouts/DocsLayout.astro
 ---
 ## reliably org create
 
@@ -29,5 +27,5 @@ reliably org create [<name>] [flags]
 
 ### SEE ALSO
 
-* [reliably org](/docs/reference/cli/reliably-org/)	 - Manage your organizations
+* [reliably org](/docs/reference/cli/reliably_org/)	 - Manage your organizations
 
