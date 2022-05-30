@@ -33,7 +33,7 @@ populate your network with resources from GCP,
 you will be prompted for Project ID and Resource types
 $ reliably graph populate gcp
 
-sepcify Porject ID to populate your network with resources from GCP
+specify Project ID to populate your network with resources from GCP
 $ reliably graph populate gcp --project abc-123
 
 populate your network with resources from GCP using select mode
